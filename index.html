@@ -37,6 +37,43 @@
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
+        .star-button {
+            transition: all 0.2s ease;
+        }
+        .star-button:hover {
+            transform: scale(1.1);
+        }
+        .star-button.starred {
+            color: #f59e0b;
+        }
+        .table-container {
+            overflow-x: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        .table-container table {
+            min-width: 100%;
+        }
+        .table-container th {
+            background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .table-container td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .table-container tr:hover {
+            background-color: #f9fafb;
+        }
+        .frequent-item {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+        }
+    </style>
     </style>
     </style>
 </head>
@@ -106,6 +143,28 @@
                     Immune System
                 </button>
             </div>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="mb-6 flex justify-between items-center">
+            <div class="flex space-x-2">
+                <button id="cardViewBtn" class="px-4 py-2 rounded-lg bg-blue-500 text-white font-medium">Card View</button>
+                <button id="tableViewBtn" class="px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-gray-300">Table View</button>
+            </div>
+            <div class="text-sm text-gray-600">
+                <span id="resultCount">110</span> diseases
+            </div>
+        </div>
+
+        <!-- Frequent Diagnoses Section -->
+        <div id="frequentSection" class="mb-6 hidden">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                <svg class="w-5 h-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Frequent Diagnoses
+            </h2>
+            <div id="frequentResults" class="space-y-2"></div>
         </div>
 
         <!-- Results -->
@@ -672,10 +731,55 @@
         const searchInput = document.getElementById('searchInput');
         const resultsDiv = document.getElementById('results');
         const categoryChips = document.querySelectorAll('.category-chip');
+        const cardViewBtn = document.getElementById('cardViewBtn');
+        const tableViewBtn = document.getElementById('tableViewBtn');
+        const frequentSection = document.getElementById('frequentSection');
+        const frequentResults = document.getElementById('frequentResults');
+        const resultCount = document.getElementById('resultCount');
+
         let currentCategory = 'all';
+        let currentView = 'card'; // 'card' or 'table'
+        let pinnedItems = new Set();
+
+        // Load pinned items from localStorage
+        function loadPinnedItems() {
+            const stored = localStorage.getItem('icd11-pinned-items');
+            if (stored) {
+                pinnedItems = new Set(JSON.parse(stored));
+            }
+        }
+
+        // Save pinned items to localStorage
+        function savePinnedItems() {
+            localStorage.setItem('icd11-pinned-items', JSON.stringify([...pinnedItems]));
+        }
+
+        // Toggle pin status for an item
+        function togglePin(code) {
+            if (pinnedItems.has(code)) {
+                pinnedItems.delete(code);
+            } else {
+                pinnedItems.add(code);
+            }
+            savePinnedItems();
+            filterAndSearch(); // Refresh display
+        }
+
+        // Check if an item is pinned
+        function isPinned(code) {
+            return pinnedItems.has(code);
+        }
 
         function displayResults(results) {
+            // Update result count
+            resultCount.textContent = results.length;
+
+            // Display frequent diagnoses
+            displayFrequentDiagnoses();
+
+            // Display main results
             resultsDiv.innerHTML = '';
+
             if (results.length === 0) {
                 resultsDiv.innerHTML = `
                     <div class="text-center py-12">
@@ -689,9 +793,17 @@
                 return;
             }
 
+            if (currentView === 'card') {
+                displayCardView(results);
+            } else {
+                displayTableView(results);
+            }
+        }
+
+        function displayCardView(results) {
             results.forEach(item => {
                 const div = document.createElement('div');
-                div.className = 'bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-shadow duration-200';
+                div.className = `bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-shadow duration-200 ${isPinned(item.code) ? 'frequent-item' : ''}`;
                 div.innerHTML = `
                     <div class="flex items-start justify-between">
                         <div class="flex-1 min-w-0">
@@ -703,14 +815,104 @@
                             <h3 class="text-lg font-bold text-blue-600 mb-1">${item.code}</h3>
                             <p class="text-gray-700 text-sm leading-relaxed">${item.description}</p>
                         </div>
-                        <button class="ml-3 flex-shrink-0 p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors duration-200" onclick="copyToClipboard('${item.code}')" title="Copy code">
+                        <div class="flex space-x-2 ml-3">
+                            <button class="star-button p-2 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors duration-200 ${isPinned(item.code) ? 'starred' : ''}" onclick="togglePin('${item.code}')" title="${isPinned(item.code) ? 'Unpin from frequent diagnoses' : 'Pin to frequent diagnoses'}">
+                                <svg class="w-4 h-4" fill="${isPinned(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors duration-200" onclick="copyToClipboard('${item.code}')" title="Copy code">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                resultsDiv.appendChild(div);
+            });
+        }
+
+        function displayTableView(results) {
+            const tableHTML = `
+                <div class="table-container bg-white">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="w-16">Pin</th>
+                                <th class="w-24">Code</th>
+                                <th>Description</th>
+                                <th class="w-48">Category</th>
+                                <th class="w-16">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${results.map(item => `
+                                <tr class="${isPinned(item.code) ? 'frequent-item' : ''}">
+                                    <td class="text-center">
+                                        <button class="star-button p-1 rounded hover:bg-gray-100 text-gray-400 ${isPinned(item.code) ? 'starred' : ''}" onclick="togglePin('${item.code}')" title="${isPinned(item.code) ? 'Unpin from frequent diagnoses' : 'Pin to frequent diagnoses'}">
+                                            <svg class="w-4 h-4" fill="${isPinned(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td class="font-bold text-blue-600">${item.code}</td>
+                                    <td class="text-gray-700">${item.description}</td>
+                                    <td>
+                                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800">
+                                            ${item.category}
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="p-1 rounded hover:bg-blue-50 text-blue-600" onclick="copyToClipboard('${item.code}')" title="Copy code">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            resultsDiv.innerHTML = tableHTML;
+        }
+
+        function displayFrequentDiagnoses() {
+            if (pinnedItems.size === 0) {
+                frequentSection.classList.add('hidden');
+                return;
+            }
+
+            frequentSection.classList.remove('hidden');
+            frequentResults.innerHTML = '';
+
+            // Get pinned items in order
+            const pinnedData = icdData.filter(item => pinnedItems.has(item.code));
+
+            pinnedData.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-3 shadow-sm';
+                div.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <div>
+                                <span class="font-bold text-blue-600">${item.code}</span>
+                                <span class="text-gray-600 ml-2">${item.description}</span>
+                            </div>
+                        </div>
+                        <button class="p-1 rounded hover:bg-red-50 text-red-500" onclick="togglePin('${item.code}')" title="Remove from frequent diagnoses">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                             </svg>
                         </button>
                     </div>
                 `;
-                resultsDiv.appendChild(div);
+                frequentResults.appendChild(div);
             });
         }
 
@@ -751,6 +953,21 @@
             displayResults(filtered);
         }
 
+        function setViewMode(mode) {
+            currentView = mode;
+            cardViewBtn.classList.toggle('bg-blue-500', mode === 'card');
+            cardViewBtn.classList.toggle('text-white', mode === 'card');
+            cardViewBtn.classList.toggle('bg-gray-200', mode !== 'card');
+            cardViewBtn.classList.toggle('text-gray-700', mode !== 'card');
+
+            tableViewBtn.classList.toggle('bg-blue-500', mode === 'table');
+            tableViewBtn.classList.toggle('text-white', mode === 'table');
+            tableViewBtn.classList.toggle('bg-gray-200', mode !== 'table');
+            tableViewBtn.classList.toggle('text-gray-700', mode !== 'table');
+
+            filterAndSearch(); // Refresh display with new view
+        }
+
         // Debounce function to limit search calls
         function debounce(func, delay) {
             let timeoutId;
@@ -780,7 +997,12 @@
             });
         });
 
-        // Initial display (show all results)
+        // View toggle event listeners
+        cardViewBtn.addEventListener('click', () => setViewMode('card'));
+        tableViewBtn.addEventListener('click', () => setViewMode('table'));
+
+        // Initialize app
+        loadPinnedItems();
         filterAndSearch();
 
         // Register service worker
