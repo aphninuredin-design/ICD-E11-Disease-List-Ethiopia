@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICD-11 Medical Coding Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3B82F6">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center mb-8 text-blue-600">ICD-11 Medical Coding Search Tool</h1>
+        
+        <div class="mb-6">
+            <input type="text" id="searchInput" placeholder="Search for ICD-11 codes or descriptions..." 
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg">
+        </div>
+        
+        <div id="results" class="space-y-4">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample ICD-11 data (focused on diabetes and related conditions for Ethiopia context)
+        const icdData = [
+            { code: "5A10", description: "Type 1 diabetes mellitus" },
+            { code: "5A11", description: "Type 2 diabetes mellitus" },
+            { code: "5A12", description: "Malnutrition-related diabetes mellitus" },
+            { code: "5A13", description: "Other specified diabetes mellitus" },
+            { code: "5A14", description: "Diabetes mellitus, unspecified" },
+            { code: "5A15", description: "Gestational diabetes mellitus" },
+            { code: "5A16", description: "Diabetes mellitus in pregnancy" },
+            { code: "5A17", description: "Diabetes mellitus with renal complications" },
+            { code: "5A18", description: "Diabetes mellitus with ophthalmic complications" },
+            { code: "5A19", description: "Diabetes mellitus with neurological complications" },
+            { code: "5A1A", description: "Diabetes mellitus with circulatory complications" },
+            { code: "5A1B", description: "Diabetes mellitus with other specified complications" },
+            { code: "5A1C", description: "Diabetes mellitus without complications" },
+            { code: "5A1D", description: "Diabetes mellitus with multiple complications" },
+            { code: "5A1E", description: "Diabetes mellitus with ketoacidosis" },
+            { code: "5A1F", description: "Diabetes mellitus with hyperosmolar coma" },
+            { code: "5A1G", description: "Diabetes mellitus with hypoglycaemic coma" },
+            { code: "5A1H", description: "Diabetes mellitus with other coma" },
+            { code: "5A1I", description: "Diabetes mellitus with gangrene" },
+            { code: "5A1J", description: "Diabetes mellitus with peripheral angiopathy" },
+            { code: "5A1K", description: "Diabetes mellitus with nephropathy" },
+            { code: "5A1L", description: "Diabetes mellitus with retinopathy" },
+            { code: "5A1M", description: "Diabetes mellitus with neuropathy" },
+            { code: "5A1N", description: "Diabetes mellitus with foot ulcer" },
+            { code: "5A1P", description: "Diabetes mellitus with arthropathy" },
+            { code: "5A1Q", description: "Diabetes mellitus with skin complications" },
+            { code: "5A1R", description: "Diabetes mellitus with other complications" },
+            { code: "5A1S", description: "Diabetes mellitus with unspecified complications" },
+            { code: "5A1T", description: "Diabetes mellitus in remission" },
+            { code: "5A1U", description: "Diabetes mellitus, insulin dependent" },
+            { code: "5A1V", description: "Diabetes mellitus, non-insulin dependent" },
+            { code: "5A1W", description: "Diabetes mellitus, brittle" },
+            { code: "5A1X", description: "Diabetes mellitus, secondary" },
+            { code: "5A1Y", description: "Diabetes mellitus, steroid-induced" },
+            { code: "5A1Z", description: "Diabetes mellitus, other specified" },
+            // Additional common conditions for Ethiopian context
+            { code: "1A00", description: "Cholera" },
+            { code: "1A01", description: "Cholera due to Vibrio cholerae 01, biovar cholerae" },
+            { code: "1A02", description: "Cholera due to Vibrio cholerae 01, biovar eltor" },
+            { code: "1A03", description: "Cholera due to Vibrio cholerae 0139" },
+            { code: "1A04", description: "Cholera due to Vibrio cholerae, other biovars" },
+            { code: "1A05", description: "Cholera, unspecified" },
+            { code: "1A06", description: "Typhoid fever" },
+            { code: "1A07", description: "Paratyphoid fever" },
+            { code: "1A08", description: "Typhoid and paratyphoid fevers" },
+            { code: "1A09", description: "Typhoid fever, unspecified" },
+            { code: "1A0A", description: "Paratyphoid fever, unspecified" },
+            { code: "1A0B", description: "Salmonella infection, unspecified" },
+            { code: "1A0C", description: "Shigellosis" },
+            { code: "1A0D", description: "Shigellosis due to Shigella dysenteriae" },
+            { code: "1A0E", description: "Shigellosis due to Shigella flexneri" },
+            { code: "1A0F", description: "Shigellosis due to Shigella boydii" },
+            { code: "1A0G", description: "Shigellosis due to Shigella sonnei" },
+            { code: "1A0H", description: "Shigellosis, unspecified" },
+            { code: "1A0I", description: "Amebiasis" },
+            { code: "1A0J", description: "Amebic dysentery" },
+            { code: "1A0K", description: "Amebic liver abscess" },
+            { code: "1A0L", description: "Amebiasis, unspecified" },
+            { code: "1A0M", description: "Giardiasis" },
+            { code: "1A0N", description: "Cryptosporidiosis" },
+            { code: "1A0P", description: "Cyclosporiasis" },
+            { code: "1A0Q", description: "Isosporiasis" },
+            { code: "1A0R", description: "Microsporidiosis" },
+            { code: "1A0S", description: "Other protozoal intestinal diseases" },
+            { code: "1A0T", description: "Protozoal intestinal disease, unspecified" },
+            { code: "1A0U", description: "Intestinal infection due to other specified organisms" },
+            { code: "1A0V", description: "Intestinal infection, unspecified" },
+            { code: "1A0W", description: "Tuberculosis of intestine, peritoneum and mesenteric glands" },
+            { code: "1A0X", description: "Tuberculosis of other sites" },
+            { code: "1A0Y", description: "Tuberculosis, unspecified" },
+            { code: "1A0Z", description: "Other bacterial intestinal infections" },
+            { code: "1A10", description: "Viral hepatitis" },
+            { code: "1A11", description: "Hepatitis A" },
+            { code: "1A12", description: "Hepatitis B" },
+            { code: "1A13", description: "Hepatitis C" },
+            { code: "1A14", description: "Hepatitis D" },
+            { code: "1A15", description: "Hepatitis E" },
+            { code: "1A16", description: "Other viral hepatitis" },
+            { code: "1A17", description: "Viral hepatitis, unspecified" },
+            { code: "1A18", description: "Human immunodeficiency virus [HIV] disease" },
+            { code: "1A19", description: "HIV disease resulting in infectious and parasitic diseases" },
+            { code: "1A1A", description: "HIV disease resulting in malignant neoplasms" },
+            { code: "1A1B", description: "HIV disease resulting in other specified diseases" },
+            { code: "1A1C", description: "HIV disease resulting in unspecified disease" },
+            { code: "1A1D", description: "HIV disease, clinical stage 1" },
+            { code: "1A1E", description: "HIV disease, clinical stage 2" },
+            { code: "1A1F", description: "HIV disease, clinical stage 3" },
+            { code: "1A1G", description: "HIV disease, clinical stage 4" },
+            { code: "1A1H", description: "HIV disease, asymptomatic" },
+            { code: "1A1I", description: "HIV disease, symptomatic" },
+            { code: "1A1J", description: "HIV disease, AIDS" },
+            { code: "1A1K", description: "HIV disease, unspecified" },
+            { code: "1A1L", description: "Acquired immunodeficiency syndrome [AIDS]" },
+            { code: "1A1M", description: "AIDS resulting in infectious and parasitic diseases" },
+            { code: "1A1N", description: "AIDS resulting in malignant neoplasms" },
+            { code: "1A1P", description: "AIDS resulting in other specified diseases" },
+            { code: "1A1Q", description: "AIDS resulting in unspecified disease" },
+            { code: "1A1R", description: "AIDS, clinical stage unspecified" },
+            { code: "1A1S", description: "Other viral diseases" },
+            { code: "1A1T", description: "Viral disease, unspecified" },
+            { code: "1A1U", description: "Mycoses" },
+            { code: "1A1V", description: "Candidiasis" },
+            { code: "1A1W", description: "Aspergillosis" },
+            { code: "1A1X", description: "Cryptococcosis" },
+            { code: "1A1Y", description: "Histoplasmosis" },
+            { code: "1A1Z", description: "Other mycoses" },
+            { code: "1A20", description: "Mycosis, unspecified" },
+            { code: "1A21", description: "Pneumocystosis" },
+            { code: "1A22", description: "Other specified infectious diseases" },
+            { code: "1A23", description: "Infectious disease, unspecified" },
+            { code: "1A24", description: "Malaria" },
+            { code: "1A25", description: "Malaria due to Plasmodium falciparum" },
+            { code: "1A26", description: "Malaria due to Plasmodium vivax" },
+            { code: "1A27", description: "Malaria due to Plasmodium ovale" },
+            { code: "1A28", description: "Malaria due to Plasmodium malariae" },
+            { code: "1A29", description: "Malaria due to Plasmodium knowlesi" },
+            { code: "1A2A", description: "Malaria due to other specified Plasmodium species" },
+            { code: "1A2B", description: "Malaria, unspecified" },
+            { code: "1A2C", description: "Cerebral malaria" },
+            { code: "1A2D", description: "Severe malaria" },
+            { code: "1A2E", description: "Malaria with complications" },
+            { code: "1A2F", description: "Malaria without complications" },
+            { code: "1A2G", description: "Relapsing fever" },
+            { code: "1A2H", description: "Louse-borne relapsing fever" },
+            { code: "1A2I", description: "Tick-borne relapsing fever" },
+            { code: "1A2J", description: "Relapsing fever, unspecified" },
+            { code: "1A2K", description: "Other spirochaetal diseases" },
+            { code: "1A2L", description: "Spirochaetal disease, unspecified" },
+            { code: "1A2M", description: "Leishmaniasis" },
+            { code: "1A2N", description: "Visceral leishmaniasis" },
+            { code: "1A2P", description: "Cutaneous leishmaniasis" },
+            { code: "1A2Q", description: "Mucocutaneous leishmaniasis" },
+            { code: "1A2R", description: "Leishmaniasis, unspecified" },
+            { code: "1A2S", description: "Chagas disease" },
+            { code: "1A2T", description: "Chagas disease with heart involvement" },
+            { code: "1A2U", description: "Chagas disease with digestive system involvement" },
+            { code: "1A2V", description: "Chagas disease with nervous system involvement" },
+            { code: "1A2W", description: "Chagas disease, unspecified" },
+            { code: "1A2X", description: "African trypanosomiasis" },
+            { code: "1A2Y", description: "Gambiense trypanosomiasis" },
+            { code: "1A2Z", description: "Rhodesiense trypanosomiasis" },
+            { code: "1A30", description: "African trypanosomiasis, unspecified" },
+            { code: "1A31", description: "American trypanosomiasis" },
+            { code: "1A32", description: "Trypanosomiasis, unspecified" },
+            { code: "1A33", description: "Schistosomiasis" },
+            { code: "1A34", description: "Schistosomiasis due to Schistosoma haematobium" },
+            { code: "1A35", description: "Schistosomiasis due to Schistosoma mansoni" },
+            { code: "1A36", description: "Schistosomiasis due to Schistosoma japonicum" },
+            { code: "1A37", description: "Schistosomiasis due to Schistosoma mekongi" },
+            { code: "1A38", description: "Schistosomiasis due to Schistosoma intercalatum" },
+            { code: "1A39", description: "Schistosomiasis due to other specified Schistosoma species" },
+            { code: "1A3A", description: "Schistosomiasis, unspecified" },
+            { code: "1A3B", description: "Other trematode infections" },
+            { code: "1A3C", description: "Trematode infection, unspecified" },
+            { code: "1A3D", description: "Cestode infections" },
+            { code: "1A3E", description: "Taeniasis" },
+            { code: "1A3F", description: "Cysticercosis" },
+            { code: "1A3G", description: "Echinococcosis" },
+            { code: "1A3H", description: "Hydatid disease" },
+            { code: "1A3I", description: "Other cestode infections" },
+            { code: "1A3J", description: "Cestode infection, unspecified" },
+            { code: "1A3K", description: "Nematode infections" },
+            { code: "1A3L", description: "Ascariasis" },
+            { code: "1A3M", description: "Trichuriasis" },
+            { code: "1A3N", description: "Hookworm diseases" },
+            { code: "1A3P", description: "Enterobiasis" },
+            { code: "1A3Q", description: "Strongyloidiasis" },
+            { code: "1A3R", description: "Trichinellosis" },
+            { code: "1A3S", description: "Filariasis" },
+            { code: "1A3T", description: "Lymphatic filariasis" },
+            { code: "1A3U", description: "Onchocerciasis" },
+            { code: "1A3V", description: "Dracunculiasis" },
+            { code: "1A3W", description: "Other nematode infections" },
+            { code: "1A3X", description: "Nematode infection, unspecified" },
+            { code: "1A3Y", description: "Other helminthiases" },
+            { code: "1A3Z", description: "Helminthiasis, unspecified" },
+            { code: "1A40", description: "Pediculosis, phthirus infestation and scabies" },
+            { code: "1A41", description: "Pediculosis" },
+            { code: "1A42", description: "Phthirus infestation" },
+            { code: "1A43", description: "Scabies" },
+            { code: "1A44", description: "Other infestations" },
+            { code: "1A45", description: "Infestation, unspecified" },
+            { code: "1A46", description: "Sequelae of infectious and parasitic diseases" },
+            { code: "1A47", description: "Sequelae of tuberculosis" },
+            { code: "1A48", description: "Sequelae of poliomyelitis" },
+            { code: "1A49", description: "Sequelae of leprosy" },
+            { code: "1A4A", description: "Sequelae of other infectious and parasitic diseases" },
+            { code: "1A4B", description: "Sequelae of infectious and parasitic disease, unspecified" },
+            { code: "1A4C", description: "Certain infectious and parasitic diseases" },
+            { code: "1A4D", description: "Other specified infectious and parasitic diseases" },
+            { code: "1A4E", description: "Infectious and parasitic disease, unspecified" }
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const resultsDiv = document.getElementById('results');
+
+        function displayResults(results) {
+            resultsDiv.innerHTML = '';
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p class="text-center text-gray-500">No results found</p>';
+                return;
+            }
+            results.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'bg-white p-4 rounded-lg shadow-md';
+                div.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-semibold text-blue-600">${item.code}</h3>
+                            <p class="text-gray-700 mt-1">${item.description}</p>
+                        </div>
+                        <button class="text-blue-500 hover:text-blue-700 ml-4" onclick="copyToClipboard('${item.code}')">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                resultsDiv.appendChild(div);
+            });
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Code copied to clipboard!');
+            });
+        }
+
+        function search(query) {
+            if (!query) {
+                displayResults([]);
+                return;
+            }
+            const filtered = icdData.filter(item => 
+                item.code.toLowerCase().includes(query.toLowerCase()) || 
+                item.description.toLowerCase().includes(query.toLowerCase())
+            );
+            displayResults(filtered);
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            search(e.target.value);
+        });
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
