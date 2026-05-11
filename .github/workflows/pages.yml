@@ -3,8 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ['main']
+  # ለወደፊቱ Pull Request ስታደርግ ቼክ እንዲያደርግልህ
   pull_request:
     branches: ['main']
+  # በራሳችን ፍላጎት ከ Actions ታብ ላይ ለማንቀሳቀስ (Manual trigger)
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,8 +34,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # index.html ያለበት ፎልደር ሩት (root) ላይ መሆኑን ያረጋግጣል
           path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        # ወደ v4 ማሳደግ የ 404 ስህተቱን ይቀርፈዋል
+        uses: actions/deploy-pages@v4
