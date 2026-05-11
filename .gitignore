@@ -18,6 +18,9 @@ Thumbs.db
 
 # IDE
 .vscode/
+
+# Backup files
+*.backup
 .idea/
 *.sublime-project
 *.sublime-workspace
