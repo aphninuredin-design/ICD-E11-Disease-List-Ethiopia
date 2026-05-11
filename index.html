@@ -105,11 +105,58 @@
         .fade-in {
             animation: fadeIn 0.5s ease-out;
         }
+
+        .table-container {
+            overflow-x: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container table {
+            min-width: 100%;
+        }
+
+        .table-container th {
+            background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .table-container td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .table-container tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .frequent-item {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+        }
+
+        .view-toggle-btn {
+            transition: all 0.2s ease;
+        }
+
+        .view-toggle-btn.active {
+            background-color: #059669;
+            color: white;
+        }
+
+        .view-toggle-btn.inactive {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
     </style>
 </head>
 <body class="ministry-bg min-h-screen font-sans">
     <!-- Ministry of Health Header -->
-    <header class="ministry-header text-white relative overflow-hidden">
+    <header class="ministry-header text-white relative overflow-hidden sticky top-0 z-10">
         <div class="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
         <div class="relative container mx-auto px-4 py-8 max-w-6xl">
             <div class="flex items-center justify-center space-x-6">
@@ -165,7 +212,7 @@
             </h3>
             <div class="flex space-x-3 overflow-x-auto pb-4 scrollbar-hide">
                 <button class="category-chip active whitespace-nowrap px-6 py-3 rounded-full text-sm font-semibold text-gray-700 flex-shrink-0" data-category="all">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
                     </svg>
                     All Categories
@@ -200,8 +247,29 @@
             </div>
         </div>
 
+        <!-- View Toggle -->
+        <div class="mb-8 fade-in flex justify-between items-center" style="animation-delay: 0.2s">
+            <div class="flex space-x-3">
+                <button id="tableViewBtn" class="view-toggle-btn active px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Table View</span>
+                </button>
+                <button id="cardViewBtn" class="view-toggle-btn inactive px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4"/>
+                    </svg>
+                    <span>Card View</span>
+                </button>
+            </div>
+            <div class="text-sm text-white font-semibold">
+                <span id="resultCount2">110</span> diseases
+            </div>
+        </div>
+
         <!-- Frequent Diagnoses Section -->
-        <div id="frequentSection" class="mb-8 hidden fade-in" style="animation-delay: 0.2s">
+        <div id="frequentSection" class="mb-8 hidden fade-in" style="animation-delay: 0.3s">
             <div class="ministry-card rounded-xl p-6">
                 <h3 class="text-gray-800 text-xl font-bold mb-4 flex items-center">
                     <svg class="w-6 h-6 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
@@ -214,8 +282,8 @@
             </div>
         </div>
 
-        <!-- Results Grid -->
-        <div id="results" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 fade-in" style="animation-delay: 0.3s">
+        <!-- Results Grid/Table -->
+        <div id="results" class="fade-in" style="animation-delay: 0.4s">
             <!-- Results will be populated by JavaScript -->
         </div>
 
@@ -236,574 +304,27 @@
         <span id="toastMessage">Code copied!</span>
     </div>
 
-    <script>
-        // Comprehensive ICD-11 Data (110+ diseases)
-        const icdData = [
-            {
-                "code": "1A36",
-                "description": "Cholera",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1A61",
-                "description": "Gastroenteritis or colitis without specification of infectious",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1A94",
-                "description": "Syphilis, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B10.0",
-                "description": "Respiratory tuberculosis, confirmed",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B10.1",
-                "description": "Respiratory tuberculosis, not confirmed",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.0",
-                "description": "Tuberculous meningitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.3",
-                "description": "Tuberculous granuloma of brain",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.Z",
-                "description": "Tuberculosis of the nervous system, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.4",
-                "description": "Tuberculosis of the musculoskeletal system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.5",
-                "description": "Tuberculosis of the genitourinary system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.6",
-                "description": "Tuberculous peripheral lymphadenopathy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.7",
-                "description": "Tuberculosis of the digestive system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.Y",
-                "description": "Tuberculosis of other specified organ or site",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.0",
-                "description": "Paucibacillary leprosy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.1",
-                "description": "Multibacillary leprosy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.2",
-                "description": "Leprosy reactions",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.Z",
-                "description": "Leprosy, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B53",
-                "description": "Streptococcal pharyngitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B70.0",
-                "description": "Erysipelas",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B70.Z",
-                "description": "Bacterial cellulitis or lymphangitis due to unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B71",
-                "description": "Necrotising fasciitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B72.Z",
-                "description": "Impetigo, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B74",
-                "description": "Superficial bacterial folliculitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.0",
-                "description": "Furuncle",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.1",
-                "description": "Carbuncle",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.3",
-                "description": "Pyogenic abscess of the skin",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C17",
-                "description": "Brucellosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C20",
-                "description": "Chlamydial conjunctivitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C82",
-                "description": "Non-pyogenic bacterial infections of the skin",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1D48",
-                "description": "Severe dengue",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1D65",
-                "description": "Severe acute respiratory syndrome",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E50",
-                "description": "Other specified zoonotic viral diseases",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E51",
-                "description": "Chronic viral hepatitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E80",
-                "description": "Molluscum contagiosum",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F00",
-                "description": "Plane warts",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F03",
-                "description": "Measles",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F23",
-                "description": "Candidosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F28",
-                "description": "Dermatophytosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F53",
-                "description": "Mycoses, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F57",
-                "description": "Toxoplasmosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F65",
-                "description": "Ascariasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F70",
-                "description": "Hookworm diseases",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F74",
-                "description": "Hymenolepiasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F86",
-                "description": "Schistosomiasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1G41",
-                "description": "Helminthiases, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "2A00",
-                "description": "Primary neoplasms of brain",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2A01",
-                "description": "Primary neoplasms of meninges",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2A80",
-                "description": "Follicular lymphoma",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B30",
-                "description": "Hodgkin lymphoma",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.1",
-                "description": "Myeloid leukaemia",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.3",
-                "description": "Lymphoid leukaemia, not elsewhere classified",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.4",
-                "description": "Leukaemia, unspecified",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2C10",
-                "description": "Neoplasms of haematopoietic or lymphoid tissues,",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2C94",
-                "description": "Malignant neoplasms of the pleura",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2E66",
-                "description": "Malignant neoplasms of thyroid gland",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2F33",
-                "description": "Benign neoplasm of other or unspecified female genital",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "3A01",
-                "description": "Megaloblastic anaemia due to vitamin B12 deficiency",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B63",
-                "description": "Anaemia due to chronic disease",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B64.Z",
-                "description": "Thrombocytopenia, unspecified",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B81.B",
-                "description": "Hypersplenism",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "4A40",
-                "description": "Other specified primary immunodeficiencies",
-                "category": "Diseases of the immune system"
-            },
-            {
-                "code": "4A84",
-                "description": "Anaphylaxis",
-                "category": "Diseases of the immune system"
-            },
-            {
-                "code": "5A00",
-                "description": "Hypothyroidism",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A02",
-                "description": "Thyrotoxicosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A14",
-                "description": "Diabetes mellitus, type unspecified",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A22",
-                "description": "Diabetic acidosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A40",
-                "description": "Diabetic coma",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A60",
-                "description": "Hypoglycaemia without associated diabetes",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A70",
-                "description": "Cushing syndrome",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B52",
-                "description": "Delayed puberty",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55",
-                "description": "Stunting in infants, children or adolescents",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.0",
-                "description": "Vitamin A deficiency with night blindness",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.1",
-                "description": "Vitamin A deficiency with conjunctival xerosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.2",
-                "description": "Vitamin A deficiency with conjunctival xerosis or Bitot's",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.3",
-                "description": "Vitamin A deficiency with corneal xerosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.5",
-                "description": "Vitamin A deficiency with corneal ulceration or",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B56.0",
-                "description": "Scurvy",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B57.0",
-                "description": "Vitamin D deficiency rickets",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B59",
-                "description": "Vitamin E deficiency",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B80.0",
-                "description": "Overweight",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B91",
-                "description": "Obesity",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5C80",
-                "description": "Hyperosmolality or hypernatraemia",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "6B23",
-                "description": "Catatonia associated with another mental disorder",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "6D84",
-                "description": "Oppositional defiant disorder",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "6D85",
-                "description": "Dementia due to diseases classified elsewhere",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "7A80",
-                "description": "Chronic insomnia",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B00.1",
-                "description": "Sleepwalking disorder",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B00.2",
-                "description": "Sleep terrors",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B01.2",
-                "description": "Nightmare disorder",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "8A40",
-                "description": "Multiple sclerosis",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8A80",
-                "description": "Status epilepticus",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B60",
-                "description": "Tension-type headache",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B88.0",
-                "description": "Bell palsy",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B94",
-                "description": "Brachial plexus disorders",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8C10",
-                "description": "Polyneuropathy, unspecified",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8C11",
-                "description": "Mononeuropathies of lower limb",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8D20",
-                "description": "Other specified disorders of nerve root, plexus or peripheral",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "9A60",
-                "description": "Other specified disorders of the ocular adnexa or orbit",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10",
-                "description": "Infectious keratitis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.02",
-                "description": "Mature age-related cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.20",
-                "description": "Traumatic cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.21",
-                "description": "Diabetic cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B51",
-                "description": "Scleritis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B71.0Z",
-                "description": "Diabetic retinopathy, unspecified",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B71.1",
-                "description": "Hypertensive retinopathy",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B73.0",
-                "description": "Retinal detachment with retinal break",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B75.0",
-                "description": "Age related macular degeneration",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B78.12",
-                "description": "Retinal vasculitis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9C84",
-                "description": "Glaucoma suspect",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9D00",
-                "description": "Disorders of refraction",
-                "category": "Diseases of the visual system"
-            }
-        ];
+    <!-- ICD-11 Data Script -->
+    <script src="icd_data.js"></script>
 
+    <script>
         // Application State
         const searchInput = document.getElementById('searchInput');
         const resultsDiv = document.getElementById('results');
         const categoryChips = document.querySelectorAll('.category-chip');
+        const cardViewBtn = document.getElementById('cardViewBtn');
+        const tableViewBtn = document.getElementById('tableViewBtn');
         const frequentSection = document.getElementById('frequentSection');
         const frequentResults = document.getElementById('frequentResults');
         const frequentCount = document.getElementById('frequentCount');
         const resultCount = document.getElementById('resultCount');
+        const resultCount2 = document.getElementById('resultCount2');
         const emptyState = document.getElementById('emptyState');
         const toast = document.getElementById('toast');
         const toastMessage = document.getElementById('toastMessage');
 
         let currentCategory = 'all';
+        let currentView = 'table'; // DEFAULT: 'table' or 'card'
         let pinnedItems = new Set();
 
         // Load pinned items from localStorage
@@ -827,7 +348,7 @@
                 pinnedItems.add(code);
             }
             savePinnedItems();
-            updateFrequentDiagnoses();
+            filterAndSearch();
             showToast(pinnedItems.has(code) ? 'Added to frequent diagnoses' : 'Removed from frequent diagnoses');
         }
 
@@ -889,7 +410,7 @@
             });
         }
 
-        // Display results
+        // Display results based on current view mode
         function displayResults(results) {
             resultsDiv.innerHTML = '';
             emptyState.classList.add('hidden');
@@ -897,10 +418,77 @@
             if (results.length === 0) {
                 emptyState.classList.remove('hidden');
                 resultCount.textContent = '0 diseases';
+                resultCount2.textContent = '0';
                 return;
             }
 
             resultCount.textContent = `${results.length} disease${results.length > 1 ? 's' : ''}`;
+            resultCount2.textContent = results.length;
+
+            // Show frequent diagnoses section if there are pinned items
+            updateFrequentDiagnoses();
+
+            // Display based on current view
+            if (currentView === 'table') {
+                displayTableView(results);
+            } else {
+                displayCardView(results);
+            }
+        }
+
+        // Display as table
+        function displayTableView(results) {
+            const tableHTML = `
+                <div class="table-container">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="w-16">Pin</th>
+                                <th class="w-24">Code</th>
+                                <th>Description</th>
+                                <th class="w-56">Category</th>
+                                <th class="w-16">Copy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${results.map(item => `
+                                <tr class="${pinnedItems.has(item.code) ? 'frequent-item' : ''}">
+                                    <td class="text-center">
+                                        <button class="star-btn p-1 rounded hover:bg-gray-100 text-gray-400 ${pinnedItems.has(item.code) ? 'starred' : ''}" 
+                                                onclick="togglePin('${item.code}')" 
+                                                title="${pinnedItems.has(item.code) ? 'Remove from frequent diagnoses' : 'Add to frequent diagnoses'}">
+                                            <svg class="w-4 h-4" fill="${pinnedItems.has(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td class="font-bold text-blue-600">${item.code}</td>
+                                    <td class="text-gray-700">${item.description}</td>
+                                    <td>
+                                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800">
+                                            ${item.category}
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="p-1 rounded hover:bg-blue-50 text-blue-600" onclick="copyToClipboard('${item.code}')" title="Copy code">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            resultsDiv.innerHTML = tableHTML;
+        }
+
+        // Display as cards
+        function displayCardView(results) {
+            const grid = document.createElement('div');
+            grid.className = 'grid gap-6 md:grid-cols-2 lg:grid-cols-3';
 
             results.forEach((item, index) => {
                 const card = document.createElement('div');
@@ -938,8 +526,10 @@
                     </div>
                 `;
 
-                resultsDiv.appendChild(card);
+                grid.appendChild(card);
             });
+
+            resultsDiv.appendChild(grid);
         }
 
         // Filter and search
@@ -964,1052 +554,45 @@
             displayResults(filtered);
         }
 
-        // Debounce function
-        function debounce(func, delay) {
-            let timeoutId;
-            return function(...args) {
-                clearTimeout(timeoutId);
-                timeoutId = setTimeout(() => func.apply(this, args), delay);
-            };
-        }
-
-        const debouncedFilterAndSearch = debounce(filterAndSearch, 300);
-
-        // Event listeners
-        searchInput.addEventListener('input', () => {
-            debouncedFilterAndSearch();
-        });
-
-        categoryChips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                categoryChips.forEach(c => c.classList.remove('active'));
-                chip.classList.add('active');
-                currentCategory = chip.dataset.category;
-                filterAndSearch();
-            });
-        });
-
-        // Initialize app
-        loadPinnedItems();
-        updateFrequentDiagnoses();
-        filterAndSearch();
-
-        // Register service worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICD-11 Medical Coding Search</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#1e40af">
-    <style>
-        .circular-bg {
-            background-image: radial-gradient(circle at 25% 25%, #3b82f6 2px, transparent 2px),
-                              radial-gradient(circle at 75% 75%, #10b981 2px, transparent 2px);
-            background-size: 40px 40px;
-            background-color: #f0f9ff;
-        }
-        .ministry-header {
-            background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .category-chip {
-            transition: all 0.2s ease;
-        }
-        .category-chip:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .category-chip.active {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .star-button {
-            transition: all 0.2s ease;
-        }
-        .star-button:hover {
-            transform: scale(1.1);
-        }
-        .star-button.starred {
-            color: #f59e0b;
-        }
-        .table-container {
-            overflow-x: auto;
-            border-radius: 0.75rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        }
-        .table-container table {
-            min-width: 100%;
-        }
-        .table-container th {
-            background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
-            color: white;
-            font-weight: 600;
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        .table-container td {
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        .table-container tr:hover {
-            background-color: #f9fafb;
-        }
-        .frequent-item {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            border: 1px solid #f59e0b;
-        }
-    </style>
-    </style>
-    </style>
-</head>
-<body class="circular-bg min-h-screen">
-    <!-- Ministry of Health Header -->
-    <header class="ministry-header text-white">
-        <div class="container mx-auto px-4 py-6 max-w-4xl">
-            <div class="flex items-center justify-center space-x-4">
-                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                </div>
-                <div class="text-center">
-                    <h1 class="text-2xl font-bold">Ministry of Health</h1>
-                    <p class="text-blue-100">ICD-11 Medical Coding Tool</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container mx-auto px-4 py-6 max-w-4xl">
-        <!-- Search Bar -->
-        <div class="mb-6">
-            <div class="relative">
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
-                </div>
-                <input type="text" id="searchInput" placeholder="Search ICD-11 codes or diseases..."
-                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg bg-white shadow-sm">
-            </div>
-        </div>
-
-        <!-- Category Filter -->
-        <div class="mb-6">
-            <div class="flex space-x-2 overflow-x-auto pb-2 scrollbar-hide">
-                <button class="category-chip active whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="all">
-                    All Categories
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Certain infectious or parasitic diseases">
-                    Infectious Diseases
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Neoplasms">
-                    Neoplasms
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Endocrine, nutritional or metabolic diseases">
-                    Endocrine & Metabolic
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Diseases of the blood or blood-forming organs">
-                    Blood Diseases
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Diseases of the nervous system">
-                    Nervous System
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Diseases of the visual system">
-                    Visual System
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Mental, behavioral or neurodevelopmental disorders">
-                    Mental Health
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Sleep-wake disorders">
-                    Sleep Disorders
-                </button>
-                <button class="category-chip whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700" data-category="Diseases of the immune system">
-                    Immune System
-                </button>
-            </div>
-        </div>
-
-        <!-- View Toggle -->
-        <div class="mb-6 flex justify-between items-center">
-            <div class="flex space-x-2">
-                <button id="cardViewBtn" class="px-4 py-2 rounded-lg bg-blue-500 text-white font-medium">Card View</button>
-                <button id="tableViewBtn" class="px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-gray-300">Table View</button>
-            </div>
-            <div class="text-sm text-gray-600">
-                <span id="resultCount">110</span> diseases
-            </div>
-        </div>
-
-        <!-- Frequent Diagnoses Section -->
-        <div id="frequentSection" class="mb-6 hidden">
-            <h2 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
-                <svg class="w-5 h-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                Frequent Diagnoses
-            </h2>
-            <div id="frequentResults" class="space-y-2"></div>
-        </div>
-
-        <!-- Results -->
-        <div id="results" class="space-y-3">
-            <!-- Results will be displayed here -->
-        </div>
-    </div>
-
-    <script>
-        // Comprehensive ICD-11 data with categories
-        const icdData = [
-            {
-                "code": "1A36",
-                "description": "Cholera",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1A61",
-                "description": "Gastroenteritis or colitis without specification of infectious",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1A94",
-                "description": "Syphilis, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B10.0",
-                "description": "Respiratory tuberculosis, confirmed",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B10.1",
-                "description": "Respiratory tuberculosis, not confirmed",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.0",
-                "description": "Tuberculous meningitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.3",
-                "description": "Tuberculous granuloma of brain",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B11.Z",
-                "description": "Tuberculosis of the nervous system, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.4",
-                "description": "Tuberculosis of the musculoskeletal system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.5",
-                "description": "Tuberculosis of the genitourinary system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.6",
-                "description": "Tuberculous peripheral lymphadenopathy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.7",
-                "description": "Tuberculosis of the digestive system",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B12.Y",
-                "description": "Tuberculosis of other specified organ or site",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.0",
-                "description": "Paucibacillary leprosy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.1",
-                "description": "Multibacillary leprosy",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.2",
-                "description": "Leprosy reactions",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B20.Z",
-                "description": "Leprosy, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B53",
-                "description": "Streptococcal pharyngitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B70.0",
-                "description": "Erysipelas",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B70.Z",
-                "description": "Bacterial cellulitis or lymphangitis due to unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B71",
-                "description": "Necrotising fasciitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B72.Z",
-                "description": "Impetigo, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B74",
-                "description": "Superficial bacterial folliculitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.0",
-                "description": "Furuncle",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.1",
-                "description": "Carbuncle",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1B75.3",
-                "description": "Pyogenic abscess of the skin",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C17",
-                "description": "Brucellosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C20",
-                "description": "Chlamydial conjunctivitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1C82",
-                "description": "Non-pyogenic bacterial infections of the skin",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1D48",
-                "description": "Severe dengue",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1D65",
-                "description": "Severe acute respiratory syndrome",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E50",
-                "description": "Other specified zoonotic viral diseases",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E51",
-                "description": "Chronic viral hepatitis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1E80",
-                "description": "Molluscum contagiosum",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F00",
-                "description": "Plane warts",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F03",
-                "description": "Measles",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F23",
-                "description": "Candidosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F28",
-                "description": "Dermatophytosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F53",
-                "description": "Mycoses, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F57",
-                "description": "Toxoplasmosis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F65",
-                "description": "Ascariasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F70",
-                "description": "Hookworm diseases",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F74",
-                "description": "Hymenolepiasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1F86",
-                "description": "Schistosomiasis",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "1G41",
-                "description": "Helminthiases, unspecified",
-                "category": "Certain infectious or parasitic diseases"
-            },
-            {
-                "code": "2A00",
-                "description": "Primary neoplasms of brain",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2A01",
-                "description": "Primary neoplasms of meninges",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2A80",
-                "description": "Follicular lymphoma",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B30",
-                "description": "Hodgkin lymphoma",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.1",
-                "description": "Myeloid leukaemia",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.3",
-                "description": "Lymphoid leukaemia, not elsewhere classified",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2B33.4",
-                "description": "Leukaemia, unspecified",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2C10",
-                "description": "Neoplasms of haematopoietic or lymphoid tissues,",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2C94",
-                "description": "Malignant neoplasms of the pleura",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2E66",
-                "description": "Malignant neoplasms of thyroid gland",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "2F33",
-                "description": "Benign neoplasm of other or unspecified female genital",
-                "category": "Neoplasms"
-            },
-            {
-                "code": "3A01",
-                "description": "Megaloblastic anaemia due to vitamin B12 deficiency",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B63",
-                "description": "Anaemia due to chronic disease",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B64.Z",
-                "description": "Thrombocytopenia, unspecified",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "3B81.B",
-                "description": "Hypersplenism",
-                "category": "Diseases of the blood or blood-forming organs"
-            },
-            {
-                "code": "4A40",
-                "description": "Other specified primary immunodeficiencies",
-                "category": "Diseases of the immune system"
-            },
-            {
-                "code": "4A84",
-                "description": "Anaphylaxis",
-                "category": "Diseases of the immune system"
-            },
-            {
-                "code": "5A00",
-                "description": "Hypothyroidism",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A02",
-                "description": "Thyrotoxicosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A14",
-                "description": "Diabetes mellitus, type unspecified",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A22",
-                "description": "Diabetic acidosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A40",
-                "description": "Diabetic coma",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A60",
-                "description": "Hypoglycaemia without associated diabetes",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5A70",
-                "description": "Cushing syndrome",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B52",
-                "description": "Delayed puberty",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55",
-                "description": "Stunting in infants, children or adolescents",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.0",
-                "description": "Vitamin A deficiency with night blindness",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.1",
-                "description": "Vitamin A deficiency with conjunctival xerosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.2",
-                "description": "Vitamin A deficiency with conjunctival xerosis or Bitot\u2019s",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.3",
-                "description": "Vitamin A deficiency with corneal xerosis",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B55.5",
-                "description": "Vitamin A deficiency with corneal ulceration or",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B56.0",
-                "description": "Scurvy",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B57.0",
-                "description": "Vitamin D deficiency rickets",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B59",
-                "description": "Vitamin E deficiency",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B80.0",
-                "description": "Overweight",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5B91",
-                "description": "Obesity",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "5C80",
-                "description": "Hyperosmolality or hypernatraemia",
-                "category": "Endocrine, nutritional or metabolic diseases"
-            },
-            {
-                "code": "6B23",
-                "description": "Catatonia associated with another mental disorder",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "6D84",
-                "description": "Oppositional defiant disorder",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "6D85",
-                "description": "Dementia due to diseases classified elsewhere",
-                "category": "Mental, behavioral or neurodevelopmental disorders"
-            },
-            {
-                "code": "7A80",
-                "description": "Chronic insomnia",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B00.1",
-                "description": "Sleepwalking disorder",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B00.2",
-                "description": "Sleep terrors",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "7B01.2",
-                "description": "Nightmare disorder",
-                "category": "Sleep-wake disorders"
-            },
-            {
-                "code": "8A40",
-                "description": "Multiple sclerosis",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8A80",
-                "description": "Status epilepticus",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B60",
-                "description": "Tension-type headache",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B88.0",
-                "description": "Bell palsy",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8B94",
-                "description": "Brachial plexus disorders",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8C10",
-                "description": "Polyneuropathy, unspecified",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8C11",
-                "description": "Mononeuropathies of lower limb",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "8D20",
-                "description": "Other specified disorders of nerve root, plexus or peripheral",
-                "category": "Diseases of the nervous system"
-            },
-            {
-                "code": "9A60",
-                "description": "Other specified disorders of the ocular adnexa or orbit",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10",
-                "description": "Infectious keratitis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.02",
-                "description": "Mature age-related cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.20",
-                "description": "Traumatic cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B10.21",
-                "description": "Diabetic cataract",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B51",
-                "description": "Scleritis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B71.0Z",
-                "description": "Diabetic retinopathy, unspecified",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B71.1",
-                "description": "Hypertensive retinopathy",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B73.0",
-                "description": "Retinal detachment with retinal break",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B75.0",
-                "description": "Age related macular degeneration",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9B78.12",
-                "description": "Retinal vasculitis",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9C84",
-                "description": "Glaucoma suspect",
-                "category": "Diseases of the visual system"
-            },
-            {
-                "code": "9D00",
-                "description": "Disorders of refraction",
-                "category": "Diseases of the visual system"
-            }
-        ];
-
-        const searchInput = document.getElementById('searchInput');
-        const resultsDiv = document.getElementById('results');
-        const categoryChips = document.querySelectorAll('.category-chip');
-        const cardViewBtn = document.getElementById('cardViewBtn');
-        const tableViewBtn = document.getElementById('tableViewBtn');
-        const frequentSection = document.getElementById('frequentSection');
-        const frequentResults = document.getElementById('frequentResults');
-        const resultCount = document.getElementById('resultCount');
-
-        let currentCategory = 'all';
-        let currentView = 'card'; // 'card' or 'table'
-        let pinnedItems = new Set();
-
-        // Load pinned items from localStorage
-        function loadPinnedItems() {
-            const stored = localStorage.getItem('icd11-pinned-items');
-            if (stored) {
-                pinnedItems = new Set(JSON.parse(stored));
-            }
-        }
-
-        // Save pinned items to localStorage
-        function savePinnedItems() {
-            localStorage.setItem('icd11-pinned-items', JSON.stringify([...pinnedItems]));
-        }
-
-        // Toggle pin status for an item
-        function togglePin(code) {
-            if (pinnedItems.has(code)) {
-                pinnedItems.delete(code);
-            } else {
-                pinnedItems.add(code);
-            }
-            savePinnedItems();
-            filterAndSearch(); // Refresh display
-        }
-
-        // Check if an item is pinned
-        function isPinned(code) {
-            return pinnedItems.has(code);
-        }
-
-        function displayResults(results) {
-            // Update result count
-            resultCount.textContent = results.length;
-
-            // Display frequent diagnoses
-            displayFrequentDiagnoses();
-
-            // Display main results
-            resultsDiv.innerHTML = '';
-
-            if (results.length === 0) {
-                resultsDiv.innerHTML = `
-                    <div class="text-center py-12">
-                        <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-.966-5.656-2.34"/>
-                        </svg>
-                        <h3 class="mt-2 text-sm font-medium text-gray-900">No results found</h3>
-                        <p class="mt-1 text-sm text-gray-500">Try adjusting your search or category filter.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            if (currentView === 'card') {
-                displayCardView(results);
-            } else {
-                displayTableView(results);
-            }
-        }
-
-        function displayCardView(results) {
-            results.forEach(item => {
-                const div = document.createElement('div');
-                div.className = `bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-shadow duration-200 ${isPinned(item.code) ? 'frequent-item' : ''}`;
-                div.innerHTML = `
-                    <div class="flex items-start justify-between">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800 border border-green-200">
-                                    ${item.category}
-                                </span>
-                            </div>
-                            <h3 class="text-lg font-bold text-blue-600 mb-1">${item.code}</h3>
-                            <p class="text-gray-700 text-sm leading-relaxed">${item.description}</p>
-                        </div>
-                        <div class="flex space-x-2 ml-3">
-                            <button class="star-button p-2 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors duration-200 ${isPinned(item.code) ? 'starred' : ''}" onclick="togglePin('${item.code}')" title="${isPinned(item.code) ? 'Unpin from frequent diagnoses' : 'Pin to frequent diagnoses'}">
-                                <svg class="w-4 h-4" fill="${isPinned(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                                </svg>
-                            </button>
-                            <button class="p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors duration-200" onclick="copyToClipboard('${item.code}')" title="Copy code">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                resultsDiv.appendChild(div);
-            });
-        }
-
-        function displayTableView(results) {
-            const tableHTML = `
-                <div class="table-container bg-white">
-                    <table class="w-full">
-                        <thead>
-                            <tr>
-                                <th class="w-16">Pin</th>
-                                <th class="w-24">Code</th>
-                                <th>Description</th>
-                                <th class="w-48">Category</th>
-                                <th class="w-16">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${results.map(item => `
-                                <tr class="${isPinned(item.code) ? 'frequent-item' : ''}">
-                                    <td class="text-center">
-                                        <button class="star-button p-1 rounded hover:bg-gray-100 text-gray-400 ${isPinned(item.code) ? 'starred' : ''}" onclick="togglePin('${item.code}')" title="${isPinned(item.code) ? 'Unpin from frequent diagnoses' : 'Pin to frequent diagnoses'}">
-                                            <svg class="w-4 h-4" fill="${isPinned(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                    <td class="font-bold text-blue-600">${item.code}</td>
-                                    <td class="text-gray-700">${item.description}</td>
-                                    <td>
-                                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800">
-                                            ${item.category}
-                                        </span>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="p-1 rounded hover:bg-blue-50 text-blue-600" onclick="copyToClipboard('${item.code}')" title="Copy code">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    </table>
-                </div>
-            `;
-            resultsDiv.innerHTML = tableHTML;
-        }
-
-        function displayFrequentDiagnoses() {
-            if (pinnedItems.size === 0) {
-                frequentSection.classList.add('hidden');
-                return;
-            }
-
-            frequentSection.classList.remove('hidden');
-            frequentResults.innerHTML = '';
-
-            // Get pinned items in order
-            const pinnedData = icdData.filter(item => pinnedItems.has(item.code));
-
-            pinnedData.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-3 shadow-sm';
-                div.innerHTML = `
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                            <div>
-                                <span class="font-bold text-blue-600">${item.code}</span>
-                                <span class="text-gray-600 ml-2">${item.description}</span>
-                            </div>
-                        </div>
-                        <button class="p-1 rounded hover:bg-red-50 text-red-500" onclick="togglePin('${item.code}')" title="Remove from frequent diagnoses">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
-                `;
-                frequentResults.appendChild(div);
-            });
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                // Show a brief success message
-                const notification = document.createElement('div');
-                notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
-                notification.textContent = 'Code copied!';
-                document.body.appendChild(notification);
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                alert('Failed to copy code');
-            });
-        }
-
-        function filterAndSearch() {
-            const query = searchInput.value.trim().toLowerCase();
-
-            let filtered = icdData;
-
-            // Apply category filter
-            if (currentCategory !== 'all') {
-                filtered = filtered.filter(item => item.category === currentCategory);
-            }
-
-            // Apply search filter
-            if (query) {
-                filtered = filtered.filter(item =>
-                    item.code.toLowerCase().includes(query) ||
-                    item.description.toLowerCase().includes(query)
-                );
-            }
-
-            displayResults(filtered);
-        }
-
+        // Change view mode
         function setViewMode(mode) {
             currentView = mode;
-            cardViewBtn.classList.toggle('bg-blue-500', mode === 'card');
-            cardViewBtn.classList.toggle('text-white', mode === 'card');
-            cardViewBtn.classList.toggle('bg-gray-200', mode !== 'card');
-            cardViewBtn.classList.toggle('text-gray-700', mode !== 'card');
-
-            tableViewBtn.classList.toggle('bg-blue-500', mode === 'table');
-            tableViewBtn.classList.toggle('text-white', mode === 'table');
-            tableViewBtn.classList.toggle('bg-gray-200', mode !== 'table');
-            tableViewBtn.classList.toggle('text-gray-700', mode !== 'table');
-
-            filterAndSearch(); // Refresh display with new view
+            
+            // Update button states
+            if (mode === 'table') {
+                tableViewBtn.classList.remove('inactive');
+                tableViewBtn.classList.add('active');
+                cardViewBtn.classList.remove('active');
+                cardViewBtn.classList.add('inactive');
+            } else {
+                cardViewBtn.classList.remove('inactive');
+                cardViewBtn.classList.add('active');
+                tableViewBtn.classList.remove('active');
+                tableViewBtn.classList.add('inactive');
+            }
+            
+            // Refresh display with new view
+            filterAndSearch();
         }
 
-        // Debounce function to limit search calls
-        function debounce(func, delay) {
-            let timeoutId;
-            return function(...args) {
-                clearTimeout(timeoutId);
-                timeoutId = setTimeout(() => func.apply(this, args), delay);
-            };
-        }
-
-        const debouncedFilterAndSearch = debounce(filterAndSearch, 300);
-
-        // Event listeners
+        // Event listeners for search (immediate - no debounce for category filtering)
         searchInput.addEventListener('input', () => {
-            debouncedFilterAndSearch();
+            filterAndSearch();
         });
 
+        // Category chip click handler - immediate filtering
         categoryChips.forEach(chip => {
             chip.addEventListener('click', () => {
-                // Remove active class from all chips
                 categoryChips.forEach(c => c.classList.remove('active'));
-                // Add active class to clicked chip
                 chip.classList.add('active');
-                // Update current category
                 currentCategory = chip.dataset.category;
-                // Filter and search
-                filterAndSearch();
+                filterAndSearch(); // Immediate filtering on category click
             });
         });
 
         // View toggle event listeners
-        cardViewBtn.addEventListener('click', () => setViewMode('card'));
         tableViewBtn.addEventListener('click', () => setViewMode('table'));
+        cardViewBtn.addEventListener('click', () => setViewMode('card'));
 
         // Initialize app
         loadPinnedItems();
