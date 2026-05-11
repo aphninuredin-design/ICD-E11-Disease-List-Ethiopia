@@ -1,0 +1,552 @@
+const icdData = [
+  {
+    "code": "1A36",
+    "description": "Cholera",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A61",
+    "description": "Gastroenteritis or colitis without specification of infectious",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A94",
+    "description": "Syphilis, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B10.0",
+    "description": "Respiratory tuberculosis, confirmed",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B10.1",
+    "description": "Respiratory tuberculosis, not confirmed",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B11.0",
+    "description": "Tuberculous meningitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B11.3",
+    "description": "Tuberculous granuloma of brain",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B11.Z",
+    "description": "Tuberculosis of the nervous system, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B12.4",
+    "description": "Tuberculosis of the musculoskeletal system",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B12.5",
+    "description": "Tuberculosis of the genitourinary system",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B12.6",
+    "description": "Tuberculous peripheral lymphadenopathy",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B12.7",
+    "description": "Tuberculosis of the digestive system",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B12.Y",
+    "description": "Tuberculosis of other specified organ or site",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B20.0",
+    "description": "Paucibacillary leprosy",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B20.1",
+    "description": "Multibacillary leprosy",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B20.2",
+    "description": "Leprosy reactions",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B20.Z",
+    "description": "Leprosy, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B53",
+    "description": "Streptococcal pharyngitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B70.0",
+    "description": "Erysipelas",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B70.Z",
+    "description": "Bacterial cellulitis or lymphangitis due to unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B71",
+    "description": "Necrotising fasciitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B72.Z",
+    "description": "Impetigo, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B74",
+    "description": "Superficial bacterial folliculitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B75.0",
+    "description": "Furuncle",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B75.1",
+    "description": "Carbuncle",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1B75.3",
+    "description": "Pyogenic abscess of the skin",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C17",
+    "description": "Brucellosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C20",
+    "description": "Chlamydial conjunctivitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C82",
+    "description": "Non-pyogenic bacterial infections of the skin",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1D48",
+    "description": "Severe dengue",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1D65",
+    "description": "Severe acute respiratory syndrome",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E50",
+    "description": "Other specified zoonotic viral diseases",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E51",
+    "description": "Chronic viral hepatitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E80",
+    "description": "Molluscum contagiosum",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F00",
+    "description": "Plane warts",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F03",
+    "description": "Measles",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F23",
+    "description": "Candidosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28",
+    "description": "Dermatophytosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F53",
+    "description": "Mycoses, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F57",
+    "description": "Toxoplasmosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F65",
+    "description": "Ascariasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F70",
+    "description": "Hookworm diseases",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F74",
+    "description": "Hymenolepiasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F86",
+    "description": "Schistosomiasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1G41",
+    "description": "Helminthiases, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "2A00",
+    "description": "Primary neoplasms of brain",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A01",
+    "description": "Primary neoplasms of meninges",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A80",
+    "description": "Follicular lymphoma",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2B30",
+    "description": "Hodgkin lymphoma",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2B33.1",
+    "description": "Myeloid leukaemia",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2B33.3",
+    "description": "Lymphoid leukaemia, not elsewhere classified",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2B33.4",
+    "description": "Leukaemia, unspecified",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2C10",
+    "description": "Neoplasms of haematopoietic or lymphoid tissues,",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2C94",
+    "description": "Malignant neoplasms of the pleura",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2E66",
+    "description": "Malignant neoplasms of thyroid gland",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2F33",
+    "description": "Benign neoplasm of other or unspecified female genital",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "3A01",
+    "description": "Megaloblastic anaemia due to vitamin B12 deficiency",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3B63",
+    "description": "Anaemia due to chronic disease",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3B64.Z",
+    "description": "Thrombocytopenia, unspecified",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3B81.B",
+    "description": "Hypersplenism",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "4A40",
+    "description": "Other specified primary immunodeficiencies",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "4A84",
+    "description": "Anaphylaxis",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "5A00",
+    "description": "Hypothyroidism",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A02",
+    "description": "Thyrotoxicosis",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A14",
+    "description": "Diabetes mellitus, type unspecified",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A22",
+    "description": "Diabetic acidosis",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A40",
+    "description": "Diabetic coma",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A60",
+    "description": "Hypoglycaemia without associated diabetes",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A70",
+    "description": "Cushing syndrome",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B52",
+    "description": "Delayed puberty",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55",
+    "description": "Stunting in infants, children or adolescents",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55.0",
+    "description": "Vitamin A deficiency with night blindness",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55.1",
+    "description": "Vitamin A deficiency with conjunctival xerosis",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55.2",
+    "description": "Vitamin A deficiency with conjunctival xerosis or Bitot\u2019s",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55.3",
+    "description": "Vitamin A deficiency with corneal xerosis",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B55.5",
+    "description": "Vitamin A deficiency with corneal ulceration or",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B56.0",
+    "description": "Scurvy",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B57.0",
+    "description": "Vitamin D deficiency rickets",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B59",
+    "description": "Vitamin E deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B80.0",
+    "description": "Overweight",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B91",
+    "description": "Obesity",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5C80",
+    "description": "Hyperosmolality or hypernatraemia",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "6B23",
+    "description": "Catatonia associated with another mental disorder",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
+    "code": "6D84",
+    "description": "Oppositional defiant disorder",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
+    "code": "6D85",
+    "description": "Dementia due to diseases classified elsewhere",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
+    "code": "7A80",
+    "description": "Chronic insomnia",
+    "category": "Sleep-wake disorders"
+  },
+  {
+    "code": "7B00.1",
+    "description": "Sleepwalking disorder",
+    "category": "Sleep-wake disorders"
+  },
+  {
+    "code": "7B00.2",
+    "description": "Sleep terrors",
+    "category": "Sleep-wake disorders"
+  },
+  {
+    "code": "7B01.2",
+    "description": "Nightmare disorder",
+    "category": "Sleep-wake disorders"
+  },
+  {
+    "code": "8A40",
+    "description": "Multiple sclerosis",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8A80",
+    "description": "Status epilepticus",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8B60",
+    "description": "Tension-type headache",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8B88.0",
+    "description": "Bell palsy",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8B94",
+    "description": "Brachial plexus disorders",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8C10",
+    "description": "Polyneuropathy, unspecified",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8C11",
+    "description": "Mononeuropathies of lower limb",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8D20",
+    "description": "Other specified disorders of nerve root, plexus or peripheral",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "9A60",
+    "description": "Other specified disorders of the ocular adnexa or orbit",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B10",
+    "description": "Infectious keratitis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B10.02",
+    "description": "Mature age-related cataract",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B10.20",
+    "description": "Traumatic cataract",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B10.21",
+    "description": "Diabetic cataract",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B51",
+    "description": "Scleritis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B71.0Z",
+    "description": "Diabetic retinopathy, unspecified",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B71.1",
+    "description": "Hypertensive retinopathy",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B73.0",
+    "description": "Retinal detachment with retinal break",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B75.0",
+    "description": "Age related macular degeneration",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9B78.12",
+    "description": "Retinal vasculitis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9C84",
+    "description": "Glaucoma suspect",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00",
+    "description": "Disorders of refraction",
+    "category": "Diseases of the visual system"
+  }
+] ;

@@ -1,0 +1,6000 @@
+ETHIOPIA SIMPLIFIED 
+VERSION INTERNATIONAL 
+CLASSIFICATION OF DISEASE 
+(ESV_ICD11)
+
+PRIMARY HOSPITAL EDITION
+
+ETHIOPIA SIMPLIFIED VERSION 
+INTERNATIONAL CLASSIFICATION 
+OF DISEASE (ESV_ICD11)
+PRIMARY HOSPITAL EDITION
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)
+
+Contents
+
+Chapter 1: Certain infectious or parasitic diseases   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 1
+Chapter 2: Neoplasms  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  10
+Chapter 3: Diseases of the blood or blood-forming organs  .   .   .   .   .   .   .   .   .   .   .   .   .   .  13
+Chapter 4: Diseases of the immune system   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  14
+Chapter 5: Endocrine, nutritional or metabolic diseases  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  15
+Chapter 6: Mental, behavioral or neurodevelopmental disorders  .   .   .   .   .   .   .   .   .   .  19
+Chapter 7: Sleep-wake disorders   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  23
+Chapter 8: Diseases of the nervous system   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 24
+Chapter 9: Diseases of the visual system  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  26
+Chapter 10: Diseases of the ear or mastoid process    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 29
+Chapter 11: Diseases of the circulatory system   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  31
+Chapter 12: Diseases of the respiratory system  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  34
+Chapter 13: Diseases of the digestive system   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  37
+Chapter 14: Diseases of the skin   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 42
+Chapter 15: Diseases of the musculoskeletal system or connective tissue   .   .   .   .   .  46
+Chapter 16: Diseases of the genitourinary system    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 49
+Chapter 17: Conditions related to sexual health    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 56
+Chapter 18: Pregnancy, childbirth or the puerperium    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 57
+Chapter 19: Certain conditions originating in the perinatal period   .   .   .   .   .   .   .   .   . 61
+Chapter 20: Developmental anomalies    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 65
+Chapter 21: Symptoms, signs or clinical findings, not elsewhere classified  .   .   .   .   .  67
+Chapter 22: Injury, poisoning or certain other consequences of external causes    . 72
+Chapter 23: External causes of morbidity or mortality  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  77
+Chapter 24: Factors influencing health status or contact with health services  .   .   .  80
+Chapter 25: Codes for special purposes   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  81
+Chapter X: Extension Codes  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  82
+
+PRIMARY HOSPITAL EDITION
+
+Chapter 1: Certain infectious or 
+parasitic diseases
+
+1A00
+
+1A02
+
+1A03
+
+1A07
+
+1A08
+
+1A0Y
+
+1A0Z
+
+1A1Z
+
+1A2Z
+
+1A31
+
+1A36
+
+- - - Cholera
+
+- - - Intestinal infections due to Shigella
+
+- - - Intestinal infections due to Escherichia coli
+
+- - - Typhoid fever
+
+- - - Paratyphoid fever
+
+- - - Other specified bacterial intestinal infections
+
+- - - Bacterial intestinal infections, unspecified
+
+- - - Bacterial foodborne intoxications, unspecified
+
+- - - Viral intestinal infections, unspecified
+
+- - - Giardiasis
+
+- - - Amoebiasis
+
+1A36 .10 - - - - - Amoebic liver abscess
+
+1
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1A36 .1Y
+
+- - - - - Amoebiasis of other specified sites
+
+1A3Y
+
+- - - Other specified protozoal intestinal infections
+
+1A40
+
+1A60
+
+1A61
+
+- - Gastroenteritis or colitis without specification of infectious 
+agent
+
+- - - Congenital syphilis
+
+- - - Early syphilis
+
+1A62 .1
+
+- - - - Cardiovascular late syphilis
+
+1A6Z
+
+1A70
+
+1A72
+
+1A73
+
+1A7Z
+
+1A80
+
+1A8Z
+
+1A90
+
+1A91
+
+1A92
+
+1A93
+
+1A94
+
+- - - Syphilis, unspecified
+
+- - - Gonococcal genitourinary infection
+
+- - - Gonococcal infection of other sites
+
+- - - Disseminated gonococcal infection
+
+- - - Gonococcal infection, unspecified
+
+- - - Chlamydial lymphogranuloma
+
+- - - Sexually transmissible infections due to chlamydia, 
+unspecified
+
+- - Chancroid
+
+- - Granuloma inguinale
+
+- - Trichomoniasis
+
+- - Sexually transmissible infestations
+
+- - Anogenital herpes simplex infection
+
+1A95 .0
+
+- - - Anal warts
+
+1A95 .1
+
+- - - Genital warts
+
+1B10.0
+
+- - - - Respiratory tuberculosis, confirmed
+
+2
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1B10.1
+
+- - - - Respiratory tuberculosis, not confirmed
+
+1B11.0
+
+- - - - Tuberculous meningitis
+
+1B11.3
+
+- - - - Tuberculous granuloma of brain
+
+1B11.Z
+
+- - - - Tuberculosis of the nervous system, unspecified
+
+1B12.4
+
+- - - - Tuberculosis of the musculoskeletal system
+
+1B12.5
+
+- - - - Tuberculosis of the genitourinary system
+
+1B12.6
+
+- - - - Tuberculous peripheral lymphadenopathy
+
+1B12.7
+
+- - - - Tuberculosis of the digestive system
+
+1B12.Y
+
+- - - - Tuberculosis of other specified organ or site
+
+1B13
+
+1B14
+
+1B1Z
+
+- - - Miliary tuberculosis
+
+- - - Latent tuberculosis
+
+- - - Tuberculosis, unspecified
+
+1B20.0
+
+- - - Paucibacillary leprosy
+
+1B20.1
+
+- - - Multibacillary leprosy
+
+1B20.2
+
+- - - Leprosy reactions
+
+1B20.Z
+
+- - - Leprosy, unspecified
+
+1B2Z
+
+- - Mycobacterial diseases, unspecified
+
+- - - Acute rheumatic fever without mention of heart 
+involvement
+
+- - - Acute rheumatic fever with heart involvement
+
+- - - Rheumatic chorea
+
+- - Scarlet fever
+
+1B40
+
+1B41
+
+1B42
+
+1B50
+
+3
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1B51
+
+1B52
+
+1B53
+
+- - Streptococcal pharyngitis
+
+- - Toxic shock syndrome
+
+- - Meningitis due to Streptococcus
+
+1B70.0
+
+- - - Erysipelas
+
+1B70.Z
+
+- - - Bacterial cellulitis or lymphangitis due to unspecified 
+bacterium
+
+1B71
+
+- - Necrotising fasciitis
+
+1B72.Z
+
+- - - Impetigo, unspecified
+
+1B74
+
+- - Superficial bacterial folliculitis
+
+1B75.0
+
+- - - Furuncle
+
+1B75.1
+
+- - - Carbuncle
+
+1B75.3
+
+- - - Pyogenic abscess of the skin
+
+1B95
+
+1B97
+
+1B98
+
+1C12
+
+1C13
+
+1C14
+
+1C15
+
+1C16
+
+1C17
+
+- - Brucellosis
+
+- - Anthrax
+
+- - Cat-scratch disease
+
+- - Whooping cough
+
+- - Tetanus
+
+- - Obstetrical tetanus
+
+- - Tetanus neonatorum
+
+- - Gas gangrene
+
+- - Diphtheria
+
+1C1C .0
+
+- - - Meningococcal meningitis
+
+4
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1C1C .2
+
+- - - Meningococcaemia
+
+1C20
+
+- - - Chlamydial conjunctivitis
+
+1C23 .0
+
+- - - - Initial stage of trachoma
+
+1C23 .1
+
+- - - - Active stage of trachoma
+
+1C23 .Z
+
+- - - - Trachoma, unspecified
+
+1C44
+
+1C4Y
+
+1C60
+
+1C62
+
+1C80
+
+1C81
+
+1C82
+
+- - Non-pyogenic bacterial infections of the skin
+
+- - Other specified bacterial diseases
+
+- - Human immunodeficiency virus disease associated with 
+tuberculosis
+
+- - Human immunodeficiency virus disease without mention of 
+tuberculosis or malaria
+
+- - Viral encephalitis not elsewhere classified
+
+- - Acute poliomyelitis
+
+- - Rabies
+
+1D00 .0
+
+- - - Bacterial encephalitis
+
+1D01 .0
+
+- - - Bacterial meningitis
+
+1D22
+
+1D2Z
+
+1D40
+
+1D47
+
+1D48
+
+- - Severe dengue
+
+- - Dengue fever, unspecified
+
+- - Chikungunya virus disease
+
+- - Yellow fever
+
+- - Zika virus disease
+
+1D60 .0
+
+- - - Ebola disease
+
+1D65
+
+- - Severe acute respiratory syndrome
+
+5
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1D6Y
+
+1D80
+
+1D84
+
+1D86
+
+1E32
+
+1E50
+
+- - Other specified zoonotic viral diseases
+
+- - Mumps
+
+- - Viral conjunctivitis
+
+- - Viral haemorrhagic fever, not elsewhere classified
+
+- - Influenza, virus not identified
+
+- - Acute viral hepatitis
+
+1E50 .0
+
+- - - Acute hepatitis A
+
+1E50 .1
+
+- - - Acute hepatitis B
+
+1E50 .2
+
+- - - Acute hepatitis C
+
+1E50 .4
+
+- - - Acute hepatitis E
+
+1E51
+
+- - Chronic viral hepatitis
+
+1E51 .Y
+
+- - - Other specified chronic viral hepatitis
+
+1E76
+
+1E80
+
+- - - Molluscum contagiosum
+
+- - - Common warts
+
+1E80 .1
+
+- - - - Plantar warts
+
+1E81
+
+1E90
+
+1E91
+
+1F00
+
+- - - Plane warts
+
+- - - Varicella
+
+- - - Zoster
+
+- - Herpes simplex infections
+
+1F00 .0
+
+- - - Herpes simplex infection of skin or mucous membrane
+
+1F03
+
+- - Measles
+
+1F03 .Y
+
+- - - Measles with other complications
+
+6
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1F23
+
+- - Candidosis
+
+1F23 .10
+
+- - - - Vulvovaginal candidosis
+
+1F23 .2
+
+- - - Candidosis of gastrointestinal tract
+
+1F27 .1
+
+- - - Cerebral cryptococcosis
+
+1F28
+
+- - Dermatophytosis
+
+1F28 .0
+
+- - - Dermatophytosis of scalp
+
+1F28 .1
+
+- - - Dermatophytosis of nail
+
+1F28 .2
+
+- - - Dermatophytosis of foot
+
+1F28 .3
+
+- - - Genitocrural dermatophytosis
+
+1F28 .4
+
+- - - Kerion
+
+1F28 .Y
+
+- - - Other specified dermatophytosis
+
+1F2C
+
+- - Mucormycosis
+
+1F2D .0
+
+- - - Pityriasis versicolor
+
+1F2Z
+
+1F40
+
+1F41
+
+1F42
+
+1F43
+
+1F4Z
+
+1F51
+
+1F53
+
+- - Mycoses, unspecified
+
+- - - Malaria due to Plasmodium falciparum
+
+- - - Malaria due to Plasmodium vivax
+
+- - - Malaria due to Plasmodium malariae
+
+- - - Malaria due to Plasmodium ovale
+
+- - - Malaria, unspecified
+
+- - - African trypanosomiasis
+
+- - - Chagas disease
+
+1F54 .0
+
+- - - - Visceral leishmaniasis
+
+7
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1F54 .1
+
+- - - - Cutaneous leishmaniasis
+
+1F54 .2
+
+- - - - Mucocutaneous leishmaniasis
+
+1F54 .Z
+
+- - - - Leishmaniasis, unspecified
+
+1F57
+
+- - - Toxoplasmosis
+
+1F57 .1
+
+- - - - Meningoencephalitis due to Toxoplasma gondii
+
+1F62
+
+1F64
+
+1F65
+
+- - - - Ascariasis
+
+- - - - Dracunculiasis
+
+- - - - Enterobiasis
+
+1F66 .3
+
+- - - - - Lymphatic filariasis
+
+1F66 .Z
+
+- - - - - Filariasis, unspecified
+
+1F68
+
+1F6A
+
+1F6B
+
+1F6G
+
+1F70
+
+- - - - Hookworm diseases
+
+- - - - Onchocerciasis
+
+- - - - Strongyloidiasis
+
+- - - - Trichuriasis
+
+- - - - Cysticercosis
+
+1F73 .Z
+
+- - - - - Echinococcosis, unspecified
+
+1F74
+
+- - - - Hymenolepiasis
+
+1F76 .0
+
+- - - - - Taeniasis due to Taenia solium
+
+1F76 .1
+
+- - - - - Taeniasis due to Taenia saginata
+
+1F86
+
+- - - - Schistosomiasis
+
+1F86 .0
+
+- - - - - Schistosomiasis due to Schistosoma haematobium
+
+1F86 .1
+
+- - - - - Schistosomiasis due to Schistosoma mansoni
+
+8
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION1F9Z
+
+1G00
+
+1G01
+
+1G02
+
+1G03
+
+1G2Y
+
+1G40
+
+1G41
+
+- - - Helminthiases, unspecified
+
+- - - Pediculosis
+
+- - - Myiasis
+
+- - - External hirudiniasis
+
+- - - Pthiriasis
+
+- - Other specified parasitic diseases
+
+- - Sepsis without septic shock
+
+- - Sepsis with septic shock
+
+9
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 2: Neoplasms
+
+2A00
+
+- - Primary neoplasms of brain
+
+2A00 .00 - - - - Glioblastoma of brain
+
+2A01
+
+- - Primary neoplasms of meninges
+
+2A0Z
+
+- - Other and unspecified neoplasms of brain or central 
+nervous system
+
+2A20 .4
+
+- - - - Polycythaemia vera
+
+2A3Z
+
+2A40
+
+2A4Z
+
+- - - Myelodysplastic syndromes, unspecified
+
+- - - Chronic myelomonocytic leukaemia
+
+- - - Myelodysplastic and myeloproliferative neoplasms, 
+unspecified
+
+2A60 .3Z
+
+- - - - Acute myeloid leukaemia, unspecified
+
+2A80
+
+- - - Follicular lymphoma
+
+2A85 .6
+
+- - - - Burkitt lymphoma including Burkitt leukaemia
+
+10
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION2B30
+
+- - Hodgkin lymphoma
+
+2B33.1
+
+- - - Myeloid leukaemia
+
+2B33.3
+
+- - - Lymphoid leukaemia, not elsewhere classified
+
+2B33.4
+
+- - - Leukaemia, unspecified
+
+2B3Z
+
+2B51
+
+2B55
+
+2B57
+
+2B6B
+
+2B6Z
+
+2B70
+
+2B72
+
+2B90
+
+2B92
+
+2C10
+
+- - Neoplasms of haematopoietic or lymphoid tissues, 
+unspecified
+
+- - - - Osteosarcoma, primary site
+
+- - - - Rhabdomyosarcoma, primary site
+
+- - - - Kaposi sarcoma, primary site
+
+- - - - Malignant neoplasms of nasopharynx
+
+- - - - Malignant neoplasms of lip, oral cavity or pharynx, 
+unspecified
+
+- - - - Malignant neoplasms of oesophagus
+
+- - - - Malignant neoplasms of stomach
+
+- - - - - - Malignant neoplasms of colon
+
+- - - - - - Malignant neoplasms of rectum
+
+- - - - Malignant neoplasm of pancreas
+
+2C12 .0
+
+- - - - - Malignant neoplasm of liver
+
+2C12 .01
+
+- - - - - - Hepatoblastoma
+
+- - - - Malignant neoplasms of gallbladder
+
+- - - - Malignant neoplasms of larynx
+
+- - - - Malignant neoplasms of trachea
+
+- - - - Malignant neoplasms of bronchus or lung
+
+2C13
+
+2C23
+
+2C24
+
+2C25
+
+11
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION2C26
+
+2C30
+
+2C63
+
+2C6Z
+
+2C77
+
+2C80
+
+2C82
+
+2C90
+
+2C94
+
+- - - - Malignant neoplasms of the pleura
+
+- - - - Melanoma of skin
+
+- - - - Malignant phyllodes tumour of breast
+
+- - - - Malignant neoplasms of breast, unspecified
+
+- - - - Malignant neoplasms of cervix uteri
+
+- - - - Malignant neoplasms of testis
+
+- - - - Malignant neoplasms of prostate
+
+- - - - Malignant neoplasms of kidney, except renal pelvis
+
+- - - - Malignant neoplasms of bladder
+
+2D02 .2
+
+- - - - - Retinoblastoma
+
+2D10
+
+2E66
+
+- - - - Malignant neoplasms of thyroid gland
+
+- - Carcinoma in situ of cervix uteri
+
+2E80 .0
+
+- - - - Lipoma
+
+2E86 .0
+
+- - - - Leiomyoma of uterus
+
+2E86 .2
+
+- - - - Rhabdomyoma
+
+2F30 .5
+
+- - - - Fibroadenoma of breast
+
+2F33
+
+- - - Benign neoplasm of other or unspecified female genital 
+organs
+
+12
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 3: Diseases of the blood or 
+blood-forming organs
+
+3A00 .0
+
+- - - - Acquired iron deficiency anaemia due to blood loss
+
+3A00 .1
+
+- - - - Acquired iron deficiency anaemia due to low intake
+
+3A00 .Z
+
+- - - - Iron deficiency anaemia, unspecified
+
+3A01
+
+- - - Megaloblastic anaemia due to vitamin B12 deficiency
+
+3A01 .2
+
+- - - - Vitamin B12 deficiency anaemia due to low intake
+
+3A02
+
+3A4Z
+
+- - - Folate deficiency anaemia
+
+- - - Haemolytic anaemias, unspecified
+
+3A70 .Z
+
+- - - Aplastic anaemia, unspecified
+
+3A71
+
+3A8Z
+
+3A94
+
+3B63
+
+- - Anaemia due to chronic disease
+
+- - - Polycythaemia, unspecified
+
+- - Acute posthaemorrhagic anaemia
+
+- - Thrombocytosis
+
+3B64.Z
+
+- - - Thrombocytopenia, unspecified
+
+3B81.B
+
+- - - Hypersplenism
+
+3C0Y
+
+- Other specified diseases of the blood or blood-forming 
+organs
+
+13
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 4: Diseases of the immune 
+system
+
+4A0Y
+
+4A20
+
+4A40
+
+- - Other specified primary immunodeficiencies
+
+- Acquired immunodeficiencies
+
+- - Lupus erythematosus
+
+4A40 .0
+
+- - - Systemic lupus erythematosus
+
+4A44 .2
+
+- - - Giant cell arteritis
+
+4A84
+
+- - Anaphylaxis
+
+4A85 .22 - - - - Allergic contact dermatitis due to food allergen
+
+4A8Y
+
+- - Allergic or hypersensitivity conditions of other specified 
+type
+
+4B4Y
+
+- Other specified diseases of the immune system
+
+14
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 5: Endocrine, nutritional or 
+metabolic diseases
+
+5A00
+
+- - - Hypothyroidism
+
+5A00 .0
+
+- - - - Congenital hypothyroidism
+
+5A00 .2
+
+- - - - Acquired hypothyroidism
+
+5A01 .0
+
+- - - - Nontoxic diffuse goitre
+
+5A01 .1
+
+- - - - Nontoxic single thyroid nodule
+
+5A01 .2
+
+- - - - Nontoxic multinodular goitre
+
+5A01 .Z
+
+- - - - Nontoxic goitre, unspecified
+
+5A02
+
+- - - Thyrotoxicosis
+
+5A02 .5
+
+- - - - Thyroid crisis
+
+- - - Thyroiditis
+
+- - - Type 1 diabetes mellitus
+
+- - - Type 2 diabetes mellitus
+
+5A03
+
+5A10
+
+5A11
+
+15
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION5A13 .4
+
+- - - - Diabetes mellitus due to drug or chemical
+
+5A14
+
+- - - Diabetes mellitus, type unspecified
+
+5A20 .0
+
+- - - - - Hyperosmolar hyperglycaemic state without coma
+
+5A20 .1
+
+- - - - - Hyperosmolar hyperglycaemic state with coma
+
+5A21 .Z
+
+- - - - - Hypoglycaemia in the context of diabetes, unspecified
+
+5A22
+
+- - - - Diabetic acidosis
+
+5A22 .0
+
+- - - - - Diabetic ketoacidosis without coma
+
+5A22 .3
+
+- - - - - Diabetic ketoacidosis with coma
+
+5A23
+
+5A24
+
+5A40
+
+- - - - Diabetic coma
+
+- - - - Uncontrolled or unstable diabetes mellitus
+
+- - - Intermediate hyperglycaemia
+
+5A40 .0
+
+- - - - Impaired fasting glucose
+
+5A41
+
+5A50
+
+5A60
+
+- - - Hypoglycaemia without associated diabetes
+
+- - - Hypoparathyroidism
+
+- - - Hyperfunction of pituitary gland
+
+5A60 .0
+
+- - - - Acromegaly or pituitary gigantism
+
+5A70
+
+- - - Cushing syndrome
+
+5A80 .1
+
+- - - - Polycystic ovary syndrome
+
+5A91
+
+5B50
+
+5B51
+
+5B52
+
+- - - Delayed puberty
+
+- - - Underweight in infants, children or adolescents
+
+- - - Wasting in infants, children or adolescents
+
+- - - Acute malnutrition in infants, children or adolescents
+
+16
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION5B53
+
+5B54
+
+5B55
+
+- - - Stunting in infants, children or adolescents
+
+- - - Underweight in adults
+
+- - - Vitamin A deficiency
+
+5B55.0
+
+- - - - Vitamin A deficiency with night blindness
+
+5B55.1
+
+- - - - Vitamin A deficiency with conjunctival xerosis
+
+5B55.2
+
+- - - - Vitamin A deficiency with conjunctival xerosis or Bitot’s 
+spots
+
+5B55.3
+
+- - - - Vitamin A deficiency with corneal xerosis
+
+5B55.4
+
+5B55.5
+
+- - - - Vitamin A deficiency with corneal ulceration or 
+keratomalacia
+
+- - - - Vitamin A deficiency with xerophthalmic scars of cornea 
+or blindness
+
+5B56.0
+
+- - - - Scurvy
+
+5B57.0
+
+- - - - Vitamin D deficiency rickets
+
+5B58
+
+5B59
+
+- - - Vitamin E deficiency
+
+- - - Vitamin K deficiency
+
+5B5A.0
+
+- - - - Beriberi
+
+5B5B
+
+- - - Vitamin B2 deficiency
+
+5B5C.0
+
+- - - - Pellagra
+
+5B5D
+
+- - - Vitamin B6 deficiency
+
+5B5E
+
+5B5F
+
+- - - Folate deficiency
+
+- - - Vitamin B12 deficiency
+
+5B5K.1
+
+- - - - Calcium deficiency
+
+17
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION5B5K.10
+
+- - - - - Tetany due to acute calcium deficiency
+
+5B5K.3
+
+- - - - Iodine deficiency
+
+5B7Z
+
+- - - Unspecified undernutrition
+
+5B80.0
+
+- - - - - Overweight
+
+5B81
+
+5B90
+
+5B91
+
+- - - - Obesity
+
+- - - - Vitamin excesses
+
+- - - - Mineral excesses
+
+5C61 .6
+
+- - - - Lactose intolerance
+
+5C70 .0
+
+- - - - Dehydration
+
+5C70 .1
+
+- - - - Hypovolaemia
+
+5C71
+
+5C72
+
+5C76
+
+5C77
+
+5C80
+
+- - - Hyperosmolality or hypernatraemia
+
+- - - Hypo-osmolality or hyponatraemia
+
+- - - Hyperkalaemia
+
+- - - Hypokalaemia
+
+- - - Hyperlipoproteinaemia
+
+5C80 .0
+
+- - - - Hypercholesterolaemia
+
+5C80 .1
+
+- - - - Hypertriglyceridaemia
+
+18
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 6: Mental, behavioral or 
+neurodevelopmental disorders
+
+- - Disorders of intellectual development
+
+- - Developmental speech or language disorders
+
+- - Autism spectrum disorder
+
+- - Developmental learning disorder
+
+- - Attention deficit hyperactivity disorder
+
+- - Other specified neurodevelopmental disorders
+
+- - Schizophrenia
+
+- - Schizoaffective disorder
+
+- - Schizotypal disorder
+
+- - Acute and transient psychotic disorder
+
+- - Delusional disorder
+
+- - Other specified primary psychotic disorder
+
+6A00
+
+6A01
+
+6A02
+
+6A03
+
+6A05
+
+6A0Y
+
+6A20
+
+6A21
+
+6A22
+
+6A23
+
+6A24
+
+6A2Y
+
+19
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION6A40
+
+6A41
+
+6A4Z
+
+6A60
+
+6A61
+
+6A62
+
+6A6Z
+
+6A71
+
+6A72
+
+6A73
+
+6A7Z
+
+6A8Z
+
+6B00
+
+6B01
+
+6B02
+
+6B03
+
+6B04
+
+6B05
+
+6B06
+
+6B0Z
+
+6B20
+
+6B23
+
+- - Catatonia associated with another mental disorder
+
+- - Catatonia induced by substances or medications
+
+- - Catatonia, unspecified
+
+- - - Bipolar type I disorder
+
+- - - Bipolar type II disorder
+
+- - - Cyclothymic disorder
+
+- - - Bipolar or related disorders, unspecified
+
+- - - Recurrent depressive disorder
+
+- - - Dysthymic disorder
+
+- - - Mixed depressive and anxiety disorder
+
+- - - Depressive disorders, unspecified
+
+- - Mood disorders, unspecified
+
+- - Generalised anxiety disorder
+
+- - Panic disorder
+
+- - Agoraphobia
+
+- - Specific phobia
+
+- - Social anxiety disorder
+
+- - Separation anxiety disorder
+
+- - Selective mutism
+
+- - Anxiety or fear-related disorders, unspecified
+
+- - Obsessive-compulsive disorder
+
+- - Hypochondriasis
+
+20
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION- - Post traumatic stress disorder
+
+- - Prolonged grief disorder
+
+- - Adjustment disorder
+
+- - Disorders specifically associated with stress, unspecified
+
+- - Dissociative neurological symptom disorder
+
+- - Dissociative amnesia
+
+- - Dissociative identity disorder
+
+- - Depersonalization-derealization disorder
+
+- - Anorexia Nervosa
+
+- - Bulimia Nervosa
+
+- - Pica
+
+- - Feeding or eating disorders, unspecified
+
+- - Enuresis
+
+- - - Disorders due to use of alcohol
+
+- - - Disorders due to use of cannabis
+
+- - - Disorders due to use of opioids
+
+- - - Disorders due to use of cocaine
+
+ - - - Disorders due to use of stimulants including 
+amphetamines, methamphetamine or methcathinone
+
+- - - Disorders due to use of nicotine
+
+- - - Disorders due to substance use, unspecified
+
+- - Intermittent explosive disorder
+
+6B40
+
+6B42
+
+6B43
+
+6B4Z
+
+6B60
+
+6B61
+
+6B64
+
+6B66
+
+6B80
+
+6B81
+
+6B84
+
+6B8Z
+
+6C00
+
+6C40
+
+6C41
+
+6C43
+
+6C45
+
+6C46
+
+6C4A
+
+6C4Z
+
+6C73
+
+21
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION6C90
+
+6C91
+
+6D10
+
+6D30
+
+6D5Z
+
+6D70
+
+6D71
+
+6D72
+
+6D80
+
+6D84
+
+- - Oppositional defiant disorder
+
+- - Conduct-dissocial disorder
+
+- - Personality disorder
+
+- - Exhibitionistic disorder
+
+- - Factitious disorders, unspecified
+
+- - Delirium
+
+- - Mild neurocognitive disorder
+
+- - Amnestic disorder
+
+- - - Dementia due to Alzheimer disease
+
+- - - Dementia due to psychoactive substances including 
+medications
+
+6D85
+
+- - - Dementia due to diseases classified elsewhere
+
+6D85 .3
+
+- - - - Dementia due to human immunodeficiency virus
+
+6D85 .7
+
+- - - - Dementia due to injury to the head
+
+6D8Z
+
+6E0Y
+
+6E20
+
+6E21
+
+6E2Z
+
+- - - Dementia, unknown or unspecified cause
+
+- - Other specified neurocognitive disorders
+
+ - - Mental or behavioural Disorders associated with 
+pregnancy, childbirth or the puerperium, without psychotic 
+symptoms
+
+ - - Mental or behavioural Disorders associated with 
+pregnancy, childbirth or the puerperium, with psychotic 
+symptoms
+
+- - Mental or behavioural disorders associated with pregnancy, 
+childbirth or the puerperium, unspecified
+
+22
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 7: Sleep-wake disorders
+
+7A00
+
+7A0Z
+
+7A20
+
+7A40
+
+7A41
+
+7A64
+
+7A80
+
+- - Chronic insomnia
+
+- - Insomnia disorders, unspecified
+
+- - Narcolepsy
+
+- - Central sleep apnoeas
+
+- - Obstructive sleep apnoea
+
+- - Circadian rhythm sleep-wake disorder, shift work type
+
+- - Restless legs syndrome
+
+7B00.1
+
+- - - Sleepwalking disorder
+
+7B00.2
+
+- - - Sleep terrors
+
+7B01.2
+
+- - - Nightmare disorder
+
+23
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 8: Diseases of the nervous 
+system
+
+8A00 .0
+
+- - - Parkinson disease
+
+8A02
+
+8A03
+
+8A05
+
+8A0Y
+
+8A20
+
+8A21
+
+8A2Y
+
+- - Dystonic disorders
+
+- - Ataxic disorders
+
+- - Tic disorders
+
+- - Other specified movement disorders
+
+- - Alzheimer disease
+
+- - Progressive focal atrophies
+
+- - Other specified disorders with neurocognitive impairment 
+as a major feature
+
+8A40
+
+- - Multiple sclerosis
+
+8A41 .0
+
+- - - Transverse myelitis
+
+8A62 .0
+
+- - - Infantile spasms
+
+8A63 .0
+
+- - - Febrile seizures
+
+8A66
+
+8A6Y
+
+8A80
+
+- - Status epilepticus
+
+- - Other specified epilepsy or seizures
+
+- - Migraine
+
+24
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION8A81
+
+8B00
+
+8B10
+
+8B11
+
+8B20
+
+8B24
+
+8B42
+
+8B60
+
+- - Tension-type headache
+
+- - - Intracerebral haemorrhage
+
+- - - Transient ischaemic attack
+
+- - - Cerebral ischaemic stroke
+
+- - Stroke not known if ischaemic or haemorrhagic
+
+- - Hypoxic-ischaemic encephalopathy
+
+- - Myelopathy
+
+- - Motor neuron disease
+
+8B88.0
+
+- - - - Bell palsy
+
+8B91
+
+8B94
+
+- - - Brachial plexus disorders
+
+- - - Diabetic radiculoplexoneuropathy
+
+8C03 .0
+
+- - - - Diabetic polyneuropathy
+
+8C0Z
+
+8C10
+
+- - - Polyneuropathy, unspecified
+
+- - - Mononeuropathies of upper limb
+
+8C10 .0
+
+- - - - Carpal tunnel syndrome
+
+8C11
+
+- - - Mononeuropathies of lower limb
+
+8C12 .0
+
+- - - - Intercostal neuropathy
+
+8C4Y
+
+8C71
+
+8D20
+
+- - Other specified disorders of nerve root, plexus or peripheral 
+nerves
+
+- - - Myotonic disorders
+
+- - Spastic cerebral palsy
+
+8D64 .Z
+
+- - - Hydrocephalus, unspecified
+
+- - Reye syndrome
+
+- Other specified diseases of the nervous system
+
+8E46
+
+8E7Y
+
+25
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 9: Diseases of the visual 
+system
+
+9A01 .3
+
+- - - - Infectious blepharitis
+
+9A02 .0
+
+- - - - Chalazion
+
+9A03 .4
+
+- - - - Lagophthalmos
+
+9A04 .0
+
+- - - - Trichiasis without entropion
+
+9A11 .5
+
+- - - - Nasolacrimal canalicular stenosis
+
+9A11 .8
+
+- - - - Nasolacrimal duct obstruction
+
+9A21 .0
+
+- - - - Orbital cellulitis
+
+9A4Y
+
+9A60
+
+- - Other specified disorders of the ocular adnexa or orbit
+
+- - - Conjunctivitis
+
+9A60 .02 - - - - - Allergic conjunctivitis
+
+9A61 .1
+
+- - - - Pterygium
+
+9A61 .5
+
+- - - - Conjunctival or subconjunctival haemorrhage
+
+26
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION9A71
+
+9A76
+
+9A77
+
+9A80
+
+9B10
+
+- - - Infectious keratitis
+
+- - - Corneal ulcer
+
+- - - Corneal scars or opacities
+
+- - - Hyphaema
+
+- - - Cataract
+
+9B10.02
+
+- - - - - Mature age-related cataract
+
+9B10.20
+
+- - - - - Traumatic cataract
+
+9B10.21
+
+- - - - - Diabetic cataract
+
+9B51
+
+- - - Scleritis
+
+9B71.0Z
+
+- - - - - Diabetic retinopathy, unspecified
+
+9B71.1
+
+- - - - Hypertensive retinopathy
+
+9B73.0
+
+- - - - Retinal detachment with retinal break
+
+9B75.0
+
+- - - - Age related macular degeneration
+
+9B78.12
+
+- - - - - Retinal vasculitis
+
+9C40 .A0 - - - - Papilloedema
+
+9C60
+
+9C61
+
+9C84
+
+- - Glaucoma suspect
+
+- - Glaucoma
+
+- - Nystagmus
+
+9D00
+
+- - Disorders of refraction
+
+9D00 .0
+
+- - - Myopia
+
+9D00 .1
+
+- - - Hypermetropia
+
+27
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITION9D00 .2
+
+- - - Astigmatism
+
+9D00 .3
+
+- - - Presbyopia
+
+9D00 .4
+
+- - - Anisometropia
+
+9D90 .4
+
+- - - Blindness, binocular
+
+9D90 .5
+
+- - - Blindness, monocular
+
+9D91
+
+9E1Y
+
+- - Near vision deficits
+
+- Other specified diseases of the visual system
+
+28
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 10: Diseases of the ear or 
+mastoid process
+
+- - - Abscess of external ear
+
+- - - Cellulitis of external ear
+
+- - - Malignant otitis externa
+
+- - - Otomycosis
+
+- - - Perichondritis of external ear
+
+- - - - Seborrhoeic otitis externa
+
+- - - - Chronic otitis externa
+
+- - - Impacted cerumen
+
+- - - - Acute suppurative otitis media
+
+- - - - Chronic suppurative otitis media
+
+- - - Acute otitis media
+
+- - - Chronic otitis media
+
+AA00
+
+AA01
+
+AA02
+
+AA03
+
+AA04
+
+AA10
+
+AA13
+
+AA42
+
+AA90
+
+AA91
+
+AB00
+
+AB01
+
+29
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONAB0Z
+
+AB11
+
+- - - Otitis media, unspecified
+
+- - Mastoiditis or related conditions
+
+AB11.0
+
+- - - Acute mastoiditis
+
+AB11.1
+
+- - - Chronic mastoiditis
+
+AB12
+
+AB13
+
+AB14
+
+AB15
+
+AB1Y
+
+- - Cholesteatoma of middle ear
+
+- - Perforation of tympanic membrane
+
+- - Acute myringitis
+
+- - Chronic myringitis
+
+- - Other specified diseases of middle ear or mastoid
+
+AB30.0
+
+- - - Vestibular neuritis
+
+AB31.0
+
+- - - Meniere disease
+
+AB33
+
+AB3Y
+
+- - Otosclerosis
+
+- - Other specified diseases of inner ear
+
+AB51.Z
+
+- - - Acquired hearing impairment, unspecified
+
+AB53
+
+AB55
+
+AB5Z
+
+- - Ototoxic hearing loss
+
+- - Sudden idiopathic hearing loss
+
+- - Disorders with hearing impairment, unspecified
+
+AB70.2
+
+- - - Otalgia
+
+AC0Z
+
+- Diseases of the ear or mastoid process, unspecified
+
+30
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 11: Diseases of the 
+circulatory system
+
+BA00
+
+BA03
+
+BA04
+
+BA20
+
+BA21
+
+BA2Z
+
+BA40
+
+- - Essential hypertension
+
+- - Hypertensive crisis
+
+- - Secondary hypertension
+
+- - Idiopathic hypotension
+
+- - Orthostatic hypotension
+
+- - Hypotension, unspecified
+
+- - - Angina pectoris
+
+BA41.Z
+
+- - - - Acute myocardial infarction, unspecified
+
+BA4Z
+
+BA50
+
+BA6Z
+
+BA8Y
+
+- - - Acute ischaemic heart disease, unspecified
+
+- - - Old myocardial infarction
+
+- - Ischaemic heart diseases, unspecified
+
+- - Other specified diseases of coronary artery
+
+BB00.Z
+
+- - - Pulmonary thromboembolism, unspecified
+
+31
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONBB01
+
+BB20
+
+BB23
+
+BB24
+
+BB25
+
+BB2Z
+
+BB40
+
+BB60
+
+BB61
+
+BB62
+
+BB6Z
+
+BB70
+
+BB71
+
+BB7Z
+
+BB8Z
+
+BB9Z
+
+- - Pulmonary hypertension
+
+- - Acute pericarditis
+
+- - Cardiac tamponade
+
+- - Haemopericardium
+
+- - Pericardial effusion
+
+- - Pericarditis, unspecified
+
+- - Acute or subacute infectious endocarditis
+
+- - - Mitral valve stenosis
+
+- - - Mitral valve insufficiency
+
+- - - Mitral valve prolapse
+
+- - - Mitral valve disease, unspecified
+
+- - - Aortic valve stenosis
+
+- - - Aortic valve insufficiency
+
+- - - Aortic valve disease, unspecified
+
+- - - Tricuspid valve disease, unspecified
+
+- - - Pulmonary valve disease, unspecified
+
+BC20.1
+
+- - Rheumatic heart disease, unspecified
+
+BC42.Z
+
+- - - Myocarditis, unspecified
+
+BC43.7
+
+- - - Diabetic cardiomyopathy
+
+BC45
+
+- - Cardiomegaly
+
+BC4Y
+
+- - Other specified diseases of the myocardium or cardiac 
+chambers
+
+32
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONBC81.3
+
+- - - - Atrial fibrillation
+
+BC9Y
+
+BD10
+
+BD1Z
+
+BD4Z
+
+BD50
+
+BD54
+
+BD70
+
+BD71
+
+BD72
+
+- - Other specified cardiac arrhythmia
+
+- - Congestive heart failure
+
+- - Heart failure, unspecified
+
+- - - Chronic arterial occlusive disease, unspecified
+
+- - Aortic aneurysm or dissection
+
+- - Diabetic foot ulcer
+
+- - Superficial thrombophlebitis
+
+- - Deep vein thrombosis
+
+- - Venous thromboembolism
+
+BD73.20 - - - - Obstruction of peripheral vein
+
+BD74.1
+
+- - - Lower limb varicose veins
+
+BD74.30 - - - - Primary venous leg ulcer
+
+BD90
+
+- - Lymphadenitis
+
+BD90.0
+
+- - - Acute lymphadenitis
+
+BD90.2
+
+- - - Chronic lymphadenitis
+
+BD93
+
+- - Lymphoedema
+
+BD93.0
+
+- - - Primary lymphoedema
+
+BD93.1
+
+- - - Secondary lymphoedema
+
+- - Other specified disorders of lymphatic vessels or lymph 
+nodes
+
+- - Lymphoedema due to surgery or radiotherapy
+
+- Other specified diseases of the circulatory system
+
+BD9Y
+
+BE1B
+
+BE2Y
+
+33
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 12: Diseases of the 
+respiratory system
+
+CA00
+
+CA01
+
+- - Acute nasopharyngitis
+
+- - Acute sinusitis
+
+CA02 .1
+
+- - - Acute viral pharyngitis
+
+CA02 .Z
+
+- - - Acute pharyngitis, unspecified
+
+CA03 .Z
+
+- - - Acute tonsillitis, unspecified
+
+CA04
+
+CA06
+
+- - Acute laryngopharyngitis
+
+- - Acute obstructive laryngitis or epiglottitis
+
+CA06 .1
+
+- - - Acute epiglottitis
+
+CA08 .0
+
+- - - Allergic rhinitis
+
+CA09 .0
+
+- - - Chronic rhinitis
+
+CA09 .1
+
+- - - Chronic nasopharyngitis
+
+CA09 .2
+
+- - - Chronic pharyngitis
+
+34
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONCA0A
+
+CA0C
+
+CA0D
+
+CA0E
+
+- - Chronic rhinosinusitis
+
+- - Cyst or mucocele of nose or nasal sinus
+
+- - Deviated nasal septum
+
+- - Hypertrophy of nasal turbinates
+
+CA0F .0
+
+- - - Hypertrophy of tonsils
+
+CA0G
+
+- - Chronic laryngitis or laryngotracheitis
+
+CA0H .3
+
+- - - Oedema of larynx
+
+CA0H .4
+
+- - - Laryngeal spasm
+
+CA0J
+
+- - Nasal polyp
+
+CA0K.0
+
+- - - Retropharyngeal or parapharyngeal abscess
+
+CA0K.1
+
+- - - Peritonsillar abscess
+
+CA20 .1
+
+- - - Chronic bronchitis
+
+CA21
+
+CA22
+
+CA23
+
+- - Emphysema
+
+- - Chronic obstructive pulmonary disease
+
+- - Asthma
+
+CA23 .30 - - - - Unspecified asthma with exacerbation
+
+CA23 .31 - - - - Unspecified asthma with status asthmaticus
+
+- - Bronchiectasis
+
+- - Cystic fibrosis
+
+- - Chronic bronchiolitis
+
+- - Tracheobronchitis
+
+- - Pneumonia
+
+CA24
+
+CA25
+
+CA26
+
+CA27
+
+CA40
+
+35
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONCA40 .0
+
+- - - Bacterial pneumonia
+
+CA40 .1
+
+- - - Viral pneumonia
+
+CA41
+
+CA42
+
+CA43
+
+CA44
+
+CA4Z
+
+CA60
+
+CA7Z
+
+CA82
+
+CB00
+
+CB01
+
+CB02
+
+CB21
+
+CB22
+
+CB24
+
+CB25
+
+CB26
+
+- - Acute bronchiolitis
+
+- - Acute bronchitis
+
+- - Abscess of lung or mediastinum
+
+- - Pyothorax
+
+- - Lung infections, unspecified
+
+- - Pneumoconiosis
+
+- - - Pneumonitis, unspecified
+
+- - Respiratory conditions due to other external agents
+
+- - Acute respiratory distress syndrome
+
+- - Pulmonary oedema
+
+- - Pulmonary eosinophilia
+
+- - Pneumothorax
+
+- - Diseases of mediastinum, not elsewhere classified
+
+- - Chylous effusion
+
+- - Fibrothorax
+
+- - Haemothorax
+
+CB40.Y
+
+- - Other specified diseases of the respiratory system
+
+CB41.0
+
+- - Acute respiratory failure
+
+CB41.1
+
+- - Chronic respiratory failure
+
+36
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 13: Diseases of the 
+digestive system
+
+DA00 .0
+
+- - - Cheilitis
+
+DA01 .10 - - - - Oral aphthae or aphtha-like ulceration
+
+DA01 .15 - - - - Mouth ulcers
+
+DA01 .30 - - - - Cellulitis or abscess of soft tissues of the mouth
+
+DA02 .1
+
+- - - Xerostomia
+
+DA03 .0
+
+- - - Glossitis
+
+DA04 .2
+
+- - - Sialoadenitis
+
+DA04 .3
+
+- - - Abscess of salivary gland
+
+DA04 .4
+
+- - - Sialolithiasis
+
+DA04 .5
+
+- - - Mucocele of salivary gland
+
+DA05
+
+- - Cysts of oral or facial-neck region
+
+DA06 .0
+
+- - - Inflammatory conditions of jaws
+
+DA08 .0
+
+- - - Dental caries
+
+37
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONDA09 .6
+
+- - - Periapical abscess
+
+DA0A
+
+DA0B
+
+DA0C
+
+- - Certain specified disorders of teeth or supporting structures
+
+- - Gingival diseases
+
+- - Periodontal disease
+
+DA0C .0
+
+- - - Acute periodontitis
+
+DA0C .31 - - - - Noma
+
+DA0C .4
+
+- - - Abscess of periodontium
+
+DA0E
+
+- - Dentofacial anomalies
+
+DA0E .8
+
+- - - Temporomandibular joint disorders
+
+DA20 .0
+
+- - - Oesophageal obstruction
+
+DA20 .3
+
+- - - Perforation of oesophagus
+
+DA21
+
+DA22
+
+DA24
+
+DA25
+
+DA2Y
+
+- - Motility disorders of oesophagus
+
+- - Gastro-oesophageal reflux disease
+
+- - Oesophagitis
+
+- - Oesophageal ulcer
+
+- - Other specified diseases of oesophagus
+
+DA40 .0
+
+- - - - Gastric outlet obstruction
+
+DA42
+
+- - - Gastritis
+
+DA42 .1
+
+- - - - Helicobacter pylori induced gastritis
+
+DA42 .8
+
+- - - - Gastritis due to external causes
+
+DA42 .Y
+
+- - - - Other specified gastritis
+
+DA51
+
+- - - Duodenitis
+
+38
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONDA51 .0
+
+- - - - Helicobacter-pylori associated duodenitis
+
+DA60
+
+- - - Gastric ulcer
+
+DA60 .3
+
+- - - - Stress ulcer of stomach
+
+DA61
+
+DA63
+
+DA91
+
+- - - Peptic ulcer, site unspecified
+
+- - - Duodenal ulcer
+
+- - Obstruction of small intestine
+
+DA93 .0
+
+- - - Paralytic ileus
+
+DB10
+
+DB30
+
+- - Appendicitis
+
+- - Obstruction of large intestine
+
+DB30.1
+
+- - - Volvulus of large intestine
+
+DB30.3
+
+- - - Impaction of large intestine
+
+DB31.2
+
+- - - Rectal prolapse
+
+DB35
+
+DB36
+
+- - Polyp of large intestine
+
+- - Certain infections of the large intestine
+
+DB50.0
+
+- - - - Anal fissure
+
+DB50.1
+
+- - - - Anal fistula
+
+- - - Stenosis of anal canal
+
+- - - Ulcer of anus
+
+- - - Anal prolapse
+
+- - - Haemorrhoids
+
+- - - Perianal venous thrombosis
+
+- - - Residual haemorrhoidal skin tags
+
+DB51
+
+DB52
+
+DB53
+
+DB60
+
+DB61
+
+DB62
+
+39
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONDB70
+
+- - Infections of the anal region
+
+DB70.00 - - - - Anal abscess
+
+DB71
+
+DB7Z
+
+DB91
+
+DB92
+
+- - Anal polyp
+
+- - Diseases of anal canal, unspecified
+
+- - Acute or subacute hepatic failure
+
+- - Non-alcoholic fatty liver disease
+
+DB93.1
+
+- - - Hepatic cirrhosis
+
+DB94
+
+DB95
+
+DB98
+
+- - Alcoholic liver disease
+
+- - Drug-induced or toxic liver disease
+
+- - Vascular disorders of the liver
+
+DB98.7
+
+- - - Portal hypertension
+
+DB99.0
+
+- - - Chronic liver disease
+
+DB99.5
+
+- - - Hepatic encephalopathy
+
+DC10 .0
+
+- - - Obstruction of gallbladder or bile ducts
+
+DC11
+
+DC12
+
+DC13
+
+DC1Y
+
+DC31
+
+DC32
+
+DC34
+
+DC50
+
+- - Cholelithiasis
+
+- - Cholecystitis
+
+- - Cholangitis
+
+- - Other specified diseases of gallbladder or biliary tract
+
+- - Acute pancreatitis
+
+- - Chronic pancreatitis
+
+- - Obstructive pancreatitis
+
+- - Peritonitis
+
+40
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONDC50 .2
+
+- - - Peritoneal abscess
+
+DC51 .2
+
+- - - Haemoperitoneum
+
+DC70
+
+DC71
+
+DC72
+
+DC80
+
+DC81
+
+DC82
+
+- - - Diverticulitis of small intestine
+
+- - - Diverticulosis of small intestine
+
+- - - Diverticulum of small intestine
+
+- - - Diverticulitis of large intestine
+
+- - - Diverticulosis of large intestine
+
+- - - Diverticulum of large intestine
+
+DD31 .00 - - - - Ischaemic colitis
+
+DD50
+
+DD51
+
+DD52
+
+DD53
+
+DD54
+
+DD55
+
+DD56
+
+DD57
+
+DD5Z
+
+- - Non-abdominal wall hernia
+
+- - Inguinal hernia
+
+- - Femoral hernia
+
+- - Umbilical hernia
+
+- - Paraumbilical hernia
+
+- - Epigastric hernia
+
+- - Incisional hernia
+
+- - Parastomal hernia
+
+- - Hernias, unspecified
+
+DD91 .0
+
+- - - Irritable bowel syndrome
+
+DD91 .2
+
+- - - Functional diarrhoea
+
+DD93 .1
+
+- - - Infantile colic
+
+- - Vomiting following gastrointestinal surgery
+
+- Other specified diseases of the digestive system
+
+DE10
+
+DE2Y
+
+41
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 14: Diseases of the skin
+
+EA10
+
+- - - - Pityriasis rosea
+
+EA60 .0
+
+- - - Subcutaneous mycoses
+
+EA80
+
+- - - Atopic eczema
+
+EA80 .0
+
+- - - - Infantile atopic eczema
+
+EA80 .1
+
+- - - - Childhood atopic eczema
+
+EA80 .2
+
+- - - - Adult atopic eczema
+
+EA81 .0
+
+- - - - Seborrhoeic dermatitis of face
+
+EA81 .1
+
+- - - - Seborrhoeic dermatitis of the scalp
+
+EA81 .Z
+
+- - - - Seborrhoeic dermatitis, unspecified
+
+EA82
+
+EA83
+
+EA84
+
+- - - Nummular dermatitis
+
+- - - Lichen simplex or lichenification
+
+- - - Asteatotic eczema
+
+42
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONEA88 .4
+
+- - - - Pityriasis alba
+
+EA8Z
+
+EA90
+
+- - - Dermatitis or eczema, unspecified
+
+- - - Psoriasis
+
+EA90 .0
+
+- - - - Plaque psoriasis
+
+EA90 .4
+
+- - - - Pustular psoriasis
+
+EA90 .50
+
+- - - - - Scalp psoriasis
+
+EA90 .53
+
+- - - - - Anogenital psoriasis
+
+EA91
+
+EA92
+
+- - - Lichen planus
+
+- - - Lichenoid dermatoses
+
+EB00.0
+
+- - - - Acute urticaria
+
+EB00.1
+
+- - - - Chronic urticaria
+
+EB04
+
+EB05
+
+EB12
+
+- - - Idiopathic angioedema
+
+- - - Urticaria of unspecified type
+
+- - - Erythema multiforme
+
+EB13.0
+
+- - - - Stevens-Johnson syndrome
+
+EB31
+
+EB51
+
+- - - Erythema nodosum
+
+- - - Chronic cutaneous lupus erythematosus
+
+EB51.0
+
+- - - - Discoid lupus erythematosus
+
+EB90.0
+
+- - - Diabetic skin lesions
+
+EB90.3
+
+- - - Porphyria or pseudoporphyria affecting the skin
+
+EC23 .20
+
+- - - - Oculocutaneous albinism
+
+EC90
+
+- - - Pruritus
+
+43
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONEC90 .1
+
+- - - - Pruritus due to systemic disorder
+
+EC90 .5
+
+- - - - Anogenital pruritus
+
+EC91
+
+- - - Prurigo
+
+ED30 .0
+
+- - - - Neuropathic skin ulceration
+
+ED54
+
+- - - - Xerosis cutis or asteatosis
+
+ED60 .1
+
+- - - - - Melasma
+
+ED60 .2
+
+- - - - - Postinflammatory hypermelanosis
+
+ED63 .0
+
+- - - - - Vitiligo
+
+ED6Y
+
+- - - - Other specified disorders of skin pigmentation
+
+ED70 .2
+
+- - - - - Alopecia areata
+
+ED72
+
+- - - - Hirsutism and syndromes with hirsutism
+
+ED80 .Z
+
+- - - - - - Acne, unspecified
+
+ED90 .0
+
+- - - - - Rosacea
+
+ED90 .1
+
+- - - - - Periorificial dermatitis
+
+ED91 .2
+
+- - - - - Seborrhoea
+
+EE12 .0
+
+- - - - - Acute bacterial paronychia
+
+EE12 .1
+
+- - - - - Onychomycosis
+
+EE13 .1
+
+- - - - - Ingrowing nail
+
+EE13 .2
+
+- - - - - Chronic paronychia
+
+EE60
+
+- - - - - Keloid or hypertrophic scars
+
+EG30.0
+
+- - - - Scalp folliculitis
+
+EG60
+
+- - - - Anal pruritus
+
+44
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONEG62
+
+EH11
+
+- - - - Inflammatory dermatoses of the perianal area
+
+- - - - Neonatal pyogenic skin infections
+
+EH40 .0
+
+- - - Infantile seborrhoeic dermatitis
+
+EH40 .1
+
+- - - Infantile napkin dermatoses
+
+EH66
+
+EH90
+
+- - - Fixed drug eruption
+
+- - Pressure ulceration
+
+EH92 .0
+
+- - - Corns or callosities
+
+EH93 .0
+
+- - - Tattoos or tattoo reactions
+
+EJ30
+
+EJ40
+
+EK00
+
+EK02
+
+EK10
+
+- - - Autoimmune or other photodermatoses
+
+- - - - Sunburn
+
+- - Allergic contact dermatitis
+
+- - Irritant contact dermatitis
+
+- - Allergic contact urticaria
+
+EK50.00
+
+- - - - Papular urticaria
+
+EK70.0
+
+- - - Epidermoid cyst
+
+EK70.Z
+
+- - - Cutaneous cysts, unspecified
+
+EK71
+
+- - Skin tags or polyps
+
+EM0Y
+
+- Other specified diseases of the skin
+
+45
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 15: Diseases of the 
+musculoskeletal system or 
+connective tissue
+
+FA00
+
+FA01
+
+FA02
+
+FA04
+
+FA11
+
+FA12
+
+FA13
+
+FA1Y
+
+FA20
+
+FA21
+
+FA24
+
+FA25
+
+FA30
+
+- - - Osteoarthritis of hip
+
+- - - Osteoarthritis of knee
+
+- - - Osteoarthritis of wrist and hand
+
+- - - Oligoosteoarthritis
+
+- - - Reactive arthropathies
+
+- - - Postinfectious arthropathies
+
+- - - Infectious spondyloarthritis
+
+- - - Other specified infection related arthropathies
+
+- - - Rheumatoid arthritis
+
+- - - Psoriatic arthritis
+
+- - - Juvenile idiopathic arthritis
+
+- - - Gout
+
+- - - Acquired deformities of fingers or toes
+
+46
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONFA30 .0
+
+- - - - Acquired hallux valgus
+
+FA31
+
+FA32
+
+- - - Other acquired deformities of limbs
+
+- - - Disorders of patella
+
+FA38 .0
+
+- - - - Diabetic arthropathy
+
+FA5Y
+
+FA70
+
+- - Other specified arthropathies
+
+- - - Spinal deformities
+
+FA70 .0
+
+- - - - Kyphosis
+
+FA70 .1
+
+- - - - Scoliosis
+
+FA70 .2
+
+- - - - Lordosis
+
+FA71
+
+FA80
+
+FA81
+
+FA82
+
+FA83
+
+FA85
+
+FB1Y
+
+FB40
+
+- - - Torticollis
+
+- - - Intervertebral disc degeneration
+
+- - - Spondylolysis
+
+- - - Spinal stenosis
+
+- - - Ossification of spinal ligaments
+
+- - - Spinal endplate defects
+
+- - Other specified conditions associated with the spine
+
+- - - Tenosynovitis
+
+FB40.1
+
+- - - - Plantar fasciitis
+
+FB40.4
+
+- - - - Trigger finger
+
+FB41
+
+- - - Spontaneous rupture of synovium or tendon
+
+FB42.2
+
+- - - - Ganglion
+
+FB4Y
+
+- - - Other specified disorders of synovium or tendon
+
+47
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONFB51
+
+- - - Fibroblastic disorders
+
+FB54.3
+
+- - - - Calcaneal spur
+
+FB55.0
+
+- - - - Medial epicondylitis of elbow
+
+FB55.1
+
+- - - - Lateral epicondylitis of elbow
+
+FB6Z
+
+- - Soft tissue disorders, unspecified
+
+FB80.7
+
+- - - Malunion of fracture
+
+FB80.8
+
+- - - Nonunion of fracture
+
+FB80.9
+
+- - - Delayed union of fracture
+
+FB80.A
+
+- - - Stress fracture, not elsewhere classified
+
+FB80.B
+
+- - - Pathological fracture, not elsewhere classified
+
+FB81
+
+FB82
+
+FB83
+
+- - Osteonecrosis
+
+- - Chondropathies
+
+- - Low bone mass disorders
+
+FB83.1
+
+- - - Osteoporosis
+
+FB84
+
+FB85
+
+FC01
+
+FC0Y
+
+- - Osteomyelitis or osteitis
+
+- - Paget disease of bone
+
+- Postprocedural disorders of the musculoskeletal system
+
+- Other specified diseases of the musculoskeletal system or 
+connective tissue
+
+48
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 16: Diseases of the 
+genitourinary system
+
+GA00
+
+- - - Vulvitis
+
+GA00.0
+
+- - - - Acute vulvitis
+
+GA00.2
+
+- - - - Abscess of vulva
+
+GA00.3
+
+- - - - Genital ulcer of vulva
+
+GA00.40 - - - - - Vulvovaginal ulceration
+
+GA01.00 - - - - - Acute endometritis
+
+GA01.10 - - - - - Chronic endometritis
+
+GA02
+
+- - - Vaginitis
+
+GA02.0
+
+- - - - Acute vaginitis
+
+GA02.3
+
+- - - - Genital ulcer disease of vagina
+
+GA03.0
+
+- - - - Abscess of Bartholin gland
+
+GA03.1
+
+- - - - Cyst of Bartholin gland
+
+49
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGA04
+
+GA05
+
+- - - Cervicitis
+
+- - - Female pelvic inflammatory diseases
+
+GA05.0
+
+- - - - Acute female pelvic inflammatory disease
+
+GA05.3
+
+- - - - Tuboovarian abscess
+
+GA06
+
+GA07
+
+GA10
+
+GA11
+
+GA12
+
+- - - Pelvic peritoneal adhesions of unknown or combined 
+origin
+
+- - - Salpingitis and oophoritis
+
+- - - Endometriosis
+
+- - - Adenomyosis
+
+- - - Dyspareunia
+
+GA13.0
+
+- - - - Polyp of vulva
+
+GA13.6
+
+- - - - Vulvar laceration
+
+GA13.7
+
+- - - - Vulvar haematoma
+
+GA14.0
+
+- - - - Polyp of vagina
+
+GA14.1
+
+- - - - Haematocolpos
+
+GA14.2
+
+- - - - Vaginal foreign body
+
+GA14.3
+
+- - - - Vaginal haematoma
+
+GA15.0
+
+- - - - Polyp of cervix uteri
+
+GA15.6
+
+- - - - Incompetence of cervix uteri
+
+GA15.7
+
+- - - - Dysplasia of cervix uteri
+
+GA16.1
+
+- - - - Malposition of uterus
+
+GA18.0
+
+- - - - Follicular cyst of ovary
+
+50
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGA20.0
+
+- - - - Amenorrhoea
+
+GA20.00 - - - - - Primary amenorrhoea
+
+GA20.01 - - - - - Secondary amenorrhoea
+
+GA20.02 - - - - - Lactational amenorrhoea
+
+GA20.10 - - - - - Frequent menstrual bleeding
+
+GA20.11 - - - - - Infrequent menstrual bleeding
+
+GA20.20 - - - - - Intermenstrual bleeding
+
+GA20.50 - - - - - Heavy menstrual bleeding
+
+GA20.51 - - - - - Light menstrual bleeding
+
+GA21.0
+
+- - - - Postcoital or contact bleeding
+
+GA22
+
+GA23
+
+GA2Z
+
+- - - Excessive menstruation with irregular cycle
+
+- - - Anovulatory bleeding
+
+- - - Abnormal uterine or vaginal bleeding, unspecified
+
+GA30.0
+
+- - - Menopause
+
+GA30.1
+
+- - - Postmenopausal uterine bleeding
+
+GA30.2
+
+- - - Postmenopausal atrophic vaginitis
+
+GA30.4
+
+- - - Menopausal hot flush
+
+GA30.5
+
+- - - Menopausal osteoporosis
+
+GA30.6
+
+- - - Premature ovarian failure
+
+GA31
+
+- - Female infertility
+
+GA31.0
+
+- - - Primary female infertility
+
+GA31.1
+
+- - - Secondary female infertility
+
+51
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGA33
+
+- - Recurrent pregnancy loss
+
+GA34.02 - - - - Vulvodynia
+
+GA34.3
+
+- - - Dysmenorrhoea
+
+GA34.4
+
+- - - Premenstrual disturbances
+
+GA42.0
+
+- - - - Vulval pruritus
+
+GA6Y
+
+GA80
+
+- - Other specified diseases of the female genital system
+
+- - - Ulcerative disorders of the penis or scrotum
+
+GA80.0
+
+- - - - Aphthosis of penis or scrotum
+
+GA81.0
+
+- - - - Penoscrotal pruritus
+
+GA90
+
+- - - Hyperplasia of prostate
+
+GA91.0
+
+- - - - Chronic prostatitis
+
+GA91.Y
+
+- - - - Other specified inflammatory and other diseases of 
+prostate
+
+GB00
+
+- - Hydrocele or spermatocele
+
+GB01.0
+
+- - - Torsion of testis
+
+GB02
+
+GB03
+
+GB04
+
+- - Orchitis or epididymitis
+
+- - Atrophy of testis
+
+- - Male infertility
+
+GB05.2
+
+- - - Phimosis
+
+GB05.3
+
+- - - Paraphimosis
+
+GB06.1
+
+- - - Priapism
+
+GB0Y
+
+- - Other specified diseases of the male genital system
+
+52
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGB20.1
+
+- - - Fibroadenosis of breast
+
+GB21.0
+
+- - - Breast abscess
+
+GB21.Z
+
+- - - Inflammatory disorders of breast, unspecified
+
+GB23.1
+
+- - - Fissure or fistula of nipple
+
+GB23.2
+
+- - - Fat necrosis of breast
+
+GB23.5
+
+- - - Mastodynia
+
+- - Disorders of breast, unspecified
+
+- - - Nephritic syndrome
+
+- - - Nephrotic syndrome
+
+- - - Persistent proteinuria or albuminuria
+
+- - - Acute tubulo-interstitial nephritis
+
+- - - Acute pyelonephritis
+
+- - - Acute tubular necrosis
+
+- - - Acute renal papillary necrosis
+
+- - - Tubulo-interstitial nephritis, not specified as acute or 
+chronic
+
+- - - Chronic tubulo-interstitial nephritis
+
+- - - Obstructive or reflux nephropathy
+
+- - - Nephrocalcinosis
+
+- - - Pyonephrosis
+
+- - - Renal or perinephric abscess
+
+- - - Acute kidney failure
+
+GB2Z
+
+GB40
+
+GB41
+
+GB42
+
+GB50
+
+GB51
+
+GB52
+
+GB53
+
+GB54
+
+GB55
+
+GB56
+
+GB57
+
+GB58
+
+GB59
+
+GB60
+
+53
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGB61
+
+GB6Z
+
+GB70
+
+- - - Chronic kidney disease
+
+- - - Kidney failure, unspecified
+
+- - - Calculus of upper urinary tract
+
+GB70.0
+
+- - - - Calculus of kidney
+
+GB70.1
+
+- - - - Calculus of ureter
+
+GB71.0
+
+- - - - Calculus in bladder
+
+GB7Z
+
+GB80
+
+GB90
+
+- - - Urolithiasis, unspecified
+
+- - - Nonfamilial nongenetic cystic kidney disease
+
+- - Certain specified disorders of kidney or ureter
+
+GB90.1
+
+- - - Hydroureter
+
+GB90.44 - - - - Renal tubular acidosis
+
+GC00
+
+GC01
+
+GC02
+
+GC03
+
+- - - Cystitis
+
+- - - Other disorders of bladder
+
+- - - Urethritis and urethral syndrome
+
+- - - Urethral stricture
+
+GC04.0
+
+- - - - Urethral fistula
+
+GC04.10 - - - - - Vesicovaginal fistula
+
+GC04.14 - - - - - Urethrovaginal fistula
+
+GC04.16 - - - - - Rectovaginal fistula
+
+GC04.Y
+
+- - - - Other specified fistula of the genitourinary tract
+
+GC06
+
+GC07
+
+- - - Urethral diverticulum
+
+- - - Urethral caruncle
+
+54
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONGC08
+
+GC0Y
+
+- - - Urinary tract infection, site not specified
+
+- - - Other diseases of urinary system
+
+GC40.2
+
+- - - - Prolapse of the vaginal apex
+
+GC40.3
+
+- - - - Uterovaginal prolapse
+
+GC51
+
+GC70
+
+GC71
+
+GC72
+
+GC73
+
+GC8Y
+
+- - Female Genital Mutilation
+
+- - Postoperative adhesions of vagina
+
+- - Prolapse of vaginal vault after hysterectomy
+
+- - Postprocedural urethral stricture
+
+- - Postprocedural pelvic peritoneal adhesions
+
+- Other specified diseases of the genitourinary system
+
+55
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 17: Conditions related to 
+sexual health
+
+HA00
+
+- - Hypoactive sexual desire dysfunction
+
+HA01 .1
+
+- - - Male erectile dysfunction
+
+HA02 .02 - - - - Anorgasmia, acquired, generalised
+
+HA03
+
+- - Ejaculatory dysfunctions
+
+HA03 .1
+
+- - - Male delayed ejaculation
+
+HA0Z
+
+HA20
+
+HA8Y
+
+- - Sexual dysfunctions, unspecified
+
+- - Sexual pain-penetration disorder
+
+- Other specified conditions related to sexual health
+
+56
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 18: Pregnancy, childbirth or 
+the puerperium
+
+JA00 .0
+
+- - - Spontaneous abortion
+
+JA00 .1
+
+- - - Induced abortion
+
+JA01 .0
+
+- - - Abdominal pregnancy
+
+JA01 .1
+
+- - - Tubal pregnancy
+
+JA01 .Z
+
+- - - Ectopic pregnancy, unspecified
+
+JA02
+
+JA03
+
+- - Molar pregnancy
+
+- - Missed abortion
+
+JA05 .2
+
+- - - Embolism following abortion, ectopic or molar pregnancy
+
+- - Gestational oedema or proteinuria without hypertension
+
+- - Gestational hypertension
+
+- - Pre-eclampsia
+
+- - Eclampsia
+
+JA22
+
+JA23
+
+JA24
+
+JA25
+
+57
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONJA2Z
+
+- - Oedema, proteinuria, or hypertensive disorders in 
+pregnancy, childbirth, or the puerperium, unspecified
+
+JA40 .0
+
+- - - Threatened abortion
+
+JA41
+
+JA42
+
+JA43
+
+JA60
+
+- - Antepartum haemorrhage
+
+- - Intrapartum haemorrhage
+
+- - Postpartum haemorrhage
+
+- - Excessive vomiting in pregnancy
+
+JA61 .0
+
+- - - Varicose veins of lower extremity in pregnancy
+
+JA61 .1
+
+- - - Genital varices in pregnancy
+
+JA61 .2
+
+- - - Superficial thrombophlebitis in pregnancy
+
+JA61 .3
+
+- - - Deep phlebothrombosis in pregnancy
+
+JA61 .4
+
+- - - Haemorrhoids in pregnancy
+
+JA62
+
+JA63
+
+JA64
+
+- - Infections of genitourinary tract in pregnancy
+
+- - Diabetes mellitus in pregnancy
+
+- - Malnutrition in pregnancy
+
+JA65 .2
+
+- - - Excessive weight gain in pregnancy
+
+JA65 .3
+
+- - - Low weight gain in pregnancy
+
+JA65 .6
+
+- - - Maternal hypotension syndrome
+
+JA65 .7
+
+- - - Subluxation of symphysis pubis in pregnancy, childbirth or 
+the puerperium
+
+JA80 .0
+
+- - - Twin pregnancy
+
+JA80 .1
+
+- - - Triplet pregnancy
+
+JA87
+
+- - Maternal care related to polyhydramnios
+
+58
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONJA88 .0
+
+- - - Oligohydramnios
+
+JA89
+
+- - Maternal care related to premature rupture of membranes
+
+JA89 .3
+
+- - - Preterm premature rupture of membranes
+
+JB00
+
+JB01
+
+- - Preterm labour or delivery
+
+- - Failed induction of labour
+
+JB02.3
+
+- - - Precipitate labour
+
+JB03.0
+
+- - - Prolonged first stage of labour
+
+JB03.1
+
+- - - Prolonged second stage of labour
+
+JB04
+
+JB05
+
+JB06
+
+JB07
+
+JB08
+
+JB09
+
+JB0A
+
+- - Obstructed labour due to malposition or malpresentation 
+of fetus
+
+- - Obstructed labour due to maternal pelvic abnormality
+
+- - Obstructed labour due to other causes
+
+- - Labour or delivery complicated by fetal distress
+
+- - Labour or delivery complicated by umbilical cord 
+complications
+
+- - Perineal laceration during delivery
+
+- - Certain specified obstetric trauma
+
+JB0A.0
+
+- - - Rupture of uterus before onset of labour
+
+JB0A.1
+
+- - - Rupture of uterus during labour
+
+JB0A.2
+
+- - - Postpartum inversion of uterus
+
+JB0A.7
+
+- - - Obstetric damage to pelvic joints or ligaments
+
+JB0A.8
+
+- - - Obstetric haematoma of pelvis
+
+JB0B.0
+
+- - - Retained placenta without haemorrhage
+
+59
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONJB0Y
+
+JB20
+
+JB21
+
+JB22
+
+JB23
+
+- - Other specified complications of labour or delivery
+
+- - Single spontaneous delivery
+
+- - Single delivery by forceps or vacuum extractor
+
+- - Single delivery by caesarean section
+
+- - Other assisted single delivery
+
+JB23.0
+
+- - - Breech extraction
+
+JB24.Z
+
+- - - Multiple delivery, unspecified
+
+JB40.0
+
+- - - Puerperal sepsis
+
+JB41.1
+
+- - - Deep phlebothrombosis in the puerperium
+
+JB42.0
+
+- - - Obstetric air embolism
+
+JB42.1
+
+- - - Amniotic fluid embolism
+
+JB42.2
+
+- - - Obstetric blood-clot embolism
+
+JB45
+
+- - Infections of breast associated with childbirth
+
+JB46.0
+
+- - - Retracted nipple associated with childbirth
+
+JB46.1
+
+- - - Cracked nipple associated with childbirth
+
+60
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 19: Certain conditions 
+originating in the perinatal period
+
+KA00
+
+KA01
+
+- - Fetus or newborn affected by maternal conditions that may 
+be unrelated to present pregnancy
+
+- - Fetus or newborn affected by maternal complications of 
+pregnancy
+
+KA02
+
+- - Fetus or newborn affected by complications of placenta
+
+KA03
+
+KA05
+
+KA06
+
+- - Fetus or newborn affected by complications of umbilical 
+cord
+
+- - Fetus or newborn affected by certain complications of 
+labour or delivery
+
+- - Fetus or newborn affected by noxious influences 
+transmitted via placenta or breast milk
+
+KA07
+
+- - Neonatal dermatoses due to maternal antibodies
+
+KA20.0
+
+- - - Small for gestational age
+
+KA21.0
+
+- - - Extremely low birth weight of newborn
+
+KA21.1
+
+- - - Very low birth weight of newborn
+
+61
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONKA21.2
+
+- - - Low birth weight of newborn
+
+KA21.4
+
+- - - Preterm newborn
+
+KA22.1
+
+- - - Large newborn for gestational age
+
+KA22.2
+
+- - - Post-term newborn
+
+KA41
+
+KA42
+
+- - Birth injury to eye
+
+- - Birth injury to scalp
+
+KA42.1
+
+- - - Cephalohaematoma due to birth injury
+
+KA42.4
+
+KA43
+
+KA44
+
+- - - Subgaleal epicranial subaponeurotic haemorrhage due to 
+birth injury
+
+- - Birth injury to skin or soft tissues
+
+- - Birth injury to peripheral nervous system
+
+KA45.5
+
+- - - Fracture of clavicle due to birth injury
+
+KA46
+
+KA60
+
+KA62
+
+KA63
+
+- - Birth injury to other organs
+
+- - Sepsis of fetus or newborn
+
+- - Viral infection in the fetus or newborn
+
+- - Fungal infection of fetus or newborn
+
+KA65.1
+
+- - - Omphalitis of newborn
+
+KA80
+
+KA81
+
+KA84
+
+KA85
+
+KA86
+
+- - Fetal blood loss
+
+- - Umbilical haemorrhage of newborn
+
+- - Haemolytic disease of fetus or newborn
+
+- - Hydrops fetalis due to haemolytic disease
+
+- - Neonatal kernicterus
+
+62
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONKA87
+
+KA88
+
+KA89
+
+KA8A
+
+KA8B
+
+KA8F
+
+KB01
+
+KB03
+
+KB04
+
+KB05
+
+KB06
+
+KB08
+
+KB20
+
+KB21
+
+- - Neonatal hyperbilirubinaemia
+
+- - Disseminated intravascular coagulation of fetus or newborn
+
+- - Transient neonatal thrombocytopaenia
+
+- - Polycythaemia neonatorum
+
+- - Anaemia of prematurity
+
+- - Neonatal vitamin K deficiency
+
+- - Periventricular cysts of newborn
+
+- - Neonatal encephalopathy
+
+- - Hypoxic ischaemic encephalopathy of newborn
+
+- - Neonatal hydrocephalus
+
+- - Neonatal seizures
+
+- - Disorders of muscle tone of newborn
+
+- - Intrauterine hypoxia
+
+- - Birth asphyxia
+
+KB23.0
+
+- - - Respiratory distress syndrome of newborn
+
+KB25
+
+- - Neonatal tracheitis
+
+KB26.0
+
+- - - Neonatal aspiration of meconium
+
+KB26.3
+
+- - - Neonatal aspiration of milk or regurgitated food
+
+- - Pulmonary haemorrhage originating in the perinatal period
+
+- - Apnoea of newborn
+
+- - Respiratory failure of newborn
+
+- - Respiratory arrest of newborn
+
+KB28
+
+KB2A
+
+KB2D
+
+KB2E
+
+63
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONKB2J
+
+- - Airway obstruction in the neonate due to airway 
+abnormality
+
+KB45
+
+- - Neonatal hypertension
+
+KB60.3
+
+- - - Neonatal hyperglycaemia
+
+KB60.4
+
+- - - Neonatal hypoglycaemia
+
+KB63.1
+
+- - - Dehydration of newborn
+
+KB87
+
+KB88
+
+KB89
+
+KB8B
+
+KC00
+
+- - Intestinal obstruction of newborn
+
+- - Necrotising enterocolitis of newborn
+
+- - Neonatal malabsorption syndromes
+
+- - Neonatal peritonitis
+
+- - Congenital hydrocele
+
+KC20.0
+
+- - - Delayed separation of umbilical cord
+
+KC50
+
+KD10
+
+KD12
+
+KD30
+
+KD32
+
+KD3Y
+
+- - - - Neonatal phototherapy burn
+
+- - Environmental hyperthermia of newborn
+
+- - Hypothermia of newborn
+
+- - Birth depression
+
+- - Feeding problems of newborn
+
+- - Other specified disorders originating in the perinatal period
+
+64
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 20: Developmental 
+anomalies
+
+LA00
+
+LA01
+
+LA02
+
+- - - Anencephaly or similar anomalies
+
+- - - Cephalocele
+
+- - - Spina bifida
+
+LA05 .0
+
+- - - - Microcephaly
+
+LA40
+
+LA42
+
+LA62
+
+LB01
+
+LB02
+
+- - - - Cleft lip
+
+- - - - Cleft palate
+
+- - - Congenital torticollis
+
+- - - Omphalocele
+
+- - - Gastroschisis
+
+LB42.2
+
+- - - - Congenital rectovaginal fistula
+
+LB42.4
+
+- - - - Imperforate hymen
+
+LB50
+
+- - - Micropenis or penis agenesis
+
+65
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONLB52.0
+
+- - - - Ectopic testis
+
+LB53
+
+LB55
+
+- - - Hypospadias
+
+- - - Epispadias
+
+LB70.3
+
+- - - - Macrocephaly
+
+LB75
+
+LB78
+
+LB79
+
+LB80
+
+LB81
+
+LB98
+
+LC40
+
+- - - Brachydactyly
+
+- - - Polydactyly
+
+- - - Syndactyly
+
+- - - - Congenital deformities of fingers
+
+- - - - Congenital deformities of toes
+
+- - - Congenital deformities of feet
+
+- - - Dermoid cyst
+
+LD50 .0
+
+- - - - Turner syndrome
+
+LD50 .3
+
+- - - - Klinefelter syndrome
+
+66
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 21: Symptoms, signs or 
+clinical findings, not elsewhere 
+classified
+
+MA01 .0
+
+- - - - Localised lymph node enlargement
+
+MA01 .1
+
+- - - - Generalised lymph node enlargement
+
+MA14 .1E - - - - - Rheumatoid factor positive
+
+MA15 .0
+
+- - - - Bacteraemia
+
+MA16 .11 - - - - - Elevated white blood cell count
+
+MA18 .0
+
+- - - - Elevated blood glucose level
+
+MA18 .4
+
+- - - - Low haemoglobin
+
+MA1A
+
+- - - Elevated erythrocyte sedimentation rate or abnormality of 
+plasma viscosity
+
+MA80
+
+- - - Speech disturbances
+
+MB20.0
+
+- - - Stupor
+
+MB20.1
+
+- - - Coma
+
+MB21.1
+
+- - - Amnesia
+
+MB23.R
+
+- - - Suicide attempt
+
+67
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONMB40.5
+
+- - - - Hyperaesthesia
+
+MB44.0
+
+- - - - Ataxic gait
+
+MB44.1
+
+- - - - Paralytic gait
+
+MB47.3
+
+- - - - Cramp or spasm
+
+MB47.5
+
+- - - - Fasciculation
+
+MB47.6
+
+- - - - Meningismus
+
+MB47.B
+
+- - - - Opisthotonos
+
+MB48.0
+
+- - - - Vertigo
+
+MB50
+
+- - - - Tetraplegia
+
+MB51
+
+- - - - Diplegia of upper extremities
+
+MB52
+
+- - - - Diplegia of lower extremities
+
+MB53.1
+
+- - - - - Flaccid hemiplegia
+
+MB53.2
+
+- - - - - Spastic hemiplegia
+
+MB53.Z
+
+- - - - - Hemiplegia, unspecified
+
+MB54
+
+- - - - Monoplegia of upper extremity
+
+MB55
+
+- - - - Monoplegia of lower extremity
+
+MB56
+
+- - - - Paraplegia
+
+MC14
+
+- - - Eye discharge
+
+MC15
+
+- - - Red eye
+
+MC16
+
+- - - Pallor conjunctiva
+
+MC17
+
+- - - Icteric sclera
+
+MC1A
+
+- - - Visual floaters
+
+68
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONMC41
+
+- - - Tinnitus
+
+MC80 .0
+
+- - - - Elevated blood-pressure reading, without diagnosis of 
+hypertension
+
+MC81 .0
+
+- - - - Tachycardia, unspecified
+
+MC81 .1
+
+- - - - Bradycardia, unspecified
+
+MC81 .2
+
+- - - - Palpitations
+
+MC81 .3
+
+- - - - Paroxysmal tachycardia
+
+MC82
+
+- - - Cardiac arrest
+
+MC83
+
+- - - Cardiac murmurs and other cardiac sounds
+
+MC85
+
+- - - Gangrene
+
+MD11 .0
+
+- - - - Apnoea
+
+MD11 .5
+
+- - - - Dyspnoea
+
+MD11 .6
+
+- - - - Hiccough
+
+MD11 .7
+
+- - - - Hyperventilation
+
+MD11 .9
+
+- - - - Nasal congestion
+
+MD11.B - - - - Stridor
+
+MD11 .C
+
+- - - - Wheezing
+
+MD12
+
+- - - Cough
+
+MD20
+
+- - - - Epistaxis
+
+MD22
+
+- - - - Haemoptysis
+
+MD31
+
+- - - Pleurisy
+
+MD33
+
+- - - Respiratory arrest
+
+69
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONMD81 .3
+
+- - - - Acute abdomen
+
+MD92
+
+- - - - Dyspepsia
+
+MD94
+
+- - - - Halitosis
+
+ME01
+
+- - - - Abdominal distension
+
+ME02
+
+- - - - Abdominal rigidity
+
+ME04
+
+- - - - Ascites
+
+ME05 .1
+
+- - - - - Diarrhoea
+
+ME07
+
+- - - - Faecal incontinence
+
+ME09
+
+- - - - Rectal tenesmus
+
+ME0A
+
+- - - - Visible peristalsis
+
+ME10 .1
+
+- - - - Unspecified jaundice
+
+ME24 .A3 - - - - - Haematochezia
+
+ME24 .A4 - - - - - Melaena
+
+ME64 .1
+
+- - - - Cyanosis
+
+ME64 .2
+
+- - - - Pallor
+
+ME66 .6
+
+- - - - Rash
+
+ME83
+
+- - - Rheumatism, unspecified
+
+ME84 .2
+
+- - - - Low back pain
+
+ME84 .3
+
+- - - - Sciatica
+
+ME85
+
+- - - Stiffness of joint
+
+MF30
+
+- - - Breast lump or mass female
+
+MF3A
+
+- - - Vaginal discharge
+
+70
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONMF50 .2
+
+- - - - Urinary incontinence
+
+MF50 .3
+
+- - - - Retention of urine
+
+MF50 .4
+
+- - - - Haematuria
+
+MF50 .7
+
+- - - - Dysuria
+
+MF51
+
+MF55
+
+MF56
+
+MF58
+
+MF84
+
+MF94
+
+MF96
+
+MF97
+
+- - - Anuria or oliguria
+
+- - - Polyuria
+
+- - - Renal colic
+
+- - - Urethral discharge
+
+- - - Pauci-immune proliferative glomerulonephritis
+
+- - - Haemoglobinuria
+
+- - - Proteinuria
+
+- - - Pyuria
+
+MG20
+
+- - - Cachexia
+
+MG22
+
+- - - Fatigue
+
+MG29
+
+- - - Oedema
+
+MG29.0
+
+- - - - Localised oedema
+
+MG29.1
+
+- - - - Generalised oedema
+
+MG40
+
+- - - Shock
+
+MG43.0
+
+- - - - Polydipsia
+
+MG45
+
+- - - Syncope and collapse
+
+MH11
+
+- - Sudden infant death syndrome
+
+MH16
+
+- - Multi organ failure
+
+71
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 22: Injury, poisoning or 
+certain other consequences of 
+external causes
+
+NA00
+
+- - Superficial injury of head
+
+NA00 .0Y - - - - Other specified superficial injury of scalp
+
+NA00 .1
+
+- - - Superficial injury of eyelid or periocular area
+
+NA01
+
+NA02
+
+- - Open wound of head
+
+- - Fracture of skull or facial bones
+
+NA02 .1
+
+- - - Fracture of base of skull
+
+NA02 .3
+
+- - - Fracture of nasal bones
+
+NA02 .5
+
+- - - Fracture of zygoma
+
+NA02 .6
+
+- - - Fracture of tooth
+
+NA02 .7
+
+- - - Fracture of mandible
+
+NA03 .0
+
+- - - Dislocation of jaw
+
+NA04
+
+NA06
+
+- - Injury of cranial nerves
+
+- - Injury of eye or orbit
+
+72
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONNA06 .8
+
+- - - Traumatic injury to eyeball
+
+NA07
+
+- - Intracranial injury
+
+NA07 .0
+
+- - - Concussion
+
+NA07 .2
+
+- - - Traumatic cerebral oedema
+
+NA08
+
+- - Crushing injury of head
+
+NA09 .0
+
+- - - Avulsion of scalp
+
+NA0A .Y
+
+- - - Other specified injuries of head
+
+NA20
+
+NA21
+
+NA22
+
+- - Superficial injury of neck
+
+- - Open wound of neck
+
+- - Fracture of neck
+
+NA22 .12 - - - - Fracture of odontoid process
+
+NA23 .1
+
+- - - Dislocation of cervical vertebra
+
+NA6Y
+
+NA80
+
+NA81
+
+NA82
+
+- - Other specified injuries to the neck
+
+- - Superficial injury of thorax
+
+- - Open wound of thorax
+
+- - Fracture of rib, sternum or thoracic spine
+
+NA82 .3
+
+- - - Fracture of rib
+
+NA82 .4
+
+- - - Multiple fractures of ribs
+
+NA82 .5
+
+- - - Flail chest
+
+NB31
+
+- - Injury of heart
+
+NB32.0
+
+- - - Traumatic pneumothorax
+
+NB32.1
+
+- - - Traumatic haemothorax
+
+73
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONNB32.2
+
+- - - Traumatic haemopneumothorax
+
+NB3Y
+
+NB50
+
+NB51
+
+NB52
+
+- - Other specified injuries to the thorax
+
+- - Superficial injury of abdomen, lower back or pelvis
+
+- - Open wound of abdomen, lower back or pelvis
+
+- - Fracture of lumbar spine or pelvis
+
+NB52.0
+
+- - - Fracture of lumbar vertebra
+
+NB52.11 - - - - Fracture of coccyx
+
+NB91
+
+NB92
+
+NC10
+
+NC11
+
+NC12
+
+- - Injury of intra-abdominal organs
+
+- - Injury of urinary or pelvic organs
+
+- - Superficial injury of shoulder or upper arm
+
+- - Open wound of shoulder or upper arm
+
+- - Fracture of shoulder or upper arm
+
+NC12 .0
+
+- - - Fracture of clavicle
+
+NC12 .1
+
+- - - Fracture of scapula
+
+NC13 .0
+
+- - - Dislocation of shoulder joint
+
+NC13 .Z
+
+- - - Dislocation or strain or sprain of joints or ligaments of 
+shoulder girdle, unspecified
+
+NC17
+
+NC30
+
+NC31
+
+NC32
+
+NC33
+
+- - Crushing injury of shoulder or upper arm
+
+- - Superficial injury of forearm
+
+- - Open wound of forearm
+
+- - Fracture of forearm
+
+- - Dislocation or strain or sprain of joints or ligaments of 
+elbow
+
+74
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONNC37
+
+NC38
+
+NC50
+
+NC51
+
+NC52
+
+NC53
+
+- - Crushing injury of forearm
+
+- - Traumatic amputation of forearm
+
+- - Injury to fingernail
+
+- - Superficial injury of wrist or hand
+
+- - Open wound of wrist or hand
+
+- - Fracture at wrist or hand level
+
+NC54 .2Y - - - - Dislocation of other specified part of finger
+
+NE60&XM3ES1 
+
+Tranquilizers poisoning [Harmful effects of substances]
+
+NC70
+
+NC72
+
+NC91
+
+NC92
+
+NC93
+
+- - Superficial injury of hip or thigh
+
+- - Fracture of femur
+
+- - Open wound of knee or lower leg
+
+- - Fracture of lower leg, including ankle
+
+- - Dislocation or strain or sprain of joints or ligaments of knee
+
+NC93 .2
+
+- - - Dislocation of knee
+
+- - Injury to toenail
+
+- - Superficial injury of ankle or foot
+
+- - Traumatic amputation of ankle or foot
+
+- - Foreign body on external eye
+
+- - Foreign body in ear
+
+- - Foreign body in respiratory tract
+
+- - - Burn of respiratory tract
+
+- - Burns, unspecified
+
+- - Frostbite, unspecified
+
+ND10
+
+ND11
+
+ND19
+
+ND70
+
+ND71
+
+ND72
+
+NE01
+
+NE2Z
+
+NE4Z
+
+75
+
+NE60&NE60&XM1X11
+
+Carbon monoxide poisoning [Harmful effects of 
+
+NE60&XM0TV9
+
+Formaldehyde poisoning [Harmful effects of 
+
+substances]
+
+substances]
+
+NE60&XM0ZH6
+
+Lead poisoning [Harmful effects of substances]
+
+NE60&XM32P2
+
+substances]
+
+Pentachlorophenol poisoning[Harmful effects of 
+
+NE60&XM4XU4
+
+substances]
+
+Chlorinated hydrocarbons poisoning[Harmful effects of 
+
+NE60&XM4YG0
+
+Barbiturate poisoning [Harmful effects of substances]
+
+NE60&XM7154
+
+effects of substances]
+
+Organophosphate insecticide poisoning [Harmful 
+
+NE60&XM86W0 
+
+Warfarin poisoning[Harmful effects of substances]
+
+NE60&XM96H3
+
+Carbamates poisoning [Harmful effects of substances]
+
+NE60&XM9EL1
+
+substances]
+
+DDT(chlorophenothane) poisoning[Harmful effects of 
+
+NE60&XM9JS2 
+
+Strychnine rodenticide poisoning [Harmful effects of 
+
+NF05
+
+NF08 .0
+
+NF08 .1
+
+NF2Y
+
+substances]
+
+- - Asphyxiation
+
+- - - Effects of lightning
+
+- - - Drowning or nonfatal submersion
+
+- Other specified injury, poisoning or certain other 
+
+consequences of external causes
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONNE60&NE60&XM1X11
+
+Carbon monoxide poisoning [Harmful effects of 
+substances]
+
+NE60&XM0TV9
+
+Formaldehyde poisoning [Harmful effects of 
+substances]
+
+NE60&XM0ZH6
+
+Lead poisoning [Harmful effects of substances]
+
+NE60&XM32P2
+
+Pentachlorophenol poisoning[Harmful effects of 
+substances]
+
+NE60&XM3ES1 
+
+Tranquilizers poisoning [Harmful effects of substances]
+
+NE60&XM4XU4
+
+Chlorinated hydrocarbons poisoning[Harmful effects of 
+substances]
+
+NE60&XM4YG0
+
+Barbiturate poisoning [Harmful effects of substances]
+
+NE60&XM7154
+
+Organophosphate insecticide poisoning [Harmful 
+effects of substances]
+
+NE60&XM86W0 
+
+Warfarin poisoning[Harmful effects of substances]
+
+NE60&XM96H3
+
+Carbamates poisoning [Harmful effects of substances]
+
+NE60&XM9EL1
+
+NE60&XM9JS2 
+
+DDT(chlorophenothane) poisoning[Harmful effects of 
+substances]
+
+Strychnine rodenticide poisoning [Harmful effects of 
+substances]
+
+NF05
+
+NF08 .0
+
+NF08 .1
+
+NF2Y
+
+- - Asphyxiation
+
+- - - Effects of lightning
+
+- - - Drowning or nonfatal submersion
+
+- Other specified injury, poisoning or certain other 
+consequences of external causes
+
+76
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 23: External causes of 
+morbidity or mortality
+
+PA5Z
+
+PA6Z
+
+PA72
+
+PA78
+
+PA79
+
+PA80
+
+PA82
+
+PA83
+
+PA84
+
+PA8Y
+
+- - - Unintentional transport injury event, unspecified
+
+- - - Unintentional fall from unspecified height
+
+- - - Unintentionally stepped on or crushed by person
+
+- - - Unintentionally stung or envenomated by animal
+
+- - - Unintentionally injured by contact with plant
+
+- - - Unintentionally struck by projectile from firearm
+
+- - - Unintentional striking against stationary object
+
+- - - Unintentionally cut or pierced by sharp object
+
+- - - Unintentionally struck by blunt object
+
+- - - Unintentional exposure to other specified object, not 
+elsewhere classified
+
+PB02
+
+- - - Unintentional threat to breathing by strangulation
+
+PB05
+
+- - - Unintentional threat to breathing by inhalation or 
+ingestion of liquids
+
+77
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONPB08
+
+PB0Y
+
+PB10
+
+PB11
+
+PB13
+
+PB16
+
+PB20
+
+PB22
+
+PB27
+
+PB31
+
+PB33
+
+PB50
+
+PB51
+
+PB53
+
+PB54
+
+- - - Unintentional threat to breathing from low oxygen 
+environment
+
+- - - Unintentional threat to breathing by other specified 
+means
+
+- - - Unintentional exposure to uncontrolled fire
+
+- - - Unintentional exposure to controlled fire
+
+- - - Unintentional contact with hot object or liquid
+
+- - - Unintentional exposure to excessive cold
+
+- - - - Unintentional exposure to or harmful effects of opioids 
+or related analgesics
+
+- - - - Unintentional exposure to or harmful effects of 
+psychostimulants
+
+- - - - Unintentional exposure to or harmful effects of 
+antiepileptics or antiparkinsonism drugs
+
+- - - - Unintentional exposure to or harmful effects of organic 
+solvents
+
+- - - - Unintentional exposure to or harmful effects of 
+pesticides
+
+- - - Unintentional exposure to foreign body in orifice
+
+- - - Unintentional exposure to electric current
+
+- - - Unintentional exposure to radiation
+
+- - - Unintentional exposure to high or low air pressure or 
+changes in air pressure
+
+PB55
+
+- - - Unintentional exposure to explosion
+
+PC31
+
+- - - Intentional self-harm by fall or jump from a height of 1 
+metre or more
+
+78
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONPC53
+
+- - - Intentional self-harm by being cut or pierced by sharp 
+object
+
+PC54
+
+- - - Intentional self-harm by being struck by blunt object
+
+- - - Intentional self-harm by threat to breathing from low 
+oxygen environment
+
+- - - - Intentional self-harm by exposure to or harmful effects of 
+opioids or related analgesics
+
+- - - - Intentional self-harm by exposure to or harmful effects of 
+psychostimulants
+
+- - - - Intentional self-harm by exposure to or harmful effects 
+of pesticides
+
+- - - Assault by transport injury event, unspecified
+
+- - - - Assault by being cut or pierced by sharp glass
+
+- - - - Assault by being cut or pierced by other or unspecified 
+sharp object
+
+- - - Assault by being struck by blunt object
+
+- - - Assault by threat to breathing by strangulation
+
+- - - Assault by exposure to uncontrolled fire
+
+- - Victim of lightning
+
+- - Victim of earthquake
+
+PC78
+
+PC90
+
+PC92
+
+PD03
+
+PD9Z
+
+PE31
+
+PE3Z
+
+PE40
+
+PE62
+
+PE70
+
+PJ00
+
+PJ01
+
+79
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 24: Factors influencing 
+health status or contact with health 
+services
+
+QA00 .0
+
+- - - - General adult medical examination
+
+QA00 .4
+
+- - - - Examination of potential donor of organ or tissue
+
+QA00 .6
+
+- - - - Examination of eyes or vision
+
+QA00 .7
+
+- - - - Examination of ears and hearing
+
+QA00 .8
+
+- - - - Dental examination
+
+QA01 .0
+
+- - - - Examination for admission to educational institution
+
+QA01 .1
+
+- - - - Pre-employment examination
+
+QA01 .3
+
+- - - - Examination for recruitment to armed forces
+
+QA01 .4
+
+- - - - Examination for driving license
+
+QA01 .5
+
+- - - - Examination for participation in sport
+
+QA01 .6
+
+- - - - Examination for insurance purposes
+
+QA01 .7
+
+- - - - Issue of medical certificate
+
+QA04 .51
+
+- - - - - Examination or observation for suspected sexual 
+maltreatment
+
+QA04 .7
+
+- - - - Examination for medicolegal reasons
+
+QA04 .7
+
+- - - - Examination for medicolegal reasons
+
+QA40
+
+- - - Pregnancy examination or test
+
+80
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter 25: Codes for special 
+purposes
+
+RA01 .0
+
+- - - COVID-19, virus identified
+
+RA01 .1
+
+- - - COVID-19, virus not identified
+
+RA02
+
+- - Post COVID-19 condition
+
+81
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONChapter X: Extension Codes
+
+XE42A
+
+- - - - Vehicle driver injured in transport related event
+
+XE7NK
+
+XE940
+
+- - - - Motorcycle as mode of transport of person injured in 
+transport related event
+
+- - - - Animal being ridden as mode of transport of person 
+injured in transport related event
+
+XE97V
+
+- - - - Intentional self-harm, person intended to die
+
+XJ44E
+
+- - - Closed fracture
+
+XJ7YM - - - Open fracture
+
+82
+
+ETHIOPIA SIMPLIFIED VERSION INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)CODE           I           CATEGORYPRIMARY HOSPITAL EDITIONETHIOPIA SIMPLIFIED VERSION 
+INTERNATIONAL CLASSIFICATION OF 
+DISEASE (ESV_ICD11)
+
+PRIMARY HOSPITAL EDITION
+
+

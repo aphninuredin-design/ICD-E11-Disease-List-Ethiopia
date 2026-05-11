@@ -36,415 +36,556 @@
     <script>
         // Comprehensive ICD-11 data with categories
         const icdData = [
-            // Endocrine, nutritional and metabolic diseases
-            { code: "5A10", description: "Type 1 diabetes mellitus", category: "Endocrine" },
-            { code: "5A11", description: "Type 2 diabetes mellitus", category: "Endocrine" },
-            { code: "5A12", description: "Malnutrition-related diabetes mellitus", category: "Endocrine" },
-            { code: "5A13", description: "Other specified diabetes mellitus", category: "Endocrine" },
-            { code: "5A14", description: "Diabetes mellitus, unspecified", category: "Endocrine" },
-            { code: "5A15", description: "Gestational diabetes mellitus", category: "Endocrine" },
-            { code: "5A16", description: "Diabetes mellitus in pregnancy", category: "Endocrine" },
-            { code: "5A17", description: "Diabetes mellitus with renal complications", category: "Endocrine" },
-            { code: "5A18", description: "Diabetes mellitus with ophthalmic complications", category: "Endocrine" },
-            { code: "5A19", description: "Diabetes mellitus with neurological complications", category: "Endocrine" },
-            { code: "5A1A", description: "Diabetes mellitus with circulatory complications", category: "Endocrine" },
-            { code: "5A1B", description: "Diabetes mellitus with other specified complications", category: "Endocrine" },
-            { code: "5A1C", description: "Diabetes mellitus without complications", category: "Endocrine" },
-            { code: "5A1D", description: "Diabetes mellitus with multiple complications", category: "Endocrine" },
-            { code: "5A1E", description: "Diabetes mellitus with ketoacidosis", category: "Endocrine" },
-            { code: "5A1F", description: "Diabetes mellitus with hyperosmolar coma", category: "Endocrine" },
-            { code: "5A1G", description: "Diabetes mellitus with hypoglycaemic coma", category: "Endocrine" },
-            { code: "5A1H", description: "Diabetes mellitus with other coma", category: "Endocrine" },
-            { code: "5A1I", description: "Diabetes mellitus with gangrene", category: "Endocrine" },
-            { code: "5A1J", description: "Diabetes mellitus with peripheral angiopathy", category: "Endocrine" },
-            { code: "5A1K", description: "Diabetes mellitus with nephropathy", category: "Endocrine" },
-            { code: "5A1L", description: "Diabetes mellitus with retinopathy", category: "Endocrine" },
-            { code: "5A1M", description: "Diabetes mellitus with neuropathy", category: "Endocrine" },
-            { code: "5A1N", description: "Diabetes mellitus with foot ulcer", category: "Endocrine" },
-            { code: "5A1P", description: "Diabetes mellitus with arthropathy", category: "Endocrine" },
-            { code: "5A1Q", description: "Diabetes mellitus with skin complications", category: "Endocrine" },
-            { code: "5A1R", description: "Diabetes mellitus with other complications", category: "Endocrine" },
-            { code: "5A1S", description: "Diabetes mellitus with unspecified complications", category: "Endocrine" },
-            { code: "5A1T", description: "Diabetes mellitus in remission", category: "Endocrine" },
-            { code: "5A1U", description: "Diabetes mellitus, insulin dependent", category: "Endocrine" },
-            { code: "5A1V", description: "Diabetes mellitus, non-insulin dependent", category: "Endocrine" },
-            { code: "5A1W", description: "Diabetes mellitus, brittle", category: "Endocrine" },
-            { code: "5A1X", description: "Diabetes mellitus, secondary", category: "Endocrine" },
-            { code: "5A1Y", description: "Diabetes mellitus, steroid-induced", category: "Endocrine" },
-            { code: "5A1Z", description: "Diabetes mellitus, other specified", category: "Endocrine" },
-            { code: "5A20", description: "Impaired glucose tolerance", category: "Endocrine" },
-            { code: "5A21", description: "Impaired fasting glycaemia", category: "Endocrine" },
-            { code: "5A22", description: "Hyperglycaemia, unspecified", category: "Endocrine" },
-            { code: "5A23", description: "Hypoglycaemia", category: "Endocrine" },
-            { code: "5A24", description: "Hypoglycaemia without coma", category: "Endocrine" },
-            { code: "5A25", description: "Hypoglycaemia with coma", category: "Endocrine" },
-            { code: "5A26", description: "Other disorders of glucose regulation and pancreatic internal secretion", category: "Endocrine" },
-            { code: "5A27", description: "Disorders of glucose regulation and pancreatic internal secretion, unspecified", category: "Endocrine" },
-            { code: "5A28", description: "Thyroiditis", category: "Endocrine" },
-            { code: "5A29", description: "Autoimmune thyroiditis", category: "Endocrine" },
-            { code: "5A2A", description: "Subacute thyroiditis", category: "Endocrine" },
-            { code: "5A2B", description: "Acute thyroiditis", category: "Endocrine" },
-            { code: "5A2C", description: "Thyroiditis, unspecified", category: "Endocrine" },
-            { code: "5A2D", description: "Hyperthyroidism", category: "Endocrine" },
-            { code: "5A2E", description: "Thyrotoxicosis", category: "Endocrine" },
-            { code: "5A2F", description: "Graves disease", category: "Endocrine" },
-            { code: "5A2G", description: "Toxic multinodular goitre", category: "Endocrine" },
-            { code: "5A2H", description: "Toxic adenoma", category: "Endocrine" },
-            { code: "5A2I", description: "Hyperthyroidism due to other causes", category: "Endocrine" },
-            { code: "5A2J", description: "Hyperthyroidism, unspecified", category: "Endocrine" },
-            { code: "5A2K", description: "Hypothyroidism", category: "Endocrine" },
-            { code: "5A2L", description: "Congenital hypothyroidism", category: "Endocrine" },
-            { code: "5A2M", description: "Acquired hypothyroidism", category: "Endocrine" },
-            { code: "5A2N", description: "Hypothyroidism, unspecified", category: "Endocrine" },
-            { code: "5A2P", description: "Goitre", category: "Endocrine" },
-            { code: "5A2Q", description: "Nontoxic goitre", category: "Endocrine" },
-            { code: "5A2R", description: "Toxic goitre", category: "Endocrine" },
-            { code: "5A2S", description: "Goitre, unspecified", category: "Endocrine" },
-            { code: "5A2T", description: "Other disorders of thyroid gland", category: "Endocrine" },
-            { code: "5A2U", description: "Disorders of thyroid gland, unspecified", category: "Endocrine" },
-            { code: "5A2V", description: "Adrenal insufficiency", category: "Endocrine" },
-            { code: "5A2W", description: "Addison disease", category: "Endocrine" },
-            { code: "5A2X", description: "Other adrenal insufficiency", category: "Endocrine" },
-            { code: "5A2Y", description: "Adrenal insufficiency, unspecified", category: "Endocrine" },
-            { code: "5A2Z", description: "Cushing syndrome", category: "Endocrine" },
-            { code: "5A30", description: "Other disorders of adrenal glands", category: "Endocrine" },
-            { code: "5A31", description: "Disorders of adrenal glands, unspecified", category: "Endocrine" },
-            { code: "5A32", description: "Pituitary adenoma", category: "Endocrine" },
-            { code: "5A33", description: "Acromegaly and gigantism", category: "Endocrine" },
-            { code: "5A34", description: "Diabetes insipidus", category: "Endocrine" },
-            { code: "5A35", description: "Other disorders of pituitary gland", category: "Endocrine" },
-            { code: "5A36", description: "Disorders of pituitary gland, unspecified", category: "Endocrine" },
-            { code: "5A37", description: "Obesity", category: "Endocrine" },
-            { code: "5A38", description: "Overweight", category: "Endocrine" },
-            { code: "5A39", description: "Malnutrition", category: "Endocrine" },
-            { code: "5A3A", description: "Protein-energy malnutrition", category: "Endocrine" },
-            { code: "5A3B", description: "Severe acute malnutrition", category: "Endocrine" },
-            { code: "5A3C", description: "Moderate acute malnutrition", category: "Endocrine" },
-            { code: "5A3D", description: "Chronic energy deficiency", category: "Endocrine" },
-            { code: "5A3E", description: "Other nutritional deficiencies", category: "Endocrine" },
-            { code: "5A3F", description: "Nutritional deficiency, unspecified", category: "Endocrine" },
-            { code: "5A3G", description: "Disorders of fluid, electrolyte and acid-base balance", category: "Endocrine" },
-            { code: "5A3H", description: "Dehydration", category: "Endocrine" },
-            { code: "5A3I", description: "Hypernatraemia", category: "Endocrine" },
-            { code: "5A3J", description: "Hyponatraemia", category: "Endocrine" },
-            { code: "5A3K", description: "Hyperkalaemia", category: "Endocrine" },
-            { code: "5A3L", description: "Hypokalaemia", category: "Endocrine" },
-            { code: "5A3M", description: "Acidosis", category: "Endocrine" },
-            { code: "5A3N", description: "Alkalosis", category: "Endocrine" },
-            { code: "5A3P", description: "Other disorders of fluid, electrolyte and acid-base balance", category: "Endocrine" },
-            { code: "5A3Q", description: "Disorders of fluid, electrolyte and acid-base balance, unspecified", category: "Endocrine" },
-            { code: "5A3R", description: "Other endocrine disorders", category: "Endocrine" },
-            { code: "5A3S", description: "Endocrine disorder, unspecified", category: "Endocrine" },
-
-            // Certain infectious or parasitic diseases
-            { code: "1A00", description: "Cholera", category: "Infectious" },
-            { code: "1A01", description: "Cholera due to Vibrio cholerae 01, biovar cholerae", category: "Infectious" },
-            { code: "1A02", description: "Cholera due to Vibrio cholerae 01, biovar eltor", category: "Infectious" },
-            { code: "1A03", description: "Cholera due to Vibrio cholerae 0139", category: "Infectious" },
-            { code: "1A04", description: "Cholera due to Vibrio cholerae, other biovars", category: "Infectious" },
-            { code: "1A05", description: "Cholera, unspecified", category: "Infectious" },
-            { code: "1A06", description: "Typhoid fever", category: "Infectious" },
-            { code: "1A07", description: "Paratyphoid fever", category: "Infectious" },
-            { code: "1A08", description: "Typhoid and paratyphoid fevers", category: "Infectious" },
-            { code: "1A09", description: "Typhoid fever, unspecified", category: "Infectious" },
-            { code: "1A0A", description: "Paratyphoid fever, unspecified", category: "Infectious" },
-            { code: "1A0B", description: "Salmonella infection, unspecified", category: "Infectious" },
-            { code: "1A0C", description: "Shigellosis", category: "Infectious" },
-            { code: "1A0D", description: "Shigellosis due to Shigella dysenteriae", category: "Infectious" },
-            { code: "1A0E", description: "Shigellosis due to Shigella flexneri", category: "Infectious" },
-            { code: "1A0F", description: "Shigellosis due to Shigella boydii", category: "Infectious" },
-            { code: "1A0G", description: "Shigellosis due to Shigella sonnei", category: "Infectious" },
-            { code: "1A0H", description: "Shigellosis, unspecified", category: "Infectious" },
-            { code: "1A0I", description: "Amebiasis", category: "Infectious" },
-            { code: "1A0J", description: "Amebic dysentery", category: "Infectious" },
-            { code: "1A0K", description: "Amebic liver abscess", category: "Infectious" },
-            { code: "1A0L", description: "Amebiasis, unspecified", category: "Infectious" },
-            { code: "1A0M", description: "Giardiasis", category: "Infectious" },
-            { code: "1A0N", description: "Cryptosporidiosis", category: "Infectious" },
-            { code: "1A0P", description: "Cyclosporiasis", category: "Infectious" },
-            { code: "1A0Q", description: "Isosporiasis", category: "Infectious" },
-            { code: "1A0R", description: "Microsporidiosis", category: "Infectious" },
-            { code: "1A0S", description: "Other protozoal intestinal diseases", category: "Infectious" },
-            { code: "1A0T", description: "Protozoal intestinal disease, unspecified", category: "Infectious" },
-            { code: "1A0U", description: "Intestinal infection due to other specified organisms", category: "Infectious" },
-            { code: "1A0V", description: "Intestinal infection, unspecified", category: "Infectious" },
-            { code: "1A0W", description: "Tuberculosis of intestine, peritoneum and mesenteric glands", category: "Infectious" },
-            { code: "1A0X", description: "Tuberculosis of other sites", category: "Infectious" },
-            { code: "1A0Y", description: "Tuberculosis, unspecified", category: "Infectious" },
-            { code: "1A0Z", description: "Other bacterial intestinal infections", category: "Infectious" },
-            { code: "1A10", description: "Viral hepatitis", category: "Infectious" },
-            { code: "1A11", description: "Hepatitis A", category: "Infectious" },
-            { code: "1A12", description: "Hepatitis B", category: "Infectious" },
-            { code: "1A13", description: "Hepatitis C", category: "Infectious" },
-            { code: "1A14", description: "Hepatitis D", category: "Infectious" },
-            { code: "1A15", description: "Hepatitis E", category: "Infectious" },
-            { code: "1A16", description: "Other viral hepatitis", category: "Infectious" },
-            { code: "1A17", description: "Viral hepatitis, unspecified", category: "Infectious" },
-            { code: "1A18", description: "Human immunodeficiency virus [HIV] disease", category: "Infectious" },
-            { code: "1A19", description: "HIV disease resulting in infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A1A", description: "HIV disease resulting in malignant neoplasms", category: "Infectious" },
-            { code: "1A1B", description: "HIV disease resulting in other specified diseases", category: "Infectious" },
-            { code: "1A1C", description: "HIV disease resulting in unspecified disease", category: "Infectious" },
-            { code: "1A1D", description: "HIV disease, clinical stage 1", category: "Infectious" },
-            { code: "1A1E", description: "HIV disease, clinical stage 2", category: "Infectious" },
-            { code: "1A1F", description: "HIV disease, clinical stage 3", category: "Infectious" },
-            { code: "1A1G", description: "HIV disease, clinical stage 4", category: "Infectious" },
-            { code: "1A1H", description: "HIV disease, asymptomatic", category: "Infectious" },
-            { code: "1A1I", description: "HIV disease, symptomatic", category: "Infectious" },
-            { code: "1A1J", description: "HIV disease, AIDS", category: "Infectious" },
-            { code: "1A1K", description: "HIV disease, unspecified", category: "Infectious" },
-            { code: "1A1L", description: "Acquired immunodeficiency syndrome [AIDS]", category: "Infectious" },
-            { code: "1A1M", description: "AIDS resulting in infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A1N", description: "AIDS resulting in malignant neoplasms", category: "Infectious" },
-            { code: "1A1P", description: "AIDS resulting in other specified diseases", category: "Infectious" },
-            { code: "1A1Q", description: "AIDS resulting in unspecified disease", category: "Infectious" },
-            { code: "1A1R", description: "AIDS, clinical stage unspecified", category: "Infectious" },
-            { code: "1A1S", description: "Other viral diseases", category: "Infectious" },
-            { code: "1A1T", description: "Viral disease, unspecified", category: "Infectious" },
-            { code: "1A1U", description: "Mycoses", category: "Infectious" },
-            { code: "1A1V", description: "Candidiasis", category: "Infectious" },
-            { code: "1A1W", description: "Aspergillosis", category: "Infectious" },
-            { code: "1A1X", description: "Cryptococcosis", category: "Infectious" },
-            { code: "1A1Y", description: "Histoplasmosis", category: "Infectious" },
-            { code: "1A1Z", description: "Other mycoses", category: "Infectious" },
-            { code: "1A20", description: "Mycosis, unspecified", category: "Infectious" },
-            { code: "1A21", description: "Pneumocystosis", category: "Infectious" },
-            { code: "1A22", description: "Other specified infectious diseases", category: "Infectious" },
-            { code: "1A23", description: "Infectious disease, unspecified", category: "Infectious" },
-            { code: "1A24", description: "Malaria", category: "Infectious" },
-            { code: "1A25", description: "Malaria due to Plasmodium falciparum", category: "Infectious" },
-            { code: "1A26", description: "Malaria due to Plasmodium vivax", category: "Infectious" },
-            { code: "1A27", description: "Malaria due to Plasmodium ovale", category: "Infectious" },
-            { code: "1A28", description: "Malaria due to Plasmodium malariae", category: "Infectious" },
-            { code: "1A29", description: "Malaria due to Plasmodium knowlesi", category: "Infectious" },
-            { code: "1A2A", description: "Malaria due to other specified Plasmodium species", category: "Infectious" },
-            { code: "1A2B", description: "Malaria, unspecified", category: "Infectious" },
-            { code: "1A2C", description: "Cerebral malaria", category: "Infectious" },
-            { code: "1A2D", description: "Severe malaria", category: "Infectious" },
-            { code: "1A2E", description: "Malaria with complications", category: "Infectious" },
-            { code: "1A2F", description: "Malaria without complications", category: "Infectious" },
-            { code: "1A2G", description: "Relapsing fever", category: "Infectious" },
-            { code: "1A2H", description: "Louse-borne relapsing fever", category: "Infectious" },
-            { code: "1A2I", description: "Tick-borne relapsing fever", category: "Infectious" },
-            { code: "1A2J", description: "Relapsing fever, unspecified", category: "Infectious" },
-            { code: "1A2K", description: "Other spirochaetal diseases", category: "Infectious" },
-            { code: "1A2L", description: "Spirochaetal disease, unspecified", category: "Infectious" },
-            { code: "1A2M", description: "Leishmaniasis", category: "Infectious" },
-            { code: "1A2N", description: "Visceral leishmaniasis", category: "Infectious" },
-            { code: "1A2P", description: "Cutaneous leishmaniasis", category: "Infectious" },
-            { code: "1A2Q", description: "Mucocutaneous leishmaniasis", category: "Infectious" },
-            { code: "1A2R", description: "Leishmaniasis, unspecified", category: "Infectious" },
-            { code: "1A2S", description: "Chagas disease", category: "Infectious" },
-            { code: "1A2T", description: "Chagas disease with heart involvement", category: "Infectious" },
-            { code: "1A2U", description: "Chagas disease with digestive system involvement", category: "Infectious" },
-            { code: "1A2V", description: "Chagas disease with nervous system involvement", category: "Infectious" },
-            { code: "1A2W", description: "Chagas disease, unspecified", category: "Infectious" },
-            { code: "1A2X", description: "African trypanosomiasis", category: "Infectious" },
-            { code: "1A2Y", description: "Gambiense trypanosomiasis", category: "Infectious" },
-            { code: "1A2Z", description: "Rhodesiense trypanosomiasis", category: "Infectious" },
-            { code: "1A30", description: "African trypanosomiasis, unspecified", category: "Infectious" },
-            { code: "1A31", description: "American trypanosomiasis", category: "Infectious" },
-            { code: "1A32", description: "Trypanosomiasis, unspecified", category: "Infectious" },
-            { code: "1A33", description: "Schistosomiasis", category: "Infectious" },
-            { code: "1A34", description: "Schistosomiasis due to Schistosoma haematobium", category: "Infectious" },
-            { code: "1A35", description: "Schistosomiasis due to Schistosoma mansoni", category: "Infectious" },
-            { code: "1A36", description: "Schistosomiasis due to Schistosoma japonicum", category: "Infectious" },
-            { code: "1A37", description: "Schistosomiasis due to Schistosoma mekongi", category: "Infectious" },
-            { code: "1A38", description: "Schistosomiasis due to Schistosoma intercalatum", category: "Infectious" },
-            { code: "1A39", description: "Schistosomiasis due to other specified Schistosoma species", category: "Infectious" },
-            { code: "1A3A", description: "Schistosomiasis, unspecified", category: "Infectious" },
-            { code: "1A3B", description: "Other trematode infections", category: "Infectious" },
-            { code: "1A3C", description: "Trematode infection, unspecified", category: "Infectious" },
-            { code: "1A3D", description: "Cestode infections", category: "Infectious" },
-            { code: "1A3E", description: "Taeniasis", category: "Infectious" },
-            { code: "1A3F", description: "Cysticercosis", category: "Infectious" },
-            { code: "1A3G", description: "Echinococcosis", category: "Infectious" },
-            { code: "1A3H", description: "Hydatid disease", category: "Infectious" },
-            { code: "1A3I", description: "Other cestode infections", category: "Infectious" },
-            { code: "1A3J", description: "Cestode infection, unspecified", category: "Infectious" },
-            { code: "1A3K", description: "Nematode infections", category: "Infectious" },
-            { code: "1A3L", description: "Ascariasis", category: "Infectious" },
-            { code: "1A3M", description: "Trichuriasis", category: "Infectious" },
-            { code: "1A3N", description: "Hookworm diseases", category: "Infectious" },
-            { code: "1A3P", description: "Enterobiasis", category: "Infectious" },
-            { code: "1A3Q", description: "Strongyloidiasis", category: "Infectious" },
-            { code: "1A3R", description: "Trichinellosis", category: "Infectious" },
-            { code: "1A3S", description: "Filariasis", category: "Infectious" },
-            { code: "1A3T", description: "Lymphatic filariasis", category: "Infectious" },
-            { code: "1A3U", description: "Onchocerciasis", category: "Infectious" },
-            { code: "1A3V", description: "Dracunculiasis", category: "Infectious" },
-            { code: "1A3W", description: "Other nematode infections", category: "Infectious" },
-            { code: "1A3X", description: "Nematode infection, unspecified", category: "Infectious" },
-            { code: "1A3Y", description: "Other helminthiases", category: "Infectious" },
-            { code: "1A3Z", description: "Helminthiasis, unspecified", category: "Infectious" },
-            { code: "1A40", description: "Pediculosis, phthirus infestation and scabies", category: "Infectious" },
-            { code: "1A41", description: "Pediculosis", category: "Infectious" },
-            { code: "1A42", description: "Phthirus infestation", category: "Infectious" },
-            { code: "1A43", description: "Scabies", category: "Infectious" },
-            { code: "1A44", description: "Other infestations", category: "Infectious" },
-            { code: "1A45", description: "Infestation, unspecified", category: "Infectious" },
-            { code: "1A46", description: "Sequelae of infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A47", description: "Sequelae of tuberculosis", category: "Infectious" },
-            { code: "1A48", description: "Sequelae of poliomyelitis", category: "Infectious" },
-            { code: "1A49", description: "Sequelae of leprosy", category: "Infectious" },
-            { code: "1A4A", description: "Sequelae of other infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A4B", description: "Sequelae of infectious and parasitic disease, unspecified", category: "Infectious" },
-            { code: "1A4C", description: "Certain infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A4D", description: "Other specified infectious and parasitic diseases", category: "Infectious" },
-            { code: "1A4E", description: "Infectious and parasitic disease, unspecified", category: "Infectious" },
-
-            // Neoplasms
-            { code: "2A00", description: "Malignant neoplasms", category: "Neoplasms" },
-            { code: "2A01", description: "Malignant neoplasms of lip, oral cavity and pharynx", category: "Neoplasms" },
-            { code: "2A02", description: "Malignant neoplasm of lip", category: "Neoplasms" },
-            { code: "2A03", description: "Malignant neoplasm of tongue", category: "Neoplasms" },
-            { code: "2A04", description: "Malignant neoplasm of gum", category: "Neoplasms" },
-            { code: "2A05", description: "Malignant neoplasm of floor of mouth", category: "Neoplasms" },
-            { code: "2A06", description: "Malignant neoplasm of palate", category: "Neoplasms" },
-            { code: "2A07", description: "Malignant neoplasm of other and unspecified parts of mouth", category: "Neoplasms" },
-            { code: "2A08", description: "Malignant neoplasm of oropharynx", category: "Neoplasms" },
-            { code: "2A09", description: "Malignant neoplasm of nasopharynx", category: "Neoplasms" },
-            { code: "2A0A", description: "Malignant neoplasm of piriform sinus", category: "Neoplasms" },
-            { code: "2A0B", description: "Malignant neoplasm of hypopharynx", category: "Neoplasms" },
-            { code: "2A0C", description: "Malignant neoplasm of other and ill-defined sites in lip, oral cavity and pharynx", category: "Neoplasms" },
-            { code: "2A0D", description: "Malignant neoplasms of digestive organs", category: "Neoplasms" },
-            { code: "2A0E", description: "Malignant neoplasm of oesophagus", category: "Neoplasms" },
-            { code: "2A0F", description: "Malignant neoplasm of stomach", category: "Neoplasms" },
-            { code: "2A0G", description: "Malignant neoplasm of small intestine", category: "Neoplasms" },
-            { code: "2A0H", description: "Malignant neoplasm of colon", category: "Neoplasms" },
-            { code: "2A0I", description: "Malignant neoplasm of rectosigmoid junction", category: "Neoplasms" },
-            { code: "2A0J", description: "Malignant neoplasm of rectum", category: "Neoplasms" },
-            { code: "2A0K", description: "Malignant neoplasm of anus and anal canal", category: "Neoplasms" },
-            { code: "2A0L", description: "Malignant neoplasm of liver and intrahepatic bile ducts", category: "Neoplasms" },
-            { code: "2A0M", description: "Malignant neoplasm of gallbladder", category: "Neoplasms" },
-            { code: "2A0N", description: "Malignant neoplasm of other and unspecified parts of biliary tract", category: "Neoplasms" },
-            { code: "2A0P", description: "Malignant neoplasm of pancreas", category: "Neoplasms" },
-            { code: "2A0Q", description: "Malignant neoplasm of other and ill-defined digestive organs", category: "Neoplasms" },
-            { code: "2A0R", description: "Malignant neoplasms of respiratory and intrathoracic organs", category: "Neoplasms" },
-            { code: "2A0S", description: "Malignant neoplasm of nasal cavity and middle ear", category: "Neoplasms" },
-            { code: "2A0T", description: "Malignant neoplasm of accessory sinuses", category: "Neoplasms" },
-            { code: "2A0U", description: "Malignant neoplasm of larynx", category: "Neoplasms" },
-            { code: "2A0V", description: "Malignant neoplasm of trachea", category: "Neoplasms" },
-            { code: "2A0W", description: "Malignant neoplasm of bronchus and lung", category: "Neoplasms" },
-            { code: "2A0X", description: "Malignant neoplasm of heart, mediastinum and pleura", category: "Neoplasms" },
-            { code: "2A0Y", description: "Malignant neoplasm of thymus", category: "Neoplasms" },
-            { code: "2A0Z", description: "Malignant neoplasms of bone and articular cartilage", category: "Neoplasms" },
-            { code: "2A10", description: "Malignant neoplasm of bone and articular cartilage of limbs", category: "Neoplasms" },
-            { code: "2A11", description: "Malignant neoplasm of bone and articular cartilage of other and unspecified sites", category: "Neoplasms" },
-            { code: "2A12", description: "Melanoma and other malignant neoplasms of skin", category: "Neoplasms" },
-            { code: "2A13", description: "Malignant melanoma of skin", category: "Neoplasms" },
-            { code: "2A14", description: "Other malignant neoplasms of skin", category: "Neoplasms" },
-            { code: "2A15", description: "Malignant neoplasms of mesothelial and soft tissue", category: "Neoplasms" },
-            { code: "2A16", description: "Malignant neoplasm of peripheral nerves and autonomic nervous system", category: "Neoplasms" },
-            { code: "2A17", description: "Malignant neoplasm of retroperitoneum and peritoneum", category: "Neoplasms" },
-            { code: "2A18", description: "Malignant neoplasm of other connective and soft tissue", category: "Neoplasms" },
-            { code: "2A19", description: "Kaposi sarcoma", category: "Neoplasms" },
-            { code: "2A1A", description: "Malignant neoplasms of breast", category: "Neoplasms" },
-            { code: "2A1B", description: "Malignant neoplasm of breast", category: "Neoplasms" },
-            { code: "2A1C", description: "Malignant neoplasms of female genital organs", category: "Neoplasms" },
-            { code: "2A1D", description: "Malignant neoplasm of vulva", category: "Neoplasms" },
-            { code: "2A1E", description: "Malignant neoplasm of vagina", category: "Neoplasms" },
-            { code: "2A1F", description: "Malignant neoplasm of cervix uteri", category: "Neoplasms" },
-            { code: "2A1G", description: "Malignant neoplasm of corpus uteri", category: "Neoplasms" },
-            { code: "2A1H", description: "Malignant neoplasm of uterus, part unspecified", category: "Neoplasms" },
-            { code: "2A1I", description: "Malignant neoplasm of ovary", category: "Neoplasms" },
-            { code: "2A1J", description: "Malignant neoplasm of other and unspecified female genital organs", category: "Neoplasms" },
-            { code: "2A1K", description: "Malignant neoplasms of male genital organs", category: "Neoplasms" },
-            { code: "2A1L", description: "Malignant neoplasm of prostate", category: "Neoplasms" },
-            { code: "2A1M", description: "Malignant neoplasm of testis", category: "Neoplasms" },
-            { code: "2A1N", description: "Malignant neoplasm of penis", category: "Neoplasms" },
-            { code: "2A1P", description: "Malignant neoplasm of other and unspecified male genital organs", category: "Neoplasms" },
-            { code: "2A1Q", description: "Malignant neoplasms of urinary tract", category: "Neoplasms" },
-            { code: "2A1R", description: "Malignant neoplasm of bladder", category: "Neoplasms" },
-            { code: "2A1S", description: "Malignant neoplasm of other and unspecified urinary organs", category: "Neoplasms" },
-            { code: "2A1T", description: "Malignant neoplasms of eye, brain and other parts of central nervous system", category: "Neoplasms" },
-            { code: "2A1U", description: "Malignant neoplasm of eye and adnexa", category: "Neoplasms" },
-            { code: "2A1V", description: "Malignant neoplasm of meninges", category: "Neoplasms" },
-            { code: "2A1W", description: "Malignant neoplasm of brain", category: "Neoplasms" },
-            { code: "2A1X", description: "Malignant neoplasm of spinal cord, cranial nerves and other parts of central nervous system", category: "Neoplasms" },
-            { code: "2A1Y", description: "Malignant neoplasms of thyroid and other endocrine glands", category: "Neoplasms" },
-            { code: "2A1Z", description: "Malignant neoplasm of thyroid gland", category: "Neoplasms" },
-            { code: "2A20", description: "Malignant neoplasm of adrenal gland", category: "Neoplasms" },
-            { code: "2A21", description: "Malignant neoplasm of other endocrine glands and related structures", category: "Neoplasms" },
-            { code: "2A22", description: "Malignant neoplasms of ill-defined, secondary and unspecified sites", category: "Neoplasms" },
-            { code: "2A23", description: "Malignant neoplasm of lymph nodes", category: "Neoplasms" },
-            { code: "2A24", description: "Secondary malignant neoplasm of respiratory and digestive organs", category: "Neoplasms" },
-            { code: "2A25", description: "Secondary malignant neoplasm of other sites", category: "Neoplasms" },
-            { code: "2A26", description: "Malignant neoplasm without specification of site", category: "Neoplasms" },
-            { code: "2A27", description: "Malignant neoplasms of lymphoid, haematopoietic and related tissue", category: "Neoplasms" },
-            { code: "2A28", description: "Hodgkin lymphoma", category: "Neoplasms" },
-            { code: "2A29", description: "Non-Hodgkin lymphoma", category: "Neoplasms" },
-            { code: "2A2A", description: "Malignant immunoproliferative diseases", category: "Neoplasms" },
-            { code: "2A2B", description: "Leukaemia", category: "Neoplasms" },
-            { code: "2A2C", description: "Myeloid leukaemia", category: "Neoplasms" },
-            { code: "2A2D", description: "Lymphoid leukaemia", category: "Neoplasms" },
-            { code: "2A2E", description: "Leukaemia of unspecified cell type", category: "Neoplasms" },
-            { code: "2A2F", description: "Other malignant neoplasms of lymphoid, haematopoietic and related tissue", category: "Neoplasms" },
-            { code: "2A2G", description: "Polycythaemia vera", category: "Neoplasms" },
-            { code: "2A2H", description: "Myelodysplastic syndromes", category: "Neoplasms" },
-            { code: "2A2I", description: "Other neoplasms of uncertain or unknown behaviour", category: "Neoplasms" },
-            { code: "2A2J", description: "Neoplasm of uncertain or unknown behaviour of oral cavity and digestive organs", category: "Neoplasms" },
-            { code: "2A2K", description: "Neoplasm of uncertain or unknown behaviour of middle ear and respiratory and intrathoracic organs", category: "Neoplasms" },
-            { code: "2A2L", description: "Neoplasm of uncertain or unknown behaviour of other and unspecified sites", category: "Neoplasms" },
-            { code: "2A2M", description: "Neoplasm of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue", category: "Neoplasms" },
-            { code: "2A2N", description: "Benign neoplasms", category: "Neoplasms" },
-            { code: "2A2P", description: "Benign neoplasm of oral cavity and digestive organs", category: "Neoplasms" },
-            { code: "2A2Q", description: "Benign neoplasm of major salivary glands", category: "Neoplasms" },
-            { code: "2A2R", description: "Benign neoplasm of colon, rectum, anus and anal canal", category: "Neoplasms" },
-            { code: "2A2S", description: "Benign neoplasm of other and unspecified parts of digestive system", category: "Neoplasms" },
-            { code: "2A2T", description: "Benign neoplasm of respiratory and intrathoracic organs", category: "Neoplasms" },
-            { code: "2A2U", description: "Benign neoplasm of bone and articular cartilage", category: "Neoplasms" },
-            { code: "2A2V", description: "Benign neoplasm of skin", category: "Neoplasms" },
-            { code: "2A2W", description: "Benign neoplasm of mesothelial and soft tissue", category: "Neoplasms" },
-            { code: "2A2X", description: "Benign neoplasm of breast", category: "Neoplasms" },
-            { code: "2A2Y", description: "Benign neoplasm of female genital organs", category: "Neoplasms" },
-            { code: "2A2Z", description: "Benign neoplasm of male genital organs", category: "Neoplasms" },
-            { code: "2A30", description: "Benign neoplasm of urinary organs", category: "Neoplasms" },
-            { code: "2A31", description: "Benign neoplasm of eye, brain and other parts of central nervous system", category: "Neoplasms" },
-            { code: "2A32", description: "Benign neoplasm of thyroid and other endocrine glands", category: "Neoplasms" },
-            { code: "2A33", description: "Benign neoplasm of other and unspecified sites", category: "Neoplasms" },
-            { code: "2A34", description: "Neoplasms of uncertain or unknown behaviour", category: "Neoplasms" },
-            { code: "2A35", description: "Carcinoma in situ", category: "Neoplasms" },
-            { code: "2A36", description: "Carcinoma in situ of digestive organs", category: "Neoplasms" },
-            { code: "2A37", description: "Carcinoma in situ of respiratory system", category: "Neoplasms" },
-            { code: "2A38", description: "Carcinoma in situ of skin", category: "Neoplasms" },
-            { code: "2A39", description: "Carcinoma in situ of breast", category: "Neoplasms" },
-            { code: "2A3A", description: "Carcinoma in situ of cervix uteri", category: "Neoplasms" },
-            { code: "2A3B", description: "Carcinoma in situ of other and unspecified genital organs", category: "Neoplasms" },
-            { code: "2A3C", description: "Carcinoma in situ of other and unspecified sites", category: "Neoplasms" },
-
-            // Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
-            { code: "3A00", description: "Anaemias", category: "Blood" },
-            { code: "3A01", description: "Iron deficiency anaemia", category: "Blood" },
-            { code: "3A02", description: "Vitamin B12 deficiency anaemia", category: "Blood" },
-            { code: "3A03", description: "Folic acid deficiency anaemia", category: "Blood" },
-            { code: "3A04", description: "Other nutritional anaemias", category: "Blood" },
-            { code: "3A05", description: "Haemolytic anaemia", category: "Blood" },
-            { code: "3A06", description: "Sickle-cell disorders", category: "Blood" },
-            { code: "3A07", description: "Thalassaemia", category: "Blood" },
-            { code: "3A08", description: "Other hereditary haemolytic anaemias", category: "Blood" },
-            { code: "3A09", description: "Acquired haemolytic anaemia", category: "Blood" },
-            { code: "3A0A", description: "Aplastic anaemia", category: "Blood" },
-            { code: "3A0B", description: "Other anaemias", category: "Blood" },
-            { code: "3A0C", description: "Anaemia, unspecified", category: "Blood" },
-            { code: "3A0D", description: "Coagulation defects, purpura and other haemorrhagic conditions", category: "Blood" },
-            { code: "3A0E", description: "Haemophilia", category: "Blood" },
-            { code: "3A0F", description: "Von Willebrand disease", category: "Blood" },
-            { code: "3A0G", description: "Other coagulation defects", category: "Blood" },
-            { code: "3A0H", description: "Purpura and other haemorrhagic conditions", category: "Blood" },
-            { code: "3A0I", description: "Thrombocytopenia", category: "Blood" },
-            { code: "3A0J", description: "Other haemorrhagic conditions", category: "Blood" },
-            { code: "3A0K", description: "Other diseases of blood and blood-forming organs", category: "Blood" },
-            { code: "3A0L", description: "Neutropenia", category: "Blood" },
-            { code: "3A0M", description: "Pancytopenia", category: "Blood" },
-            { code: "3A0N", description: "Other diseases of blood and blood-forming organs", category: "Blood" },
-            { code: "3A0P", description: "Certain disorders involving the immune mechanism", category: "Blood" },
-            { code: "3A0Q", description: "Immunodeficiency with predominantly antibody defects", category: "Blood" },
-            { code: "3A0R", description: "Combined immunodeficiencies", category: "Blood" },
-            { code: "3A0S", description: "Other immunodeficiencies", category: "Blood" },
-            { code: "3A0T", description: "Sarcoidosis", category: "Blood" },
-            { code: "3A0U", description: "Other disorders involving the immune mechanism", category: "Blood" },
-            { code: "3A0V", description: "Disorders involving the immune mechanism, unspecified", category: "Blood" }
+            {
+                "code": "1A36",
+                "description": "Cholera",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1A61",
+                "description": "Gastroenteritis or colitis without specification of infectious",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1A94",
+                "description": "Syphilis, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B10.0",
+                "description": "Respiratory tuberculosis, confirmed",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B10.1",
+                "description": "Respiratory tuberculosis, not confirmed",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B11.0",
+                "description": "Tuberculous meningitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B11.3",
+                "description": "Tuberculous granuloma of brain",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B11.Z",
+                "description": "Tuberculosis of the nervous system, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B12.4",
+                "description": "Tuberculosis of the musculoskeletal system",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B12.5",
+                "description": "Tuberculosis of the genitourinary system",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B12.6",
+                "description": "Tuberculous peripheral lymphadenopathy",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B12.7",
+                "description": "Tuberculosis of the digestive system",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B12.Y",
+                "description": "Tuberculosis of other specified organ or site",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B20.0",
+                "description": "Paucibacillary leprosy",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B20.1",
+                "description": "Multibacillary leprosy",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B20.2",
+                "description": "Leprosy reactions",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B20.Z",
+                "description": "Leprosy, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B53",
+                "description": "Streptococcal pharyngitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B70.0",
+                "description": "Erysipelas",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B70.Z",
+                "description": "Bacterial cellulitis or lymphangitis due to unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B71",
+                "description": "Necrotising fasciitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B72.Z",
+                "description": "Impetigo, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B74",
+                "description": "Superficial bacterial folliculitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B75.0",
+                "description": "Furuncle",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B75.1",
+                "description": "Carbuncle",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1B75.3",
+                "description": "Pyogenic abscess of the skin",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1C17",
+                "description": "Brucellosis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1C20",
+                "description": "Chlamydial conjunctivitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1C82",
+                "description": "Non-pyogenic bacterial infections of the skin",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1D48",
+                "description": "Severe dengue",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1D65",
+                "description": "Severe acute respiratory syndrome",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1E50",
+                "description": "Other specified zoonotic viral diseases",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1E51",
+                "description": "Chronic viral hepatitis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1E80",
+                "description": "Molluscum contagiosum",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F00",
+                "description": "Plane warts",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F03",
+                "description": "Measles",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F23",
+                "description": "Candidosis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F28",
+                "description": "Dermatophytosis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F53",
+                "description": "Mycoses, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F57",
+                "description": "Toxoplasmosis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F65",
+                "description": "Ascariasis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F70",
+                "description": "Hookworm diseases",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F74",
+                "description": "Hymenolepiasis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1F86",
+                "description": "Schistosomiasis",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "1G41",
+                "description": "Helminthiases, unspecified",
+                "category": "Certain infectious or parasitic diseases"
+            },
+            {
+                "code": "2A00",
+                "description": "Primary neoplasms of brain",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2A01",
+                "description": "Primary neoplasms of meninges",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2A80",
+                "description": "Follicular lymphoma",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2B30",
+                "description": "Hodgkin lymphoma",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2B33.1",
+                "description": "Myeloid leukaemia",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2B33.3",
+                "description": "Lymphoid leukaemia, not elsewhere classified",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2B33.4",
+                "description": "Leukaemia, unspecified",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2C10",
+                "description": "Neoplasms of haematopoietic or lymphoid tissues,",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2C94",
+                "description": "Malignant neoplasms of the pleura",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2E66",
+                "description": "Malignant neoplasms of thyroid gland",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "2F33",
+                "description": "Benign neoplasm of other or unspecified female genital",
+                "category": "Neoplasms"
+            },
+            {
+                "code": "3A01",
+                "description": "Megaloblastic anaemia due to vitamin B12 deficiency",
+                "category": "Diseases of the blood or blood-forming organs"
+            },
+            {
+                "code": "3B63",
+                "description": "Anaemia due to chronic disease",
+                "category": "Diseases of the blood or blood-forming organs"
+            },
+            {
+                "code": "3B64.Z",
+                "description": "Thrombocytopenia, unspecified",
+                "category": "Diseases of the blood or blood-forming organs"
+            },
+            {
+                "code": "3B81.B",
+                "description": "Hypersplenism",
+                "category": "Diseases of the blood or blood-forming organs"
+            },
+            {
+                "code": "4A40",
+                "description": "Other specified primary immunodeficiencies",
+                "category": "Diseases of the immune system"
+            },
+            {
+                "code": "4A84",
+                "description": "Anaphylaxis",
+                "category": "Diseases of the immune system"
+            },
+            {
+                "code": "5A00",
+                "description": "Hypothyroidism",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A02",
+                "description": "Thyrotoxicosis",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A14",
+                "description": "Diabetes mellitus, type unspecified",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A22",
+                "description": "Diabetic acidosis",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A40",
+                "description": "Diabetic coma",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A60",
+                "description": "Hypoglycaemia without associated diabetes",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5A70",
+                "description": "Cushing syndrome",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B52",
+                "description": "Delayed puberty",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55",
+                "description": "Stunting in infants, children or adolescents",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55.0",
+                "description": "Vitamin A deficiency with night blindness",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55.1",
+                "description": "Vitamin A deficiency with conjunctival xerosis",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55.2",
+                "description": "Vitamin A deficiency with conjunctival xerosis or Bitot\u2019s",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55.3",
+                "description": "Vitamin A deficiency with corneal xerosis",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B55.5",
+                "description": "Vitamin A deficiency with corneal ulceration or",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B56.0",
+                "description": "Scurvy",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B57.0",
+                "description": "Vitamin D deficiency rickets",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B59",
+                "description": "Vitamin E deficiency",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B80.0",
+                "description": "Overweight",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5B91",
+                "description": "Obesity",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "5C80",
+                "description": "Hyperosmolality or hypernatraemia",
+                "category": "Endocrine, nutritional or metabolic diseases"
+            },
+            {
+                "code": "6B23",
+                "description": "Catatonia associated with another mental disorder",
+                "category": "Mental, behavioral or neurodevelopmental disorders"
+            },
+            {
+                "code": "6D84",
+                "description": "Oppositional defiant disorder",
+                "category": "Mental, behavioral or neurodevelopmental disorders"
+            },
+            {
+                "code": "6D85",
+                "description": "Dementia due to diseases classified elsewhere",
+                "category": "Mental, behavioral or neurodevelopmental disorders"
+            },
+            {
+                "code": "7A80",
+                "description": "Chronic insomnia",
+                "category": "Sleep-wake disorders"
+            },
+            {
+                "code": "7B00.1",
+                "description": "Sleepwalking disorder",
+                "category": "Sleep-wake disorders"
+            },
+            {
+                "code": "7B00.2",
+                "description": "Sleep terrors",
+                "category": "Sleep-wake disorders"
+            },
+            {
+                "code": "7B01.2",
+                "description": "Nightmare disorder",
+                "category": "Sleep-wake disorders"
+            },
+            {
+                "code": "8A40",
+                "description": "Multiple sclerosis",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8A80",
+                "description": "Status epilepticus",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8B60",
+                "description": "Tension-type headache",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8B88.0",
+                "description": "Bell palsy",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8B94",
+                "description": "Brachial plexus disorders",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8C10",
+                "description": "Polyneuropathy, unspecified",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8C11",
+                "description": "Mononeuropathies of lower limb",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "8D20",
+                "description": "Other specified disorders of nerve root, plexus or peripheral",
+                "category": "Diseases of the nervous system"
+            },
+            {
+                "code": "9A60",
+                "description": "Other specified disorders of the ocular adnexa or orbit",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B10",
+                "description": "Infectious keratitis",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B10.02",
+                "description": "Mature age-related cataract",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B10.20",
+                "description": "Traumatic cataract",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B10.21",
+                "description": "Diabetic cataract",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B51",
+                "description": "Scleritis",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B71.0Z",
+                "description": "Diabetic retinopathy, unspecified",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B71.1",
+                "description": "Hypertensive retinopathy",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B73.0",
+                "description": "Retinal detachment with retinal break",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B75.0",
+                "description": "Age related macular degeneration",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9B78.12",
+                "description": "Retinal vasculitis",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9C84",
+                "description": "Glaucoma suspect",
+                "category": "Diseases of the visual system"
+            },
+            {
+                "code": "9D00",
+                "description": "Disorders of refraction",
+                "category": "Diseases of the visual system"
+            }
         ];
 
         const searchInput = document.getElementById('searchInput');
