@@ -373,45 +373,10 @@
                         </button>
 
                         <div id="categoryDropdown" class="dropdown-menu hidden">
-                            <div class="py-1">
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="all">
-                                    <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
-                                    </svg>
-                                    All Categories
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Certain infectious or parasitic diseases">
-                                    🦠 Chapter 1: Certain infectious or parasitic diseases
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Neoplasms">
-                                    🎗️ Chapter 2: Neoplasms
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Diseases of the blood or blood-forming organs">
-                                    🩸 Chapter 3: Diseases of the blood or blood-forming organs
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Diseases of the immune system">
-                                    🛡️ Chapter 4: Diseases of the immune system
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Endocrine, nutritional or metabolic diseases">
-                                    🫘 Chapter 5: Endocrine, nutritional or metabolic diseases
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Mental, behavioral or neurodevelopmental disorders">
-                                    🧠 Chapter 6: Mental, behavioral or neurodevelopmental disorders
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Sleep-wake disorders">
-                                    😴 Chapter 7: Sleep-wake disorders
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Diseases of the nervous system">
-                                    🧠 Chapter 8: Diseases of the nervous system
-                                </button>
-                                <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center" data-category="Diseases of the visual system">
-                                    👁️ Chapter 9: Diseases of the visual system
-                                </button>
-                                <div class="border-t border-gray-200 my-1"></div>
-                                <div class="px-4 py-2 text-xs text-gray-500 font-medium">
-                                    Note: Currently showing 9 categories with 110 diseases.<br>
-                                    Full ICD-11 dataset expansion in progress.
-                                </div>
+                            <div id="categoryDropdownList" class="py-1"></div>
+                            <div class="border-t border-gray-200 my-1"></div>
+                            <div class="px-4 py-2 text-xs text-gray-500 font-medium">
+                                <span id="categoryNote">Showing categories from the full ESV ICD-11 dataset.</span>
                             </div>
                         </div>
                     </div>

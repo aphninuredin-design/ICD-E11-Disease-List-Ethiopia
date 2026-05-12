@@ -1,17 +1,47 @@
 const icdData = [
   {
     "code": "1A36",
-    "description": "Cholera",
+    "description": "Cholera Intestinal infections due to Shigella Intestinal infections due to Escherichia coli Typhoid fever Paratyphoid fever Other specified bacterial intestinal infections Bacterial intestinal infections, unspecified Bacterial foodborne intoxications, unspecified Viral intestinal infections, unspecified Giardiasis Amoebiasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A36.10",
+    "description": "Amoebic liver abscess",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A36.1Y",
+    "description": "Amoebiasis of other specified sites",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A3Y",
+    "description": "Other specified protozoal intestinal infections",
     "category": "Certain infectious or parasitic diseases"
   },
   {
     "code": "1A61",
-    "description": "Gastroenteritis or colitis without specification of infectious",
+    "description": "Gastroenteritis or colitis without specification of infectious agent Congenital syphilis Early syphilis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A62.1",
+    "description": "Cardiovascular late syphilis",
     "category": "Certain infectious or parasitic diseases"
   },
   {
     "code": "1A94",
-    "description": "Syphilis, unspecified",
+    "description": "Syphilis, unspecified Gonococcal genitourinary infection Gonococcal infection of other sites Disseminated gonococcal infection Gonococcal infection, unspecified Chlamydial lymphogranuloma Sexually transmissible infections due to chlamydia, unspecified Chancroid Granuloma inguinale Trichomoniasis Sexually transmissible infestations Anogenital herpes simplex infection",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A95.0",
+    "description": "Anal warts",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1A95.1",
+    "description": "Genital warts",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -65,6 +95,11 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1B1Z",
+    "description": "Miliary tuberculosis Latent tuberculosis Tuberculosis, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1B20.0",
     "description": "Paucibacillary leprosy",
     "category": "Certain infectious or parasitic diseases"
@@ -85,8 +120,13 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1B2Z",
+    "description": "Mycobacterial diseases, unspecified Acute rheumatic fever without mention of heart involvement Acute rheumatic fever with heart involvement Rheumatic chorea Scarlet fever",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1B53",
-    "description": "Streptococcal pharyngitis",
+    "description": "Streptococcal pharyngitis Toxic shock syndrome Meningitis due to Streptococcus",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -96,7 +136,7 @@ const icdData = [
   },
   {
     "code": "1B70.Z",
-    "description": "Bacterial cellulitis or lymphangitis due to unspecified",
+    "description": "Bacterial cellulitis or lymphangitis due to unspecified bacterium",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -131,7 +171,17 @@ const icdData = [
   },
   {
     "code": "1C17",
-    "description": "Brucellosis",
+    "description": "Brucellosis Anthrax Cat-scratch disease Whooping cough Tetanus Obstetrical tetanus Tetanus neonatorum Gas gangrene Diphtheria",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C1C.0",
+    "description": "Meningococcal meningitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C1C.2",
+    "description": "Meningococcaemia",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -140,13 +190,43 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1C23.0",
+    "description": "Initial stage of trachoma",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C23.1",
+    "description": "Active stage of trachoma",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1C23.Z",
+    "description": "Trachoma, unspecified",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1C82",
-    "description": "Non-pyogenic bacterial infections of the skin",
+    "description": "Non-pyogenic bacterial infections of the skin Other specified bacterial diseases Human immunodeficiency virus disease associated with tuberculosis Human immunodeficiency virus disease without mention of tuberculosis or malaria Viral encephalitis not elsewhere classified Acute poliomyelitis Rabies",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1D00.0",
+    "description": "Bacterial encephalitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1D01.0",
+    "description": "Bacterial meningitis",
     "category": "Certain infectious or parasitic diseases"
   },
   {
     "code": "1D48",
-    "description": "Severe dengue",
+    "description": "Severe dengue Dengue fever, unspecified Chikungunya virus disease Yellow fever Zika virus disease",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1D60.0",
+    "description": "Ebola disease",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -156,7 +236,27 @@ const icdData = [
   },
   {
     "code": "1E50",
-    "description": "Other specified zoonotic viral diseases",
+    "description": "Other specified zoonotic viral diseases Mumps Viral conjunctivitis Viral haemorrhagic fever, not elsewhere classified Influenza, virus not identified Acute viral hepatitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E50.0",
+    "description": "Acute hepatitis A",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E50.1",
+    "description": "Acute hepatitis B",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E50.2",
+    "description": "Acute hepatitis C",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E50.4",
+    "description": "Acute hepatitis E",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -165,13 +265,28 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1E51.Y",
+    "description": "Other specified chronic viral hepatitis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1E80",
-    "description": "Molluscum contagiosum",
+    "description": "Molluscum contagiosum Common warts",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1E80.1",
+    "description": "Plantar warts",
     "category": "Certain infectious or parasitic diseases"
   },
   {
     "code": "1F00",
-    "description": "Plane warts",
+    "description": "Plane warts Varicella Zoster Herpes simplex infections",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F00.0",
+    "description": "Herpes simplex infection of skin or mucous membrane",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -180,8 +295,28 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1F03.Y",
+    "description": "Measles with other complications",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1F23",
     "description": "Candidosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F23.10",
+    "description": "Vulvovaginal candidosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F23.2",
+    "description": "Candidosis of gastrointestinal tract",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F27.1",
+    "description": "Cerebral cryptococcosis",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -190,8 +325,68 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1F28.0",
+    "description": "Dermatophytosis of scalp",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28.1",
+    "description": "Dermatophytosis of nail",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28.2",
+    "description": "Dermatophytosis of foot",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28.3",
+    "description": "Genitocrural dermatophytosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28.4",
+    "description": "Kerion",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F28.Y",
+    "description": "Other specified dermatophytosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F2C",
+    "description": "Mucormycosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F2D.0",
+    "description": "Pityriasis versicolor",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1F53",
-    "description": "Mycoses, unspecified",
+    "description": "Mycoses, unspecified Malaria due to Plasmodium falciparum Malaria due to Plasmodium vivax Malaria due to Plasmodium malariae Malaria due to Plasmodium ovale Malaria, unspecified African trypanosomiasis Chagas disease",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F54.0",
+    "description": "Visceral leishmaniasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F54.1",
+    "description": "Cutaneous leishmaniasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F54.2",
+    "description": "Mucocutaneous leishmaniasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F54.Z",
+    "description": "Leishmaniasis, unspecified",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -200,13 +395,33 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1F57.1",
+    "description": "Meningoencephalitis due to Toxoplasma gondii",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1F65",
-    "description": "Ascariasis",
+    "description": "Ascariasis Dracunculiasis Enterobiasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F66.3",
+    "description": "Lymphatic filariasis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F66.Z",
+    "description": "Filariasis, unspecified",
     "category": "Certain infectious or parasitic diseases"
   },
   {
     "code": "1F70",
-    "description": "Hookworm diseases",
+    "description": "Hookworm diseases Onchocerciasis Strongyloidiasis Trichuriasis Cysticercosis",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F73.Z",
+    "description": "Echinococcosis, unspecified",
     "category": "Certain infectious or parasitic diseases"
   },
   {
@@ -215,18 +430,43 @@ const icdData = [
     "category": "Certain infectious or parasitic diseases"
   },
   {
+    "code": "1F76.0",
+    "description": "Taeniasis due to Taenia solium",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F76.1",
+    "description": "Taeniasis due to Taenia saginata",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
     "code": "1F86",
     "description": "Schistosomiasis",
     "category": "Certain infectious or parasitic diseases"
   },
   {
-    "code": "1G41",
-    "description": "Helminthiases, unspecified",
+    "code": "1F86.0",
+    "description": "Schistosomiasis due to Schistosoma haematobium",
     "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1F86.1",
+    "description": "Schistosomiasis due to Schistosoma mansoni",
+    "category": "Certain infectious or parasitic diseases"
+  },
+  {
+    "code": "1G41",
+    "description": "Helminthiases, unspecified Pediculosis Myiasis External hirudiniasis Pthiriasis Other specified parasitic diseases Sepsis without septic shock Sepsis with septic shock",
+    "category": "Neoplasms"
   },
   {
     "code": "2A00",
     "description": "Primary neoplasms of brain",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A00.00",
+    "description": "Glioblastoma of brain",
     "category": "Neoplasms"
   },
   {
@@ -235,8 +475,33 @@ const icdData = [
     "category": "Neoplasms"
   },
   {
+    "code": "2A0Z",
+    "description": "Other and unspecified neoplasms of brain or central nervous system",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A20.4",
+    "description": "Polycythaemia vera",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A4Z",
+    "description": "Myelodysplastic syndromes, unspecified Chronic myelomonocytic leukaemia Myelodysplastic and myeloproliferative neoplasms, unspecified",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A60.3Z",
+    "description": "Acute myeloid leukaemia, unspecified",
+    "category": "Neoplasms"
+  },
+  {
     "code": "2A80",
     "description": "Follicular lymphoma",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2A85.6",
+    "description": "Burkitt lymphoma including Burkitt leukaemia",
     "category": "Neoplasms"
   },
   {
@@ -261,23 +526,73 @@ const icdData = [
   },
   {
     "code": "2C10",
-    "description": "Neoplasms of haematopoietic or lymphoid tissues,",
+    "description": "Neoplasms of haematopoietic or lymphoid tissues, unspecified Osteosarcoma, primary site Rhabdomyosarcoma, primary site Kaposi sarcoma, primary site Malignant neoplasms of nasopharynx Malignant neoplasms of lip, oral cavity or pharynx, unspecified Malignant neoplasms of oesophagus Malignant neoplasms of stomach Malignant neoplasms of colon Malignant neoplasms of rectum Malignant neoplasm of pancreas",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2C12.0",
+    "description": "Malignant neoplasm of liver",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2C12.01",
+    "description": "Hepatoblastoma Malignant neoplasms of gallbladder Malignant neoplasms of larynx Malignant neoplasms of trachea Malignant neoplasms of bronchus or lung",
     "category": "Neoplasms"
   },
   {
     "code": "2C94",
-    "description": "Malignant neoplasms of the pleura",
+    "description": "Malignant neoplasms of the pleura Melanoma of skin Malignant phyllodes tumour of breast Malignant neoplasms of breast, unspecified Malignant neoplasms of cervix uteri Malignant neoplasms of testis Malignant neoplasms of prostate Malignant neoplasms of kidney, except renal pelvis Malignant neoplasms of bladder",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2D02.2",
+    "description": "Retinoblastoma",
     "category": "Neoplasms"
   },
   {
     "code": "2E66",
-    "description": "Malignant neoplasms of thyroid gland",
+    "description": "Malignant neoplasms of thyroid gland Carcinoma in situ of cervix uteri",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2E80.0",
+    "description": "Lipoma",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2E86.0",
+    "description": "Leiomyoma of uterus",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2E86.2",
+    "description": "Rhabdomyoma",
+    "category": "Neoplasms"
+  },
+  {
+    "code": "2F30.5",
+    "description": "Fibroadenoma of breast",
     "category": "Neoplasms"
   },
   {
     "code": "2F33",
-    "description": "Benign neoplasm of other or unspecified female genital",
-    "category": "Neoplasms"
+    "description": "Benign neoplasm of other or unspecified female genital organs",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3A00.0",
+    "description": "Acquired iron deficiency anaemia due to blood loss",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3A00.1",
+    "description": "Acquired iron deficiency anaemia due to low intake",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3A00.Z",
+    "description": "Iron deficiency anaemia, unspecified",
+    "category": "Diseases of the blood or blood-forming organs"
   },
   {
     "code": "3A01",
@@ -285,8 +600,23 @@ const icdData = [
     "category": "Diseases of the blood or blood-forming organs"
   },
   {
+    "code": "3A01.2",
+    "description": "Vitamin B12 deficiency anaemia due to low intake",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3A4Z",
+    "description": "Folate deficiency anaemia Haemolytic anaemias, unspecified",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
+    "code": "3A70.Z",
+    "description": "Aplastic anaemia, unspecified",
+    "category": "Diseases of the blood or blood-forming organs"
+  },
+  {
     "code": "3B63",
-    "description": "Anaemia due to chronic disease",
+    "description": "Anaemia due to chronic disease Polycythaemia, unspecified Acute posthaemorrhagic anaemia Thrombocytosis",
     "category": "Diseases of the blood or blood-forming organs"
   },
   {
@@ -300,8 +630,23 @@ const icdData = [
     "category": "Diseases of the blood or blood-forming organs"
   },
   {
+    "code": "3C0Y",
+    "description": "- Other specified diseases of the blood or blood-forming organs",
+    "category": "Diseases of the immune system"
+  },
+  {
     "code": "4A40",
-    "description": "Other specified primary immunodeficiencies",
+    "description": "Other specified primary immunodeficiencies - Acquired immunodeficiencies Lupus erythematosus",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "4A40.0",
+    "description": "Systemic lupus erythematosus",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "4A44.2",
+    "description": "Giant cell arteritis",
     "category": "Diseases of the immune system"
   },
   {
@@ -310,8 +655,53 @@ const icdData = [
     "category": "Diseases of the immune system"
   },
   {
+    "code": "4A85.22",
+    "description": "Allergic contact dermatitis due to food allergen",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "4A8Y",
+    "description": "Allergic or hypersensitivity conditions of other specified type",
+    "category": "Diseases of the immune system"
+  },
+  {
+    "code": "4B4Y",
+    "description": "- Other specified diseases of the immune system",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
     "code": "5A00",
     "description": "Hypothyroidism",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A00.0",
+    "description": "Congenital hypothyroidism",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A00.2",
+    "description": "Acquired hypothyroidism",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A01.0",
+    "description": "Nontoxic diffuse goitre",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A01.1",
+    "description": "Nontoxic single thyroid nodule",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A01.2",
+    "description": "Nontoxic multinodular goitre",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A01.Z",
+    "description": "Nontoxic goitre, unspecified",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -320,8 +710,33 @@ const icdData = [
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
+    "code": "5A02.5",
+    "description": "Thyroid crisis Thyroiditis Type 1 diabetes mellitus Type 2 diabetes mellitus",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A13.4",
+    "description": "Diabetes mellitus due to drug or chemical",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
     "code": "5A14",
     "description": "Diabetes mellitus, type unspecified",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A20.0",
+    "description": "Hyperosmolar hyperglycaemic state without coma",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A20.1",
+    "description": "Hyperosmolar hyperglycaemic state with coma",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A21.Z",
+    "description": "Hypoglycaemia in the context of diabetes, unspecified",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -330,13 +745,33 @@ const icdData = [
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
+    "code": "5A22.0",
+    "description": "Diabetic ketoacidosis without coma",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A22.3",
+    "description": "Diabetic ketoacidosis with coma",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
     "code": "5A40",
-    "description": "Diabetic coma",
+    "description": "Diabetic coma Uncontrolled or unstable diabetes mellitus Intermediate hyperglycaemia",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A40.0",
+    "description": "Impaired fasting glucose",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
     "code": "5A60",
-    "description": "Hypoglycaemia without associated diabetes",
+    "description": "Hypoglycaemia without associated diabetes Hypoparathyroidism Hyperfunction of pituitary gland",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5A60.0",
+    "description": "Acromegaly or pituitary gigantism",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -345,13 +780,18 @@ const icdData = [
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
+    "code": "5A80.1",
+    "description": "Polycystic ovary syndrome",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
     "code": "5B52",
-    "description": "Delayed puberty",
+    "description": "Delayed puberty Underweight in infants, children or adolescents Wasting in infants, children or adolescents Acute malnutrition in infants, children or adolescents",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
     "code": "5B55",
-    "description": "Stunting in infants, children or adolescents",
+    "description": "Stunting in infants, children or adolescents Underweight in adults Vitamin A deficiency",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -366,7 +806,7 @@ const icdData = [
   },
   {
     "code": "5B55.2",
-    "description": "Vitamin A deficiency with conjunctival xerosis or Bitot\u2019s",
+    "description": "Vitamin A deficiency with conjunctival xerosis or Bitot’s spots",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -376,7 +816,7 @@ const icdData = [
   },
   {
     "code": "5B55.5",
-    "description": "Vitamin A deficiency with corneal ulceration or",
+    "description": "Vitamin A deficiency with corneal ulceration or keratomalacia Vitamin A deficiency with xerophthalmic scars of cornea or blindness",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -391,7 +831,52 @@ const icdData = [
   },
   {
     "code": "5B59",
-    "description": "Vitamin E deficiency",
+    "description": "Vitamin E deficiency Vitamin K deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5A.0",
+    "description": "Beriberi",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5B",
+    "description": "Vitamin B2 deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5C.0",
+    "description": "Pellagra",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5D",
+    "description": "Vitamin B6 deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5F",
+    "description": "Folate deficiency Vitamin B12 deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5K.1",
+    "description": "Calcium deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5K.10",
+    "description": "Tetany due to acute calcium deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B5K.3",
+    "description": "Iodine deficiency",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5B7Z",
+    "description": "Unspecified undernutrition",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
@@ -401,22 +886,47 @@ const icdData = [
   },
   {
     "code": "5B91",
-    "description": "Obesity",
+    "description": "Obesity Vitamin excesses Mineral excesses",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5C61.6",
+    "description": "Lactose intolerance",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5C70.0",
+    "description": "Dehydration",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5C70.1",
+    "description": "Hypovolaemia",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
     "code": "5C80",
-    "description": "Hyperosmolality or hypernatraemia",
+    "description": "Hyperosmolality or hypernatraemia Hypo-osmolality or hyponatraemia Hyperkalaemia Hypokalaemia Hyperlipoproteinaemia",
     "category": "Endocrine, nutritional or metabolic diseases"
   },
   {
+    "code": "5C80.0",
+    "description": "Hypercholesterolaemia",
+    "category": "Endocrine, nutritional or metabolic diseases"
+  },
+  {
+    "code": "5C80.1",
+    "description": "Hypertriglyceridaemia Disorders of intellectual development Developmental speech or language disorders Autism spectrum disorder Developmental learning disorder Attention deficit hyperactivity disorder Other specified neurodevelopmental disorders Schizophrenia Schizoaffective disorder Schizotypal disorder Acute and transient psychotic disorder Delusional disorder Other specified primary psychotic disorder",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
     "code": "6B23",
-    "description": "Catatonia associated with another mental disorder",
+    "description": "Catatonia associated with another mental disorder Catatonia induced by substances or medications Catatonia, unspecified Bipolar type I disorder Bipolar type II disorder Cyclothymic disorder Bipolar or related disorders, unspecified Recurrent depressive disorder Dysthymic disorder Mixed depressive and anxiety disorder Depressive disorders, unspecified Mood disorders, unspecified Generalised anxiety disorder Panic disorder Agoraphobia Specific phobia Social anxiety disorder Separation anxiety disorder Selective mutism Anxiety or fear-related disorders, unspecified Obsessive-compulsive disorder Hypochondriasis Post traumatic stress disorder Prolonged grief disorder Adjustment disorder Disorders specifically associated with stress, unspecified Dissociative neurological symptom disorder Dissociative amnesia Dissociative identity disorder Depersonalization-derealization disorder Anorexia Nervosa Bulimia Nervosa Pica Feeding or eating disorders, unspecified Enuresis Disorders due to use of alcohol Disorders due to use of cannabis Disorders due to use of opioids Disorders due to use of cocaine Disorders due to use of stimulants including amphetamines, methamphetamine or methcathinone Disorders due to use of nicotine Disorders due to substance use, unspecified Intermittent explosive disorder",
     "category": "Mental, behavioral or neurodevelopmental disorders"
   },
   {
     "code": "6D84",
-    "description": "Oppositional defiant disorder",
+    "description": "Oppositional defiant disorder Conduct-dissocial disorder Personality disorder Exhibitionistic disorder Factitious disorders, unspecified Delirium Mild neurocognitive disorder Amnestic disorder Dementia due to Alzheimer disease Dementia due to psychoactive substances including medications",
     "category": "Mental, behavioral or neurodevelopmental disorders"
   },
   {
@@ -425,8 +935,23 @@ const icdData = [
     "category": "Mental, behavioral or neurodevelopmental disorders"
   },
   {
+    "code": "6D85.3",
+    "description": "Dementia due to human immunodeficiency virus",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
+    "code": "6D85.7",
+    "description": "Dementia due to injury to the head",
+    "category": "Mental, behavioral or neurodevelopmental disorders"
+  },
+  {
+    "code": "6E2Z",
+    "description": "Dementia, unknown or unspecified cause Other specified neurocognitive disorders Mental or behavioural Disorders associated with pregnancy, childbirth or the puerperium, without psychotic symptoms Mental or behavioural Disorders associated with pregnancy, childbirth or the puerperium, with psychotic symptoms Mental or behavioural disorders associated with pregnancy, childbirth or the puerperium, unspecified",
+    "category": "Sleep-wake disorders"
+  },
+  {
     "code": "7A80",
-    "description": "Chronic insomnia",
+    "description": "Chronic insomnia Insomnia disorders, unspecified Narcolepsy Central sleep apnoeas Obstructive sleep apnoea Circadian rhythm sleep-wake disorder, shift work type Restless legs syndrome",
     "category": "Sleep-wake disorders"
   },
   {
@@ -442,7 +967,17 @@ const icdData = [
   {
     "code": "7B01.2",
     "description": "Nightmare disorder",
-    "category": "Sleep-wake disorders"
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8A00.0",
+    "description": "Parkinson disease",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8A2Y",
+    "description": "Dystonic disorders Ataxic disorders Tic disorders Other specified movement disorders Alzheimer disease Progressive focal atrophies Other specified disorders with neurocognitive impairment as a major feature",
+    "category": "Diseases of the nervous system"
   },
   {
     "code": "8A40",
@@ -450,13 +985,28 @@ const icdData = [
     "category": "Diseases of the nervous system"
   },
   {
+    "code": "8A41.0",
+    "description": "Transverse myelitis",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8A62.0",
+    "description": "Infantile spasms",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8A63.0",
+    "description": "Febrile seizures",
+    "category": "Diseases of the nervous system"
+  },
+  {
     "code": "8A80",
-    "description": "Status epilepticus",
+    "description": "Status epilepticus Other specified epilepsy or seizures Migraine",
     "category": "Diseases of the nervous system"
   },
   {
     "code": "8B60",
-    "description": "Tension-type headache",
+    "description": "Tension-type headache Intracerebral haemorrhage Transient ischaemic attack Cerebral ischaemic stroke Stroke not known if ischaemic or haemorrhagic Hypoxic-ischaemic encephalopathy Myelopathy Motor neuron disease",
     "category": "Diseases of the nervous system"
   },
   {
@@ -466,12 +1016,22 @@ const icdData = [
   },
   {
     "code": "8B94",
-    "description": "Brachial plexus disorders",
+    "description": "Brachial plexus disorders Diabetic radiculoplexoneuropathy",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8C03.0",
+    "description": "Diabetic polyneuropathy",
     "category": "Diseases of the nervous system"
   },
   {
     "code": "8C10",
-    "description": "Polyneuropathy, unspecified",
+    "description": "Polyneuropathy, unspecified Mononeuropathies of upper limb",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8C10.0",
+    "description": "Carpal tunnel syndrome",
     "category": "Diseases of the nervous system"
   },
   {
@@ -480,18 +1040,78 @@ const icdData = [
     "category": "Diseases of the nervous system"
   },
   {
-    "code": "8D20",
-    "description": "Other specified disorders of nerve root, plexus or peripheral",
+    "code": "8C12.0",
+    "description": "Intercostal neuropathy",
     "category": "Diseases of the nervous system"
   },
   {
+    "code": "8D20",
+    "description": "Other specified disorders of nerve root, plexus or peripheral nerves Myotonic disorders Spastic cerebral palsy",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "8D64.Z",
+    "description": "Hydrocephalus, unspecified Reye syndrome - Other specified diseases of the nervous system",
+    "category": "Diseases of the nervous system"
+  },
+  {
+    "code": "9A01.3",
+    "description": "Infectious blepharitis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A02.0",
+    "description": "Chalazion",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A03.4",
+    "description": "Lagophthalmos",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A04.0",
+    "description": "Trichiasis without entropion",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A11.5",
+    "description": "Nasolacrimal canalicular stenosis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A11.8",
+    "description": "Nasolacrimal duct obstruction",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A21.0",
+    "description": "Orbital cellulitis",
+    "category": "Diseases of the visual system"
+  },
+  {
     "code": "9A60",
-    "description": "Other specified disorders of the ocular adnexa or orbit",
+    "description": "Other specified disorders of the ocular adnexa or orbit Conjunctivitis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A60.02",
+    "description": "Allergic conjunctivitis",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A61.1",
+    "description": "Pterygium",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9A61.5",
+    "description": "Conjunctival or subconjunctival haemorrhage",
     "category": "Diseases of the visual system"
   },
   {
     "code": "9B10",
-    "description": "Infectious keratitis",
+    "description": "Infectious keratitis Corneal ulcer Corneal scars or opacities Hyphaema Cataract",
     "category": "Diseases of the visual system"
   },
   {
@@ -540,13 +1160,2873 @@ const icdData = [
     "category": "Diseases of the visual system"
   },
   {
+    "code": "9C40.A0",
+    "description": "Papilloedema",
+    "category": "Diseases of the visual system"
+  },
+  {
     "code": "9C84",
-    "description": "Glaucoma suspect",
+    "description": "Glaucoma suspect Glaucoma Nystagmus",
     "category": "Diseases of the visual system"
   },
   {
     "code": "9D00",
     "description": "Disorders of refraction",
     "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00.0",
+    "description": "Myopia",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00.1",
+    "description": "Hypermetropia",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00.2",
+    "description": "Astigmatism",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00.3",
+    "description": "Presbyopia",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D00.4",
+    "description": "Anisometropia",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D90.4",
+    "description": "Blindness, binocular",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9D90.5",
+    "description": "Blindness, monocular",
+    "category": "Diseases of the visual system"
+  },
+  {
+    "code": "9E1Y",
+    "description": "Near vision deficits - Other specified diseases of the visual system Abscess of external ear Cellulitis of external ear Malignant otitis externa Otomycosis Perichondritis of external ear Seborrhoeic otitis externa Chronic otitis externa Impacted cerumen Acute suppurative otitis media Chronic suppurative otitis media Acute otitis media Chronic otitis media",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB11",
+    "description": "Otitis media, unspecified Mastoiditis or related conditions",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB11.0",
+    "description": "Acute mastoiditis",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB11.1",
+    "description": "Chronic mastoiditis",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB1Y",
+    "description": "Cholesteatoma of middle ear Perforation of tympanic membrane Acute myringitis Chronic myringitis Other specified diseases of middle ear or mastoid",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB30.0",
+    "description": "Vestibular neuritis",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB31.0",
+    "description": "Meniere disease",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB3Y",
+    "description": "Otosclerosis Other specified diseases of inner ear",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB51.Z",
+    "description": "Acquired hearing impairment, unspecified",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB5Z",
+    "description": "Ototoxic hearing loss Sudden idiopathic hearing loss Disorders with hearing impairment, unspecified",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AB70.2",
+    "description": "Otalgia",
+    "category": "Diseases of the ear or mastoid process"
+  },
+  {
+    "code": "AC0Z",
+    "description": "- Diseases of the ear or mastoid process, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BA40",
+    "description": "Essential hypertension Hypertensive crisis Secondary hypertension Idiopathic hypotension Orthostatic hypotension Hypotension, unspecified Angina pectoris",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BA41.Z",
+    "description": "Acute myocardial infarction, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BA8Y",
+    "description": "Acute ischaemic heart disease, unspecified Old myocardial infarction Ischaemic heart diseases, unspecified Other specified diseases of coronary artery",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BB00.Z",
+    "description": "Pulmonary thromboembolism, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BB9Z",
+    "description": "Pulmonary hypertension Acute pericarditis Cardiac tamponade Haemopericardium Pericardial effusion Pericarditis, unspecified Acute or subacute infectious endocarditis Mitral valve stenosis Mitral valve insufficiency Mitral valve prolapse Mitral valve disease, unspecified Aortic valve stenosis Aortic valve insufficiency Aortic valve disease, unspecified Tricuspid valve disease, unspecified Pulmonary valve disease, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC20.1",
+    "description": "Rheumatic heart disease, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC42.Z",
+    "description": "Myocarditis, unspecified",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC43.7",
+    "description": "Diabetic cardiomyopathy",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC45",
+    "description": "Cardiomegaly",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC4Y",
+    "description": "Other specified diseases of the myocardium or cardiac chambers",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BC81.3",
+    "description": "Atrial fibrillation",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD72",
+    "description": "Other specified cardiac arrhythmia Congestive heart failure Heart failure, unspecified Chronic arterial occlusive disease, unspecified Aortic aneurysm or dissection Diabetic foot ulcer Superficial thrombophlebitis Deep vein thrombosis Venous thromboembolism",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD73.20",
+    "description": "Obstruction of peripheral vein",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD74.1",
+    "description": "Lower limb varicose veins",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD74.30",
+    "description": "Primary venous leg ulcer",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD90",
+    "description": "Lymphadenitis",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD90.0",
+    "description": "Acute lymphadenitis",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD90.2",
+    "description": "Chronic lymphadenitis",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD93",
+    "description": "Lymphoedema",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD93.0",
+    "description": "Primary lymphoedema",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "BD93.1",
+    "description": "Secondary lymphoedema Other specified disorders of lymphatic vessels or lymph nodes Lymphoedema due to surgery or radiotherapy - Other specified diseases of the circulatory system",
+    "category": "Diseases of the circulatory system"
+  },
+  {
+    "code": "CA01",
+    "description": "Acute nasopharyngitis Acute sinusitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA02.1",
+    "description": "Acute viral pharyngitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA02.Z",
+    "description": "Acute pharyngitis, unspecified",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA03.Z",
+    "description": "Acute tonsillitis, unspecified",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA06",
+    "description": "Acute laryngopharyngitis Acute obstructive laryngitis or epiglottitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA06.1",
+    "description": "Acute epiglottitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA08.0",
+    "description": "Allergic rhinitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA09.0",
+    "description": "Chronic rhinitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA09.1",
+    "description": "Chronic nasopharyngitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA09.2",
+    "description": "Chronic pharyngitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0E",
+    "description": "Chronic rhinosinusitis Cyst or mucocele of nose or nasal sinus Deviated nasal septum Hypertrophy of nasal turbinates",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0F.0",
+    "description": "Hypertrophy of tonsils",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0G",
+    "description": "Chronic laryngitis or laryngotracheitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0H.3",
+    "description": "Oedema of larynx",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0H.4",
+    "description": "Laryngeal spasm",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0J",
+    "description": "Nasal polyp",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0K.0",
+    "description": "Retropharyngeal or parapharyngeal abscess",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA0K.1",
+    "description": "Peritonsillar abscess",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA20.1",
+    "description": "Chronic bronchitis",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA23",
+    "description": "Emphysema Chronic obstructive pulmonary disease Asthma",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA23.30",
+    "description": "Unspecified asthma with exacerbation",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA23.31",
+    "description": "Unspecified asthma with status asthmaticus Bronchiectasis Cystic fibrosis Chronic bronchiolitis Tracheobronchitis Pneumonia",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA40.0",
+    "description": "Bacterial pneumonia",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CA40.1",
+    "description": "Viral pneumonia",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CB26",
+    "description": "Acute bronchiolitis Acute bronchitis Abscess of lung or mediastinum Pyothorax Lung infections, unspecified Pneumoconiosis Pneumonitis, unspecified Respiratory conditions due to other external agents Acute respiratory distress syndrome Pulmonary oedema Pulmonary eosinophilia Pneumothorax Diseases of mediastinum, not elsewhere classified Chylous effusion Fibrothorax Haemothorax",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CB40.Y",
+    "description": "Other specified diseases of the respiratory system",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CB41.0",
+    "description": "Acute respiratory failure",
+    "category": "Diseases of the respiratory system"
+  },
+  {
+    "code": "CB41.1",
+    "description": "Chronic respiratory failure",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA00.0",
+    "description": "Cheilitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA01.10",
+    "description": "Oral aphthae or aphtha-like ulceration",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA01.15",
+    "description": "Mouth ulcers",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA01.30",
+    "description": "Cellulitis or abscess of soft tissues of the mouth",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA02.1",
+    "description": "Xerostomia",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA03.0",
+    "description": "Glossitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA04.2",
+    "description": "Sialoadenitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA04.3",
+    "description": "Abscess of salivary gland",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA04.4",
+    "description": "Sialolithiasis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA04.5",
+    "description": "Mucocele of salivary gland",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA05",
+    "description": "Cysts of oral or facial-neck region",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA06.0",
+    "description": "Inflammatory conditions of jaws",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA08.0",
+    "description": "Dental caries",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA09.6",
+    "description": "Periapical abscess",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0C",
+    "description": "Certain specified disorders of teeth or supporting structures Gingival diseases Periodontal disease",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0C.0",
+    "description": "Acute periodontitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0C.31",
+    "description": "Noma",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0C.4",
+    "description": "Abscess of periodontium",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0E",
+    "description": "Dentofacial anomalies",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA0E.8",
+    "description": "Temporomandibular joint disorders",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA20.0",
+    "description": "Oesophageal obstruction",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA20.3",
+    "description": "Perforation of oesophagus",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA2Y",
+    "description": "Motility disorders of oesophagus Gastro-oesophageal reflux disease Oesophagitis Oesophageal ulcer Other specified diseases of oesophagus",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA40.0",
+    "description": "Gastric outlet obstruction",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA42",
+    "description": "Gastritis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA42.1",
+    "description": "Helicobacter pylori induced gastritis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA42.8",
+    "description": "Gastritis due to external causes",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA42.Y",
+    "description": "Other specified gastritis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA51",
+    "description": "Duodenitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA51.0",
+    "description": "Helicobacter-pylori associated duodenitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA60",
+    "description": "Gastric ulcer",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA60.3",
+    "description": "Stress ulcer of stomach",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA91",
+    "description": "Peptic ulcer, site unspecified Duodenal ulcer Obstruction of small intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DA93.0",
+    "description": "Paralytic ileus",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB30",
+    "description": "Appendicitis Obstruction of large intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB30.1",
+    "description": "Volvulus of large intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB30.3",
+    "description": "Impaction of large intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB31.2",
+    "description": "Rectal prolapse",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB36",
+    "description": "Polyp of large intestine Certain infections of the large intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB50.0",
+    "description": "Anal fissure",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB50.1",
+    "description": "Anal fistula Stenosis of anal canal Ulcer of anus Anal prolapse Haemorrhoids Perianal venous thrombosis Residual haemorrhoidal skin tags",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB70",
+    "description": "Infections of the anal region",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB70.00",
+    "description": "Anal abscess",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB92",
+    "description": "Anal polyp Diseases of anal canal, unspecified Acute or subacute hepatic failure Non-alcoholic fatty liver disease",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB93.1",
+    "description": "Hepatic cirrhosis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB98",
+    "description": "Alcoholic liver disease Drug-induced or toxic liver disease Vascular disorders of the liver",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB98.7",
+    "description": "Portal hypertension",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB99.0",
+    "description": "Chronic liver disease",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DB99.5",
+    "description": "Hepatic encephalopathy",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DC10.0",
+    "description": "Obstruction of gallbladder or bile ducts",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DC50",
+    "description": "Cholelithiasis Cholecystitis Cholangitis Other specified diseases of gallbladder or biliary tract Acute pancreatitis Chronic pancreatitis Obstructive pancreatitis Peritonitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DC50.2",
+    "description": "Peritoneal abscess",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DC51.2",
+    "description": "Haemoperitoneum",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DC82",
+    "description": "Diverticulitis of small intestine Diverticulosis of small intestine Diverticulum of small intestine Diverticulitis of large intestine Diverticulosis of large intestine Diverticulum of large intestine",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DD31.00",
+    "description": "Ischaemic colitis",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DD5Z",
+    "description": "Non-abdominal wall hernia Inguinal hernia Femoral hernia Umbilical hernia Paraumbilical hernia Epigastric hernia Incisional hernia Parastomal hernia Hernias, unspecified",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DD91.0",
+    "description": "Irritable bowel syndrome",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DD91.2",
+    "description": "Functional diarrhoea",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "DD93.1",
+    "description": "Infantile colic Vomiting following gastrointestinal surgery - Other specified diseases of the digestive system",
+    "category": "Diseases of the digestive system"
+  },
+  {
+    "code": "EA10",
+    "description": "Pityriasis rosea",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA60.0",
+    "description": "Subcutaneous mycoses",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA80",
+    "description": "Atopic eczema",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA80.0",
+    "description": "Infantile atopic eczema",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA80.1",
+    "description": "Childhood atopic eczema",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA80.2",
+    "description": "Adult atopic eczema",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA81.0",
+    "description": "Seborrhoeic dermatitis of face",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA81.1",
+    "description": "Seborrhoeic dermatitis of the scalp",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA81.Z",
+    "description": "Seborrhoeic dermatitis, unspecified",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA84",
+    "description": "Nummular dermatitis Lichen simplex or lichenification Asteatotic eczema",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA88.4",
+    "description": "Pityriasis alba",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA90",
+    "description": "Dermatitis or eczema, unspecified Psoriasis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA90.0",
+    "description": "Plaque psoriasis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA90.4",
+    "description": "Pustular psoriasis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA90.50",
+    "description": "Scalp psoriasis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA90.53",
+    "description": "Anogenital psoriasis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EA92",
+    "description": "Lichen planus Lichenoid dermatoses",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB00.0",
+    "description": "Acute urticaria",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB00.1",
+    "description": "Chronic urticaria",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB12",
+    "description": "Idiopathic angioedema Urticaria of unspecified type Erythema multiforme",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB13.0",
+    "description": "Stevens-Johnson syndrome",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB51",
+    "description": "Erythema nodosum Chronic cutaneous lupus erythematosus",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB51.0",
+    "description": "Discoid lupus erythematosus",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB90.0",
+    "description": "Diabetic skin lesions",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EB90.3",
+    "description": "Porphyria or pseudoporphyria affecting the skin",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EC23.20",
+    "description": "Oculocutaneous albinism",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EC90",
+    "description": "Pruritus",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EC90.1",
+    "description": "Pruritus due to systemic disorder",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EC90.5",
+    "description": "Anogenital pruritus",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EC91",
+    "description": "Prurigo",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED30.0",
+    "description": "Neuropathic skin ulceration",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED54",
+    "description": "Xerosis cutis or asteatosis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED60.1",
+    "description": "Melasma",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED60.2",
+    "description": "Postinflammatory hypermelanosis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED63.0",
+    "description": "Vitiligo",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED6Y",
+    "description": "Other specified disorders of skin pigmentation",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED70.2",
+    "description": "Alopecia areata",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED72",
+    "description": "Hirsutism and syndromes with hirsutism",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED80.Z",
+    "description": "Acne, unspecified",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED90.0",
+    "description": "Rosacea",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED90.1",
+    "description": "Periorificial dermatitis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "ED91.2",
+    "description": "Seborrhoea",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EE12.0",
+    "description": "Acute bacterial paronychia",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EE12.1",
+    "description": "Onychomycosis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EE13.1",
+    "description": "Ingrowing nail",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EE13.2",
+    "description": "Chronic paronychia",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EE60",
+    "description": "Keloid or hypertrophic scars",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EG30.0",
+    "description": "Scalp folliculitis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EG60",
+    "description": "Anal pruritus",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH11",
+    "description": "Inflammatory dermatoses of the perianal area Neonatal pyogenic skin infections",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH40.0",
+    "description": "Infantile seborrhoeic dermatitis",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH40.1",
+    "description": "Infantile napkin dermatoses",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH90",
+    "description": "Fixed drug eruption Pressure ulceration",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH92.0",
+    "description": "Corns or callosities",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EH93.0",
+    "description": "Tattoos or tattoo reactions",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EK10",
+    "description": "Autoimmune or other photodermatoses Sunburn Allergic contact dermatitis Irritant contact dermatitis Allergic contact urticaria",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EK50.00",
+    "description": "Papular urticaria",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EK70.0",
+    "description": "Epidermoid cyst",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EK70.Z",
+    "description": "Cutaneous cysts, unspecified",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EK71",
+    "description": "Skin tags or polyps",
+    "category": "Diseases of the skin"
+  },
+  {
+    "code": "EM0Y",
+    "description": "- Other specified diseases of the skin",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA30",
+    "description": "Osteoarthritis of hip Osteoarthritis of knee Osteoarthritis of wrist and hand Oligoosteoarthritis Reactive arthropathies Postinfectious arthropathies Infectious spondyloarthritis Other specified infection related arthropathies Rheumatoid arthritis Psoriatic arthritis Juvenile idiopathic arthritis Gout Acquired deformities of fingers or toes",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA30.0",
+    "description": "Acquired hallux valgus",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA32",
+    "description": "Other acquired deformities of limbs Disorders of patella",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA38.0",
+    "description": "Diabetic arthropathy",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA70",
+    "description": "Other specified arthropathies Spinal deformities",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA70.0",
+    "description": "Kyphosis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA70.1",
+    "description": "Scoliosis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FA70.2",
+    "description": "Lordosis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB40",
+    "description": "Torticollis Intervertebral disc degeneration Spondylolysis Spinal stenosis Ossification of spinal ligaments Spinal endplate defects Other specified conditions associated with the spine Tenosynovitis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB40.1",
+    "description": "Plantar fasciitis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB40.4",
+    "description": "Trigger finger",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB41",
+    "description": "Spontaneous rupture of synovium or tendon",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB42.2",
+    "description": "Ganglion",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB4Y",
+    "description": "Other specified disorders of synovium or tendon",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB51",
+    "description": "Fibroblastic disorders",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB54.3",
+    "description": "Calcaneal spur",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB55.0",
+    "description": "Medial epicondylitis of elbow",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB55.1",
+    "description": "Lateral epicondylitis of elbow",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB6Z",
+    "description": "Soft tissue disorders, unspecified",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB80.7",
+    "description": "Malunion of fracture",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB80.8",
+    "description": "Nonunion of fracture",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB80.9",
+    "description": "Delayed union of fracture",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB80.A",
+    "description": "Stress fracture, not elsewhere classified",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB80.B",
+    "description": "Pathological fracture, not elsewhere classified",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB83",
+    "description": "Osteonecrosis Chondropathies Low bone mass disorders",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FB83.1",
+    "description": "Osteoporosis",
+    "category": "Diseases of the musculoskeletal system or connective tissue"
+  },
+  {
+    "code": "FC0Y",
+    "description": "Osteomyelitis or osteitis Paget disease of bone - Postprocedural disorders of the musculoskeletal system - Other specified diseases of the musculoskeletal system or connective tissue",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA00",
+    "description": "Vulvitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA00.0",
+    "description": "Acute vulvitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA00.2",
+    "description": "Abscess of vulva",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA00.3",
+    "description": "Genital ulcer of vulva",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA00.40",
+    "description": "Vulvovaginal ulceration",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA01.00",
+    "description": "Acute endometritis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA01.10",
+    "description": "Chronic endometritis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA02",
+    "description": "Vaginitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA02.0",
+    "description": "Acute vaginitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA02.3",
+    "description": "Genital ulcer disease of vagina",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA03.0",
+    "description": "Abscess of Bartholin gland",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA03.1",
+    "description": "Cyst of Bartholin gland",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA05",
+    "description": "Cervicitis Female pelvic inflammatory diseases",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA05.0",
+    "description": "Acute female pelvic inflammatory disease",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA05.3",
+    "description": "Tuboovarian abscess",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA12",
+    "description": "Pelvic peritoneal adhesions of unknown or combined origin Salpingitis and oophoritis Endometriosis Adenomyosis Dyspareunia",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA13.0",
+    "description": "Polyp of vulva",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA13.6",
+    "description": "Vulvar laceration",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA13.7",
+    "description": "Vulvar haematoma",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA14.0",
+    "description": "Polyp of vagina",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA14.1",
+    "description": "Haematocolpos",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA14.2",
+    "description": "Vaginal foreign body",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA14.3",
+    "description": "Vaginal haematoma",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA15.0",
+    "description": "Polyp of cervix uteri",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA15.6",
+    "description": "Incompetence of cervix uteri",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA15.7",
+    "description": "Dysplasia of cervix uteri",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA16.1",
+    "description": "Malposition of uterus",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA18.0",
+    "description": "Follicular cyst of ovary",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.0",
+    "description": "Amenorrhoea",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.00",
+    "description": "Primary amenorrhoea",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.01",
+    "description": "Secondary amenorrhoea",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.02",
+    "description": "Lactational amenorrhoea",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.10",
+    "description": "Frequent menstrual bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.11",
+    "description": "Infrequent menstrual bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.20",
+    "description": "Intermenstrual bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.50",
+    "description": "Heavy menstrual bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA20.51",
+    "description": "Light menstrual bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA21.0",
+    "description": "Postcoital or contact bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA2Z",
+    "description": "Excessive menstruation with irregular cycle Anovulatory bleeding Abnormal uterine or vaginal bleeding, unspecified",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.0",
+    "description": "Menopause",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.1",
+    "description": "Postmenopausal uterine bleeding",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.2",
+    "description": "Postmenopausal atrophic vaginitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.4",
+    "description": "Menopausal hot flush",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.5",
+    "description": "Menopausal osteoporosis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA30.6",
+    "description": "Premature ovarian failure",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA31",
+    "description": "Female infertility",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA31.0",
+    "description": "Primary female infertility",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA31.1",
+    "description": "Secondary female infertility",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA33",
+    "description": "Recurrent pregnancy loss",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA34.02",
+    "description": "Vulvodynia",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA34.3",
+    "description": "Dysmenorrhoea",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA34.4",
+    "description": "Premenstrual disturbances",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA42.0",
+    "description": "Vulval pruritus",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA80",
+    "description": "Other specified diseases of the female genital system Ulcerative disorders of the penis or scrotum",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA80.0",
+    "description": "Aphthosis of penis or scrotum",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA81.0",
+    "description": "Penoscrotal pruritus",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA90",
+    "description": "Hyperplasia of prostate",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA91.0",
+    "description": "Chronic prostatitis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GA91.Y",
+    "description": "Other specified inflammatory and other diseases of prostate",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB00",
+    "description": "Hydrocele or spermatocele",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB01.0",
+    "description": "Torsion of testis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB04",
+    "description": "Orchitis or epididymitis Atrophy of testis Male infertility",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB05.2",
+    "description": "Phimosis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB05.3",
+    "description": "Paraphimosis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB06.1",
+    "description": "Priapism",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB0Y",
+    "description": "Other specified diseases of the male genital system",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB20.1",
+    "description": "Fibroadenosis of breast",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB21.0",
+    "description": "Breast abscess",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB21.Z",
+    "description": "Inflammatory disorders of breast, unspecified",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB23.1",
+    "description": "Fissure or fistula of nipple",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB23.2",
+    "description": "Fat necrosis of breast",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB23.5",
+    "description": "Mastodynia Disorders of breast, unspecified Nephritic syndrome Nephrotic syndrome Persistent proteinuria or albuminuria Acute tubulo-interstitial nephritis Acute pyelonephritis Acute tubular necrosis Acute renal papillary necrosis Tubulo-interstitial nephritis, not specified as acute or chronic Chronic tubulo-interstitial nephritis Obstructive or reflux nephropathy Nephrocalcinosis Pyonephrosis Renal or perinephric abscess Acute kidney failure",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB70",
+    "description": "Chronic kidney disease Kidney failure, unspecified Calculus of upper urinary tract",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB70.0",
+    "description": "Calculus of kidney",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB70.1",
+    "description": "Calculus of ureter",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB71.0",
+    "description": "Calculus in bladder",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB90",
+    "description": "Urolithiasis, unspecified Nonfamilial nongenetic cystic kidney disease Certain specified disorders of kidney or ureter",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB90.1",
+    "description": "Hydroureter",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GB90.44",
+    "description": "Renal tubular acidosis",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC03",
+    "description": "Cystitis Other disorders of bladder Urethritis and urethral syndrome Urethral stricture",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC04.0",
+    "description": "Urethral fistula",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC04.10",
+    "description": "Vesicovaginal fistula",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC04.14",
+    "description": "Urethrovaginal fistula",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC04.16",
+    "description": "Rectovaginal fistula",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC04.Y",
+    "description": "Other specified fistula of the genitourinary tract",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC07",
+    "description": "Urethral diverticulum Urethral caruncle",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC0Y",
+    "description": "Urinary tract infection, site not specified Other diseases of urinary system",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC40.2",
+    "description": "Prolapse of the vaginal apex",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC40.3",
+    "description": "Uterovaginal prolapse",
+    "category": "Diseases of the genitourinary system"
+  },
+  {
+    "code": "GC8Y",
+    "description": "Female Genital Mutilation Postoperative adhesions of vagina Prolapse of vaginal vault after hysterectomy Postprocedural urethral stricture Postprocedural pelvic peritoneal adhesions - Other specified diseases of the genitourinary system",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA00",
+    "description": "Hypoactive sexual desire dysfunction",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA01.1",
+    "description": "Male erectile dysfunction",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA02.02",
+    "description": "Anorgasmia, acquired, generalised",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA03",
+    "description": "Ejaculatory dysfunctions",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA03.1",
+    "description": "Male delayed ejaculation",
+    "category": "Conditions related to sexual health"
+  },
+  {
+    "code": "HA8Y",
+    "description": "Sexual dysfunctions, unspecified Sexual pain-penetration disorder - Other specified conditions related to sexual health",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA00.0",
+    "description": "Spontaneous abortion",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA00.1",
+    "description": "Induced abortion",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA01.0",
+    "description": "Abdominal pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA01.1",
+    "description": "Tubal pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA01.Z",
+    "description": "Ectopic pregnancy, unspecified",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA03",
+    "description": "Molar pregnancy Missed abortion",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA05.2",
+    "description": "Embolism following abortion, ectopic or molar pregnancy Gestational oedema or proteinuria without hypertension Gestational hypertension Pre-eclampsia Eclampsia",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA2Z",
+    "description": "Oedema, proteinuria, or hypertensive disorders in pregnancy, childbirth, or the puerperium, unspecified",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA40.0",
+    "description": "Threatened abortion",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA60",
+    "description": "Antepartum haemorrhage Intrapartum haemorrhage Postpartum haemorrhage Excessive vomiting in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA61.0",
+    "description": "Varicose veins of lower extremity in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA61.1",
+    "description": "Genital varices in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA61.2",
+    "description": "Superficial thrombophlebitis in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA61.3",
+    "description": "Deep phlebothrombosis in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA61.4",
+    "description": "Haemorrhoids in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA64",
+    "description": "Infections of genitourinary tract in pregnancy Diabetes mellitus in pregnancy Malnutrition in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA65.2",
+    "description": "Excessive weight gain in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA65.3",
+    "description": "Low weight gain in pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA65.6",
+    "description": "Maternal hypotension syndrome",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA65.7",
+    "description": "Subluxation of symphysis pubis in pregnancy, childbirth or the puerperium",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA80.0",
+    "description": "Twin pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA80.1",
+    "description": "Triplet pregnancy",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA87",
+    "description": "Maternal care related to polyhydramnios",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA88.0",
+    "description": "Oligohydramnios",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA89",
+    "description": "Maternal care related to premature rupture of membranes",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JA89.3",
+    "description": "Preterm premature rupture of membranes",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB01",
+    "description": "Preterm labour or delivery Failed induction of labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB02.3",
+    "description": "Precipitate labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB03.0",
+    "description": "Prolonged first stage of labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB03.1",
+    "description": "Prolonged second stage of labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A",
+    "description": "Obstructed labour due to malposition or malpresentation of fetus Obstructed labour due to maternal pelvic abnormality Obstructed labour due to other causes Labour or delivery complicated by fetal distress Labour or delivery complicated by umbilical cord complications Perineal laceration during delivery Certain specified obstetric trauma",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A.0",
+    "description": "Rupture of uterus before onset of labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A.1",
+    "description": "Rupture of uterus during labour",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A.2",
+    "description": "Postpartum inversion of uterus",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A.7",
+    "description": "Obstetric damage to pelvic joints or ligaments",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0A.8",
+    "description": "Obstetric haematoma of pelvis",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB0B.0",
+    "description": "Retained placenta without haemorrhage",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB23",
+    "description": "Other specified complications of labour or delivery Single spontaneous delivery Single delivery by forceps or vacuum extractor Single delivery by caesarean section Other assisted single delivery",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB23.0",
+    "description": "Breech extraction",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB24.Z",
+    "description": "Multiple delivery, unspecified",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB40.0",
+    "description": "Puerperal sepsis",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB41.1",
+    "description": "Deep phlebothrombosis in the puerperium",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB42.0",
+    "description": "Obstetric air embolism",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB42.1",
+    "description": "Amniotic fluid embolism",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB42.2",
+    "description": "Obstetric blood-clot embolism",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB45",
+    "description": "Infections of breast associated with childbirth",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB46.0",
+    "description": "Retracted nipple associated with childbirth",
+    "category": "Pregnancy, childbirth or the puerperium"
+  },
+  {
+    "code": "JB46.1",
+    "description": "Cracked nipple associated with childbirth",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA01",
+    "description": "Fetus or newborn affected by maternal conditions that may be unrelated to present pregnancy Fetus or newborn affected by maternal complications of pregnancy",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA02",
+    "description": "Fetus or newborn affected by complications of placenta",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA06",
+    "description": "Fetus or newborn affected by complications of umbilical cord Fetus or newborn affected by certain complications of labour or delivery Fetus or newborn affected by noxious influences transmitted via placenta or breast milk",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA07",
+    "description": "Neonatal dermatoses due to maternal antibodies",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA20.0",
+    "description": "Small for gestational age",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA21.0",
+    "description": "Extremely low birth weight of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA21.1",
+    "description": "Very low birth weight of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA21.2",
+    "description": "Low birth weight of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA21.4",
+    "description": "Preterm newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA22.1",
+    "description": "Large newborn for gestational age",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA22.2",
+    "description": "Post-term newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA42",
+    "description": "Birth injury to eye Birth injury to scalp",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA42.1",
+    "description": "Cephalohaematoma due to birth injury",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA44",
+    "description": "Subgaleal epicranial subaponeurotic haemorrhage due to birth injury Birth injury to skin or soft tissues Birth injury to peripheral nervous system",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA45.5",
+    "description": "Fracture of clavicle due to birth injury",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA63",
+    "description": "Birth injury to other organs Sepsis of fetus or newborn Viral infection in the fetus or newborn Fungal infection of fetus or newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA65.1",
+    "description": "Omphalitis of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KA86",
+    "description": "Fetal blood loss Umbilical haemorrhage of newborn Haemolytic disease of fetus or newborn Hydrops fetalis due to haemolytic disease Neonatal kernicterus",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB21",
+    "description": "Neonatal hyperbilirubinaemia Disseminated intravascular coagulation of fetus or newborn Transient neonatal thrombocytopaenia Polycythaemia neonatorum Anaemia of prematurity Neonatal vitamin K deficiency Periventricular cysts of newborn Neonatal encephalopathy Hypoxic ischaemic encephalopathy of newborn Neonatal hydrocephalus Neonatal seizures Disorders of muscle tone of newborn Intrauterine hypoxia Birth asphyxia",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB23.0",
+    "description": "Respiratory distress syndrome of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB25",
+    "description": "Neonatal tracheitis",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB26.0",
+    "description": "Neonatal aspiration of meconium",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB26.3",
+    "description": "Neonatal aspiration of milk or regurgitated food Pulmonary haemorrhage originating in the perinatal period Apnoea of newborn Respiratory failure of newborn Respiratory arrest of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB2J",
+    "description": "Airway obstruction in the neonate due to airway abnormality",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB45",
+    "description": "Neonatal hypertension",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB60.3",
+    "description": "Neonatal hyperglycaemia",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB60.4",
+    "description": "Neonatal hypoglycaemia",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KB63.1",
+    "description": "Dehydration of newborn",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KC00",
+    "description": "Intestinal obstruction of newborn Necrotising enterocolitis of newborn Neonatal malabsorption syndromes Neonatal peritonitis Congenital hydrocele",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KC20.0",
+    "description": "Delayed separation of umbilical cord",
+    "category": "Certain conditions originating in the perinatal period"
+  },
+  {
+    "code": "KD3Y",
+    "description": "Neonatal phototherapy burn Environmental hyperthermia of newborn Hypothermia of newborn Birth depression Feeding problems of newborn Other specified disorders originating in the perinatal period",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LA02",
+    "description": "Anencephaly or similar anomalies Cephalocele Spina bifida",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LA05.0",
+    "description": "Microcephaly",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB02",
+    "description": "Cleft lip Cleft palate Congenital torticollis Omphalocele Gastroschisis",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB42.2",
+    "description": "Congenital rectovaginal fistula",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB42.4",
+    "description": "Imperforate hymen",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB50",
+    "description": "Micropenis or penis agenesis",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB52.0",
+    "description": "Ectopic testis",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB55",
+    "description": "Hypospadias Epispadias",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LB70.3",
+    "description": "Macrocephaly",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LC40",
+    "description": "Brachydactyly Polydactyly Syndactyly Congenital deformities of fingers Congenital deformities of toes Congenital deformities of feet Dermoid cyst",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LD50.0",
+    "description": "Turner syndrome",
+    "category": "Developmental anomalies"
+  },
+  {
+    "code": "LD50.3",
+    "description": "Klinefelter syndrome",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA01.0",
+    "description": "Localised lymph node enlargement",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA01.1",
+    "description": "Generalised lymph node enlargement",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA14.1E",
+    "description": "Rheumatoid factor positive",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA15.0",
+    "description": "Bacteraemia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA16.11",
+    "description": "Elevated white blood cell count",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA18.0",
+    "description": "Elevated blood glucose level",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA18.4",
+    "description": "Low haemoglobin",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA1A",
+    "description": "Elevated erythrocyte sedimentation rate or abnormality of plasma viscosity",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MA80",
+    "description": "Speech disturbances",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB20.0",
+    "description": "Stupor",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB20.1",
+    "description": "Coma",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB21.1",
+    "description": "Amnesia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB23.R",
+    "description": "Suicide attempt",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB40.5",
+    "description": "Hyperaesthesia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB44.0",
+    "description": "Ataxic gait",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB44.1",
+    "description": "Paralytic gait",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB47.3",
+    "description": "Cramp or spasm",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB47.5",
+    "description": "Fasciculation",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB47.6",
+    "description": "Meningismus",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB47.B",
+    "description": "Opisthotonos",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB48.0",
+    "description": "Vertigo",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB50",
+    "description": "Tetraplegia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB51",
+    "description": "Diplegia of upper extremities",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB52",
+    "description": "Diplegia of lower extremities",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB53.1",
+    "description": "Flaccid hemiplegia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB53.2",
+    "description": "Spastic hemiplegia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB53.Z",
+    "description": "Hemiplegia, unspecified",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB54",
+    "description": "Monoplegia of upper extremity",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB55",
+    "description": "Monoplegia of lower extremity",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MB56",
+    "description": "Paraplegia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC14",
+    "description": "Eye discharge",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC15",
+    "description": "Red eye",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC16",
+    "description": "Pallor conjunctiva",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC17",
+    "description": "Icteric sclera",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC1A",
+    "description": "Visual floaters",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC41",
+    "description": "Tinnitus",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC80.0",
+    "description": "Elevated blood-pressure reading, without diagnosis of hypertension",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC81.0",
+    "description": "Tachycardia, unspecified",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC81.1",
+    "description": "Bradycardia, unspecified",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC81.2",
+    "description": "Palpitations",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC81.3",
+    "description": "Paroxysmal tachycardia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC82",
+    "description": "Cardiac arrest",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC83",
+    "description": "Cardiac murmurs and other cardiac sounds",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MC85",
+    "description": "Gangrene",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.0",
+    "description": "Apnoea",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.5",
+    "description": "Dyspnoea",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.6",
+    "description": "Hiccough",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.7",
+    "description": "Hyperventilation",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.9",
+    "description": "Nasal congestion",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.B",
+    "description": "Stridor",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD11.C",
+    "description": "Wheezing",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD12",
+    "description": "Cough",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD20",
+    "description": "Epistaxis",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD22",
+    "description": "Haemoptysis",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD31",
+    "description": "Pleurisy",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD33",
+    "description": "Respiratory arrest",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD81.3",
+    "description": "Acute abdomen",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD92",
+    "description": "Dyspepsia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MD94",
+    "description": "Halitosis",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME01",
+    "description": "Abdominal distension",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME02",
+    "description": "Abdominal rigidity",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME04",
+    "description": "Ascites",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME05.1",
+    "description": "Diarrhoea",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME07",
+    "description": "Faecal incontinence",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME09",
+    "description": "Rectal tenesmus",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME0A",
+    "description": "Visible peristalsis",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME10.1",
+    "description": "Unspecified jaundice",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME24.A3",
+    "description": "Haematochezia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME24.A4",
+    "description": "Melaena",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME64.1",
+    "description": "Cyanosis",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME64.2",
+    "description": "Pallor",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME66.6",
+    "description": "Rash",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME83",
+    "description": "Rheumatism, unspecified",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME84.2",
+    "description": "Low back pain",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME84.3",
+    "description": "Sciatica",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "ME85",
+    "description": "Stiffness of joint",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF30",
+    "description": "Breast lump or mass female",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF3A",
+    "description": "Vaginal discharge",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF50.2",
+    "description": "Urinary incontinence",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF50.3",
+    "description": "Retention of urine",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF50.4",
+    "description": "Haematuria",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF50.7",
+    "description": "Dysuria",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MF97",
+    "description": "Anuria or oliguria Polyuria Renal colic Urethral discharge Pauci-immune proliferative glomerulonephritis Haemoglobinuria Proteinuria Pyuria",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG20",
+    "description": "Cachexia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG22",
+    "description": "Fatigue",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG29",
+    "description": "Oedema",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG29.0",
+    "description": "Localised oedema",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG29.1",
+    "description": "Generalised oedema",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG40",
+    "description": "Shock",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG43.0",
+    "description": "Polydipsia",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MG45",
+    "description": "Syncope and collapse",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MH11",
+    "description": "Sudden infant death syndrome",
+    "category": "Symptoms, signs or clinical findings, not elsewhere classified"
+  },
+  {
+    "code": "MH16",
+    "description": "Multi organ failure",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA00",
+    "description": "Superficial injury of head",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA00.0Y",
+    "description": "Other specified superficial injury of scalp",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA00.1",
+    "description": "Superficial injury of eyelid or periocular area",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02",
+    "description": "Open wound of head Fracture of skull or facial bones",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02.1",
+    "description": "Fracture of base of skull",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02.3",
+    "description": "Fracture of nasal bones",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02.5",
+    "description": "Fracture of zygoma",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02.6",
+    "description": "Fracture of tooth",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA02.7",
+    "description": "Fracture of mandible",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA03.0",
+    "description": "Dislocation of jaw",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA06",
+    "description": "Injury of cranial nerves Injury of eye or orbit",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA06.8",
+    "description": "Traumatic injury to eyeball",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA07",
+    "description": "Intracranial injury",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA07.0",
+    "description": "Concussion",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA07.2",
+    "description": "Traumatic cerebral oedema",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA08",
+    "description": "Crushing injury of head",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA09.0",
+    "description": "Avulsion of scalp",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA0A.Y",
+    "description": "Other specified injuries of head",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA22",
+    "description": "Superficial injury of neck Open wound of neck Fracture of neck",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA22.12",
+    "description": "Fracture of odontoid process",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA23.1",
+    "description": "Dislocation of cervical vertebra",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA82",
+    "description": "Other specified injuries to the neck Superficial injury of thorax Open wound of thorax Fracture of rib, sternum or thoracic spine",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA82.3",
+    "description": "Fracture of rib",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA82.4",
+    "description": "Multiple fractures of ribs",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NA82.5",
+    "description": "Flail chest",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB31",
+    "description": "Injury of heart",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB32.0",
+    "description": "Traumatic pneumothorax",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB32.1",
+    "description": "Traumatic haemothorax",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB32.2",
+    "description": "Traumatic haemopneumothorax",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB52",
+    "description": "Other specified injuries to the thorax Superficial injury of abdomen, lower back or pelvis Open wound of abdomen, lower back or pelvis Fracture of lumbar spine or pelvis",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB52.0",
+    "description": "Fracture of lumbar vertebra",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NB52.11",
+    "description": "Fracture of coccyx",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC12",
+    "description": "Injury of intra-abdominal organs Injury of urinary or pelvic organs Superficial injury of shoulder or upper arm Open wound of shoulder or upper arm Fracture of shoulder or upper arm",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC12.0",
+    "description": "Fracture of clavicle",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC12.1",
+    "description": "Fracture of scapula",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC13.0",
+    "description": "Dislocation of shoulder joint",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC13.Z",
+    "description": "Dislocation or strain or sprain of joints or ligaments of shoulder girdle, unspecified",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC33",
+    "description": "Crushing injury of shoulder or upper arm Superficial injury of forearm Open wound of forearm Fracture of forearm Dislocation or strain or sprain of joints or ligaments of elbow",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC53",
+    "description": "Crushing injury of forearm Traumatic amputation of forearm Injury to fingernail Superficial injury of wrist or hand Open wound of wrist or hand Fracture at wrist or hand level",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC54.2Y",
+    "description": "Dislocation of other specified part of finger NE60&XM3ES1 Tranquilizers poisoning [Harmful effects of substances]",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC93",
+    "description": "Superficial injury of hip or thigh Fracture of femur Open wound of knee or lower leg Fracture of lower leg, including ankle Dislocation or strain or sprain of joints or ligaments of knee",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NC93.2",
+    "description": "Dislocation of knee Injury to toenail Superficial injury of ankle or foot Traumatic amputation of ankle or foot Foreign body on external eye Foreign body in ear Foreign body in respiratory tract Burn of respiratory tract Burns, unspecified Frostbite, unspecified",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NE4Z",
+    "description": "NE60&NE60&XM1X11 Carbon monoxide poisoning [Harmful effects of NE60&XM0TV9 Formaldehyde poisoning [Harmful effects of substances] substances] NE60&XM0ZH6 Lead poisoning [Harmful effects of substances] NE60&XM32P2 substances] Pentachlorophenol poisoning[Harmful effects of NE60&XM4XU4 substances] Chlorinated hydrocarbons poisoning[Harmful effects of NE60&XM4YG0 Barbiturate poisoning [Harmful effects of substances] NE60&XM7154 effects of substances] Organophosphate insecticide poisoning [Harmful NE60&XM86W0 Warfarin poisoning[Harmful effects of substances] NE60&XM96H3 Carbamates poisoning [Harmful effects of substances] NE60&XM9EL1 substances] DDT(chlorophenothane) poisoning[Harmful effects of NE60&XM9JS2 Strychnine rodenticide poisoning [Harmful effects of",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NF2Y",
+    "description": "substances] Asphyxiation Effects of lightning Drowning or nonfatal submersion - Other specified injury, poisoning or certain other consequences of external causes NE60&NE60&XM1X11 Carbon monoxide poisoning [Harmful effects of substances] NE60&XM0TV9 Formaldehyde poisoning [Harmful effects of substances] NE60&XM0ZH6 Lead poisoning [Harmful effects of substances] NE60&XM32P2 Pentachlorophenol poisoning[Harmful effects of substances] NE60&XM3ES1 Tranquilizers poisoning [Harmful effects of substances] NE60&XM4XU4 Chlorinated hydrocarbons poisoning[Harmful effects of substances] NE60&XM4YG0 Barbiturate poisoning [Harmful effects of substances] NE60&XM7154 Organophosphate insecticide poisoning [Harmful effects of substances] NE60&XM86W0 Warfarin poisoning[Harmful effects of substances] NE60&XM96H3 Carbamates poisoning [Harmful effects of substances] NE60&XM9EL1 NE60&XM9JS2 DDT(chlorophenothane) poisoning[Harmful effects of substances] Strychnine rodenticide poisoning [Harmful effects of substances]",
+    "category": "Injury, poisoning or certain other consequences of external causes"
+  },
+  {
+    "code": "NF2Y",
+    "description": "Asphyxiation Effects of lightning Drowning or nonfatal submersion - Other specified injury, poisoning or certain other consequences of external causes",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PA8Y",
+    "description": "Unintentional transport injury event, unspecified Unintentional fall from unspecified height Unintentionally stepped on or crushed by person Unintentionally stung or envenomated by animal Unintentionally injured by contact with plant Unintentionally struck by projectile from firearm Unintentional striking against stationary object Unintentionally cut or pierced by sharp object Unintentionally struck by blunt object Unintentional exposure to other specified object, not elsewhere classified",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PB02",
+    "description": "Unintentional threat to breathing by strangulation",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PB05",
+    "description": "Unintentional threat to breathing by inhalation or ingestion of liquids",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PB54",
+    "description": "Unintentional threat to breathing from low oxygen environment Unintentional threat to breathing by other specified means Unintentional exposure to uncontrolled fire Unintentional exposure to controlled fire Unintentional contact with hot object or liquid Unintentional exposure to excessive cold Unintentional exposure to or harmful effects of opioids or related analgesics Unintentional exposure to or harmful effects of psychostimulants Unintentional exposure to or harmful effects of antiepileptics or antiparkinsonism drugs Unintentional exposure to or harmful effects of organic solvents Unintentional exposure to or harmful effects of pesticides Unintentional exposure to foreign body in orifice Unintentional exposure to electric current Unintentional exposure to radiation Unintentional exposure to high or low air pressure or changes in air pressure",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PB55",
+    "description": "Unintentional exposure to explosion",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PC31",
+    "description": "Intentional self-harm by fall or jump from a height of 1 metre or more",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PC53",
+    "description": "Intentional self-harm by being cut or pierced by sharp object",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "PC54",
+    "description": "Intentional self-harm by being struck by blunt object Intentional self-harm by threat to breathing from low oxygen environment Intentional self-harm by exposure to or harmful effects of opioids or related analgesics Intentional self-harm by exposure to or harmful effects of psychostimulants Intentional self-harm by exposure to or harmful effects of pesticides Assault by transport injury event, unspecified Assault by being cut or pierced by sharp glass Assault by being cut or pierced by other or unspecified sharp object Assault by being struck by blunt object Assault by threat to breathing by strangulation Assault by exposure to uncontrolled fire Victim of lightning Victim of earthquake",
+    "category": "External causes of morbidity or mortality"
+  },
+  {
+    "code": "QA00.0",
+    "description": "General adult medical examination",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA00.4",
+    "description": "Examination of potential donor of organ or tissue",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA00.6",
+    "description": "Examination of eyes or vision",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA00.7",
+    "description": "Examination of ears and hearing",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA00.8",
+    "description": "Dental examination",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.0",
+    "description": "Examination for admission to educational institution",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.1",
+    "description": "Pre-employment examination",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.3",
+    "description": "Examination for recruitment to armed forces",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.4",
+    "description": "Examination for driving license",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.5",
+    "description": "Examination for participation in sport",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.6",
+    "description": "Examination for insurance purposes",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA01.7",
+    "description": "Issue of medical certificate",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA04.51",
+    "description": "Examination or observation for suspected sexual maltreatment",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA04.7",
+    "description": "Examination for medicolegal reasons",
+    "category": "Factors influencing health status or contact with health services"
+  },
+  {
+    "code": "QA40",
+    "description": "Pregnancy examination or test",
+    "category": "Codes for special purposes"
+  },
+  {
+    "code": "RA01.0",
+    "description": "COVID-19, virus identified",
+    "category": "Codes for special purposes"
+  },
+  {
+    "code": "RA01.1",
+    "description": "COVID-19, virus not identified",
+    "category": "Codes for special purposes"
+  },
+  {
+    "code": "RA02",
+    "description": "Post COVID-19 condition",
+    "category": "Extension Codes"
+  },
+  {
+    "code": "XE42A",
+    "description": "Vehicle driver injured in transport related event",
+    "category": "Extension Codes"
+  },
+  {
+    "code": "XE940",
+    "description": "Motorcycle as mode of transport of person injured in transport related event Animal being ridden as mode of transport of person injured in transport related event",
+    "category": "Extension Codes"
+  },
+  {
+    "code": "XE97V",
+    "description": "Intentional self-harm, person intended to die",
+    "category": "Extension Codes"
+  },
+  {
+    "code": "XJ44E",
+    "description": "Closed fracture",
+    "category": "Extension Codes"
+  },
+  {
+    "code": "XJ7YM",
+    "description": "Open fracture INTERNATIONAL CLASSIFICATION OF DISEASE (ESV_ICD11)",
+    "category": "Extension Codes"
   }
-] ;
+];

@@ -3,6 +3,7 @@ const searchInput = document.getElementById('searchInput');
 const resultsDiv = document.getElementById('results');
 const categoryDropdownBtn = document.getElementById('categoryDropdownBtn');
 const categoryDropdown = document.getElementById('categoryDropdown');
+const categoryDropdownList = document.getElementById('categoryDropdownList');
 const selectedCategory = document.getElementById('selectedCategory');
 const sortBtn = document.getElementById('sortBtn');
 const sortStatus = document.getElementById('sortStatus');
@@ -35,6 +36,74 @@ function loadPinnedItems() {
 
 function savePinnedItems() {
     localStorage.setItem('ministry-health-icd11-pinned', JSON.stringify([...pinnedItems]));
+}
+
+function renderCategoryDropdown() {
+    const categoryOrder = [
+        'Certain infectious or parasitic diseases',
+        'Neoplasms',
+        'Diseases of the blood or blood-forming organs',
+        'Diseases of the immune system',
+        'Endocrine, nutritional or metabolic diseases',
+        'Mental, behavioral or neurodevelopmental disorders',
+        'Sleep-wake disorders',
+        'Diseases of the nervous system',
+        'Diseases of the visual system',
+        'Diseases of the ear or mastoid process',
+        'Diseases of the circulatory system',
+        'Diseases of the respiratory system',
+        'Diseases of the digestive system',
+        'Diseases of the skin',
+        'Diseases of the musculoskeletal system or connective tissue',
+        'Diseases of the genitourinary system',
+        'Conditions related to sexual health',
+        'Pregnancy, childbirth or the puerperium',
+        'Certain conditions originating in the perinatal period',
+        'Developmental anomalies',
+        'Symptoms, signs or clinical findings, not elsewhere classified',
+        'Injury, poisoning or certain other consequences of external causes',
+        'External causes of morbidity or mortality',
+        'Factors influencing health status or contact with health services',
+        'Codes for special purposes',
+        'Extension Codes'
+    ];
+
+    const categories = [...new Set(icdData.map(item => item.category))];
+    categories.sort((a, b) => {
+        const aIndex = categoryOrder.indexOf(a);
+        const bIndex = categoryOrder.indexOf(b);
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+        return a.localeCompare(b);
+    });
+
+    const buttons = [{
+        category: 'all',
+        label: 'All Categories'
+    }, ...categories.map(category => ({
+        category,
+        label: category
+    }))];
+
+    categoryDropdownList.innerHTML = buttons.map(btn => `
+        <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-category="${btn.category}">
+            ${btn.label}
+        </button>
+    `).join('');
+
+    const categoryNote = document.getElementById('categoryNote');
+    if (categoryNote) {
+        categoryNote.textContent = `Showing ${categories.length} categories and ${icdData.length} diseases in the dataset.`;
+    }
+
+    document.querySelectorAll('#categoryDropdownList button').forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+            const displayText = button.textContent.trim();
+            selectCategory(category, displayText);
+        });
+    });
 }
 
 function openSidebar() {
@@ -299,13 +368,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-document.querySelectorAll('#categoryDropdown button').forEach(button => {
-    button.addEventListener('click', () => {
-        const category = button.dataset.category;
-        const displayText = button.textContent.trim();
-        selectCategory(category, displayText);
-    });
-});
+renderCategoryDropdown();
 
 sortBtn.addEventListener('click', toggleSorting);
 
