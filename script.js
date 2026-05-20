@@ -23,9 +23,19 @@ const closeSidebarBtn = document.getElementById('closeSidebar');
 const sidebarOverlay = document.getElementById('sidebarOverlay');
 
 let currentCategory = 'all';
-let currentView = 'table'; // DEFAULT: 'table' or 'card'
+// Detect if mobile and set default view accordingly
+let currentView = window.innerWidth <= 768 ? 'card' : 'table'; // DEFAULT: 'table' or 'card'
 let isSorted = false;
 let pinnedItems = new Set();
+
+// Listen for window resize to auto-switch views
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768 && currentView === 'table') {
+        setViewMode('card');
+    } else if (window.innerWidth > 768 && currentView === 'card') {
+        setViewMode('table');
+    }
+});
 
 function loadPinnedItems() {
     const stored = localStorage.getItem('ministry-health-icd11-pinned');
@@ -114,6 +124,7 @@ function openSidebar() {
 function closeSidebar() {
     sidebar.classList.remove('active');
     sidebarOverlay.classList.add('hidden');
+    categoryDropdown.classList.add('hidden');
 }
 
 function togglePin(code) {
@@ -209,18 +220,18 @@ function displayTableView(results) {
             <table class="w-full">
                 <thead>
                     <tr>
-                        <th class="w-16">Pin</th>
-                        <th class="w-24">Code</th>
+                        <th style="width: 3rem;" class="text-center">Pin</th>
+                        <th style="width: 5rem;">Code</th>
                         <th>Description</th>
-                        <th class="w-56">Category</th>
-                        <th class="w-16">Copy</th>
+                        <th style="min-width: 200px;">Category</th>
+                        <th style="width: 3rem;" class="text-center">Copy</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${results.map(item => `
                         <tr class="${pinnedItems.has(item.code) ? 'frequent-item' : ''}">
                             <td class="text-center">
-                                <button class="star-btn p-1 rounded hover:bg-gray-100 text-gray-400 ${pinnedItems.has(item.code) ? 'starred' : ''}" 
+                                <button class="star-btn p-2 rounded hover:bg-gray-100 text-gray-400 ${pinnedItems.has(item.code) ? 'starred' : ''}" 
                                         onclick="togglePin('${item.code}')" 
                                         title="${pinnedItems.has(item.code) ? 'Remove from frequent diagnoses' : 'Add to frequent diagnoses'}">
                                     <svg class="w-4 h-4" fill="${pinnedItems.has(item.code) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,7 +247,7 @@ function displayTableView(results) {
                                 </span>
                             </td>
                             <td class="text-center">
-                                <button class="p-1 rounded hover:bg-blue-50 text-blue-600" onclick="copyToClipboard('${item.code}')" title="Copy code">
+                                <button class="p-2 rounded hover:bg-blue-50 text-blue-600" onclick="copyToClipboard('${item.code}')" title="Copy code">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                                     </svg>
@@ -253,22 +264,22 @@ function displayTableView(results) {
 
 function displayCardView(results) {
     const grid = document.createElement('div');
-    grid.className = 'grid gap-6 md:grid-cols-2 lg:grid-cols-3';
+    grid.className = 'grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
 
     results.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = `disease-card rounded-xl p-6 fade-in ${pinnedItems.has(item.code) ? 'ring-2 ring-yellow-400' : ''}`;
+        card.className = `disease-card rounded-xl p-4 sm:p-6 fade-in ${pinnedItems.has(item.code) ? 'ring-2 ring-yellow-400' : ''}`;
         card.style.animationDelay = `${index * 0.05}s`;
 
         card.innerHTML = `
-            <div class="flex items-start justify-between mb-4">
-                <div class="flex items-center space-x-2">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800 border border-green-200">
-                        ${item.category}
+            <div class="flex items-start justify-between mb-4 gap-2">
+                <div class="flex items-center gap-2 min-w-0 flex-1">
+                    <span class="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-100 to-blue-100 text-green-800 border border-green-200 whitespace-nowrap">
+                        ${item.category.substring(0, 15)}${item.category.length > 15 ? '...' : ''}
                     </span>
-                    ${pinnedItems.has(item.code) ? '<svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>' : ''}
+                    ${pinnedItems.has(item.code) ? '<svg class="w-4 h-4 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>' : ''}
                 </div>
-                <div class="flex space-x-2">
+                <div class="flex gap-2 flex-shrink-0">
                     <button class="star-btn p-2 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors ${pinnedItems.has(item.code) ? 'starred' : ''}"
                             onclick="togglePin('${item.code}')"
                             title="${pinnedItems.has(item.code) ? 'Remove from frequent diagnoses' : 'Add to frequent diagnoses'}">
@@ -286,8 +297,8 @@ function displayCardView(results) {
                 </div>
             </div>
             <div class="mb-3">
-                <div class="text-2xl font-bold text-blue-600 mb-2">${item.code}</div>
-                <div class="text-gray-700 leading-relaxed">${item.description}</div>
+                <div class="text-xl sm:text-2xl font-bold text-blue-600 mb-2 break-words">${item.code}</div>
+                <div class="text-sm sm:text-base text-gray-700 leading-relaxed line-clamp-3">${item.description}</div>
             </div>
         `;
 
@@ -379,8 +390,40 @@ hamburgerMenu.addEventListener('click', openSidebar);
 closeSidebarBtn.addEventListener('click', closeSidebar);
 sidebarOverlay.addEventListener('click', closeSidebar);
 
+// Close dropdown when clicking outside on mobile
+document.addEventListener('click', (e) => {
+    if (!categoryDropdownBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
+        categoryDropdown.classList.add('hidden');
+    }
+    // Close sidebar when clicking on main content area on mobile
+    if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+        closeSidebar();
+    }
+});
+
+// Prevent dropdown from closing when clicking inside it
+categoryDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Handle keyboard navigation
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        categoryDropdown.classList.add('hidden');
+    }
+});
+
 loadPinnedItems();
 filterAndSearch();
+
+// Initialize correct view based on screen size
+if (window.innerWidth <= 768) {
+    setViewMode('card');
+    cardViewBtn.classList.remove('inactive');
+    cardViewBtn.classList.add('active');
+    tableViewBtn.classList.remove('active');
+    tableViewBtn.classList.add('inactive');
+}
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {

@@ -20,6 +20,7 @@
                 radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+            min-height: 100vh;
         }
 
         .ministry-card {
@@ -27,6 +28,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: inherit;
         }
 
         .ministry-header {
@@ -41,8 +43,9 @@
             top: 0;
             bottom: 0;
             left: 0;
-            width: min(100%, 320px);
+            width: min(100vw - 60px, 320px);
             z-index: 50;
+            box-sizing: border-box;
         }
 
         .sidebar.active {
@@ -54,40 +57,305 @@
             inset: 0;
             background: rgba(0, 0, 0, 0.5);
             z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        #sidebarOverlay:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
         }
 
         .floating-title {
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
             font-weight: 900;
             letter-spacing: -0.025em;
             background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 50%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                0 4px 8px rgba(0, 0, 0, 0.05),
-                0 8px 16px rgba(0, 0, 0, 0.03);
-            transform: perspective(1000px) rotateX(10deg) rotateY(-5deg);
             animation: float 4s ease-in-out infinite;
             transition: all 0.3s ease;
         }
 
         .floating-title:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(0deg) scale(1.05);
-            text-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                0 8px 16px rgba(0, 0, 0, 0.1),
-                0 16px 32px rgba(0, 0, 0, 0.05);
+            -webkit-text-fill-color: #ffffff;
+            background: unset;
         }
 
         @keyframes float {
             0%, 100% {
-                transform: perspective(1000px) rotateX(10deg) rotateY(-5deg) translateY(0px);
+                transform: translateY(0px);
             }
             50% {
-                transform: perspective(1000px) rotateX(10deg) rotateY(-5deg) translateY(-15px);
+                transform: translateY(-8px);
             }
+        }
+
+        /* Mobile-first responsive styles */
+        @media (max-width: 768px) {
+            .floating-title {
+                font-size: clamp(1.25rem, 4vw, 1.75rem);
+            }
+        }
+
+        /* Table responsive wrapper */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .table-container table {
+            min-width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-container thead {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .table-container thead th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .table-container tbody tr {
+            border-bottom: 1px solid #e5e7eb;
+            transition: background-color 0.2s;
+        }
+
+        .table-container tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .table-container tbody td {
+            padding: 1rem;
+            font-size: 0.875rem;
+            vertical-align: middle;
+        }
+
+        .table-container tbody tr.frequent-item {
+            background-color: #fefce8;
+        }
+
+        /* Hide table on mobile, show card view instead */
+        @media (max-width: 768px) {
+            .table-container {
+                display: none;
+            }
+
+            /* Auto-switch to card view on mobile by showing card grid */
+            #results > div[class*="grid"] {
+                display: grid;
+            }
+        }
+
+        /* Card grid responsive */
+        #results > div[class*="grid"] {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 640px) {
+            #results > div[class*="grid"] {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #results > div[class*="grid"] {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        /* Ensure touch-friendly button sizes */
+        button, a[role="button"] {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Better dropdown positioning for mobile */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            z-index: 50;
+        }
+
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: fixed;
+                top: auto;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 1rem 1rem 0 0;
+                max-height: 70vh;
+            }
+        }
+
+        /* Mobile-optimized search input */
+        .search-input {
+            font-size: 16px !important;
+            -webkit-appearance: none;
+            appearance: none;
+            border: 2px solid #10b981;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: #059669;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+
+        /* View toggle buttons - better for mobile */
+        .view-toggle-btn {
+            white-space: nowrap;
+            min-height: 44px;
+            transition: all 0.2s;
+        }
+
+        .view-toggle-btn.active {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+        }
+
+        .view-toggle-btn.inactive {
+            background: white;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Improved card styling for mobile */
+        .disease-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s ease;
+        }
+
+        .disease-card:active {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: scale(0.98);
+        }
+
+        /* Star button styling */
+        .star-btn {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: all 0.2s;
+        }
+
+        .star-btn:active {
+            transform: scale(0.9);
+        }
+
+        .star-btn.starred {
+            color: #eab308;
+        }
+
+        /* Toast notification improvements */
+        #toast {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: #10b981;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(120px);
+            transition: transform 0.3s ease-out;
+            z-index: 50;
+            max-width: 90%;
+            font-size: 0.875rem;
+        }
+
+        #toast:not(.translate-y-full) {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 640px) {
+            #toast {
+                bottom: 0.5rem;
+                right: 0.5rem;
+                left: 0.5rem;
+                max-width: unset;
+            }
+        }
+
+        /* Animation for fade-in elements */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        /* Utility classes for better text truncation */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Ensure scroll behavior is smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Improved touch target sizes for mobile */
+        @media (max-width: 768px) {
+            input, button, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Sidebar optimization for small screens */
+        @media (max-width: 640px) {
+            .sidebar {
+                width: calc(100vw - 50px);
+            }
+
+            .sidebar .p-6 {
+                padding: 1rem;
+            }
+        }
+
+        /* Improve long text wrapping */
+        .break-words {
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         /* ሌሎቹ የ CSS ስታይሎችህ እዚህ ይቀጥላሉ... */
@@ -191,58 +459,58 @@
     <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
 
     <!-- Ethio-ICD E11 Banner -->
-    <header class="bg-gradient-to-r from-emerald-700 to-teal-600 text-white p-6 shadow-lg sticky top-0 z-30">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-4">
-                <div class="bg-white p-2 rounded-full shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <header class="bg-gradient-to-r from-emerald-700 to-teal-600 text-white p-4 sm:p-6 shadow-lg sticky top-0 z-30">
+        <div class="container mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-start gap-3 flex-1 min-w-0">
+                <div class="bg-white p-2 rounded-full shadow-inner flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 sm:h-10 w-8 sm:w-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                 </div>
-                <div>
-                    <h1 class="floating-title">Ethio-ICD E11 Tool</h1>
-                    <p class="text-xs md:text-sm opacity-90 mt-1 max-w-2xl leading-relaxed">
-                        A Digital Assistant for ICD-11 Medical Coding (Primary Hospital Edition) based on Federal Democratic Republic of Ethiopia Ministry of Health ICD-11 Medical Coding guideline.
+                <div class="min-w-0 flex-1">
+                    <h1 class="floating-title line-clamp-2">Ethio-ICD E11 Tool</h1>
+                    <p class="text-xs sm:text-sm opacity-90 mt-1 leading-tight">
+                        ICD-11 Medical Coding Assistant - Ethiopia
                     </p>
                 </div>
             </div>
-            <button id="hamburgerMenu" class="p-3 rounded-full bg-white/15 hover:bg-white/25 transition-colors" aria-label="Open sidebar">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button id="hamburgerMenu" class="p-2 sm:p-3 rounded-full bg-white/15 hover:bg-white/25 transition-colors flex-shrink-0" aria-label="Open sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 sm:h-6 w-5 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+    <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-8 max-w-6xl">
         <!-- Search and Controls Section -->
-        <div class="ministry-card rounded-2xl p-6 mb-8 fade-in">
-            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+        <div class="ministry-card rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 fade-in">
+            <div class="flex flex-col gap-4">
                 <!-- Search Input -->
-                <div class="flex-1 w-full">
+                <div class="w-full">
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                            <svg class="h-5 sm:h-6 w-5 sm:w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                         </div>
-                        <input type="text" id="searchInput" placeholder="Search ICD-11 codes or disease descriptions..."
-                               class="search-input w-full pl-12 pr-4 py-4 rounded-xl text-lg font-medium placeholder-gray-500 focus:outline-none">
+                        <input type="text" id="searchInput" placeholder="Search ICD-11 codes or diseases..."
+                               class="search-input w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-lg sm:rounded-xl text-base font-medium placeholder-gray-500 focus:outline-none">
                     </div>
                 </div>
 
                 <!-- Controls -->
-                <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <!-- Category Dropdown -->
-                    <div class="relative">
-                        <button id="categoryDropdownBtn" class="flex items-center justify-between w-full sm:w-64 px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500">
-                            <span class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="relative flex-1 min-w-0">
+                        <button id="categoryDropdownBtn" class="flex items-center justify-between w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm min-h-[44px]">
+                            <span class="flex items-center gap-2 min-w-0">
+                                <svg class="w-4 sm:w-5 h-4 sm:h-5 mr-1 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
                                 </svg>
-                                <span id="selectedCategory" class="text-gray-700 font-medium">All Categories</span>
+                                <span id="selectedCategory" class="text-gray-700 font-medium truncate">All Categories</span>
                             </span>
-                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                             </svg>
                         </button>
@@ -257,60 +525,62 @@
                     </div>
 
                     <!-- Sort Button -->
-                    <button id="sortBtn" class="sort-btn flex items-center justify-center px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500">
-                        <svg class="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="sortBtn" class="sort-btn flex items-center justify-center gap-2 px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm min-h-[44px]">
+                        <svg class="w-4 sm:w-5 h-4 sm:h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
                         </svg>
-                        <span class="text-gray-700 font-medium">A-Z Sort</span>
+                        <span class="text-gray-700 font-medium hidden sm:inline">A-Z Sort</span>
                     </button>
                 </div>
-            </div>
 
-            <!-- Results Count -->
-            <div class="mt-4 flex items-center justify-between text-sm text-gray-600">
-                <div>
-                    <span id="resultCount" class="font-semibold">110 diseases</span>
-                    <span>•</span>
-                    <span>ICD-11 Classification</span>
-                </div>
-                <div class="text-xs text-gray-500">
-                    <span id="sortStatus">Default order</span>
+                <!-- Results Count -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs sm:text-sm text-gray-600 pt-2">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span id="resultCount" class="font-semibold">110 diseases</span>
+                        <span class="hidden sm:inline">•</span>
+                        <span class="hidden sm:inline">ICD-11 Classification</span>
+                    </div>
+                    <div class="text-xs text-gray-500">
+                        <span id="sortStatus">Default order</span>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- View Toggle -->
-        <div class="mb-8 fade-in flex justify-between items-center" style="animation-delay: 0.2s">
-            <div class="flex space-x-3">
-                <button id="tableViewBtn" class="view-toggle-btn active px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="mb-6 sm:mb-8 fade-in flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3" style="animation-delay: 0.2s">
+            <div class="flex gap-2 overflow-x-auto w-full sm:w-auto">
+                <button id="tableViewBtn" class="view-toggle-btn active px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold flex items-center gap-2 text-sm flex-shrink-0">
+                    <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                     </svg>
-                    <span>Table View</span>
+                    <span class="hidden sm:inline">Table</span>
+                    <span class="sm:hidden">Table</span>
                 </button>
-                <button id="cardViewBtn" class="view-toggle-btn inactive px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="cardViewBtn" class="view-toggle-btn inactive px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold flex items-center gap-2 text-sm flex-shrink-0">
+                    <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4"/>
                     </svg>
-                    <span>Card View</span>
+                    <span class="hidden sm:inline">Card</span>
+                    <span class="sm:hidden">Card</span>
                 </button>
             </div>
-            <div class="text-sm text-white font-semibold">
+            <div class="text-sm text-white font-semibold bg-gradient-to-r from-green-600 to-emerald-600 px-4 py-2 rounded-lg">
                 <span id="resultCount2">110</span> diseases
             </div>
         </div>
 
         <!-- Frequent Diagnoses Section -->
-        <div id="frequentSection" class="mb-8 hidden fade-in" style="animation-delay: 0.3s">
-            <div class="ministry-card rounded-xl p-6">
-                <h3 class="text-gray-800 text-xl font-bold mb-4 flex items-center">
-                    <svg class="w-6 h-6 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
+        <div id="frequentSection" class="mb-6 sm:mb-8 hidden fade-in" style="animation-delay: 0.3s">
+            <div class="ministry-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <h3 class="text-gray-800 text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+                    <svg class="w-5 sm:w-6 h-5 sm:h-6 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
-                    Frequent Diagnoses
-                    <span class="ml-auto text-sm font-normal text-gray-500" id="frequentCount"></span>
+                    <span>Frequent Diagnoses</span>
+                    <span class="ml-auto text-xs sm:text-sm font-normal text-gray-500" id="frequentCount"></span>
                 </h3>
-                <div id="frequentResults" class="grid gap-3 md:grid-cols-2 lg:grid-cols-3"></div>
+                <div id="frequentResults" class="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
             </div>
         </div>
 
@@ -320,20 +590,20 @@
         </div>
 
         <!-- Empty State -->
-        <div id="emptyState" class="hidden text-center py-16 fade-in">
-            <div class="ministry-card rounded-2xl p-12 max-w-md mx-auto">
-                <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div id="emptyState" class="hidden text-center py-12 sm:py-16 fade-in">
+            <div class="ministry-card rounded-xl sm:rounded-2xl p-8 sm:p-12 max-w-md mx-auto">
+                <svg class="mx-auto h-12 sm:h-16 w-12 sm:w-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-.966-5.656-2.34"/>
                 </svg>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">No diseases found</h3>
-                <p class="text-gray-600">Try adjusting your search terms or category filter.</p>
+                <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">No diseases found</h3>
+                <p class="text-sm sm:text-base text-gray-600">Try adjusting your search terms or category filter.</p>
             </div>
         </div>
 
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300 z-50">
+    <div id="toast" class="translate-y-full">
         <span id="toastMessage">Code copied!</span>
     </div>
 
