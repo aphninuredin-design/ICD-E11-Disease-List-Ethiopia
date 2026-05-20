@@ -1,10 +1,7 @@
 // Application State
 const searchInput = document.getElementById('searchInput');
 const resultsDiv = document.getElementById('results');
-const categoryDropdownBtn = document.getElementById('categoryDropdownBtn');
-const categoryDropdown = document.getElementById('categoryDropdown');
-const categoryDropdownList = document.getElementById('categoryDropdownList');
-const selectedCategory = document.getElementById('selectedCategory');
+const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
 const sortBtn = document.getElementById('sortBtn');
 const sortStatus = document.getElementById('sortStatus');
 const cardViewBtn = document.getElementById('cardViewBtn');
@@ -96,23 +93,25 @@ function renderCategoryDropdown() {
         label: category
     }))];
 
-    categoryDropdownList.innerHTML = buttons.map(btn => `
-        <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-category="${btn.category}">
-            ${btn.label}
-        </button>
-    `).join('');
-
-    const categoryNote = document.getElementById('categoryNote');
-    if (categoryNote) {
-        categoryNote.textContent = `Showing ${categories.length} categories and ${icdData.length} diseases in the dataset.`;
-    }
-
-    document.querySelectorAll('#categoryDropdownList button').forEach(button => {
+    // Clear container and render buttons
+    categoryButtonsContainer.innerHTML = '';
+    
+    buttons.forEach(btn => {
+        const button = document.createElement('button');
+        button.className = `category-btn ${btn.category === 'all' ? 'active' : ''}`;
+        button.textContent = btn.label;
+        button.dataset.category = btn.category;
+        button.type = 'button';
+        
         button.addEventListener('click', () => {
-            const category = button.dataset.category;
-            const displayText = button.textContent.trim();
-            selectCategory(category, displayText);
+            // Remove active class from all buttons
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            selectCategory(btn.category);
         });
+        
+        categoryButtonsContainer.appendChild(button);
     });
 }
 
@@ -124,7 +123,6 @@ function openSidebar() {
 function closeSidebar() {
     sidebar.classList.remove('active');
     sidebarOverlay.classList.add('hidden');
-    categoryDropdown.classList.add('hidden');
 }
 
 function togglePin(code) {
@@ -349,13 +347,11 @@ function setViewMode(mode) {
 }
 
 function toggleCategoryDropdown() {
-    categoryDropdown.classList.toggle('hidden');
+    // Not needed with new button grid approach
 }
 
-function selectCategory(category, displayText) {
+function selectCategory(category) {
     currentCategory = category;
-    selectedCategory.textContent = displayText;
-    categoryDropdown.classList.add('hidden');
     filterAndSearch();
 }
 
@@ -371,14 +367,6 @@ searchInput.addEventListener('input', () => {
     filterAndSearch();
 });
 
-categoryDropdownBtn.addEventListener('click', toggleCategoryDropdown);
-
-document.addEventListener('click', (e) => {
-    if (!categoryDropdownBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
-        categoryDropdown.classList.add('hidden');
-    }
-});
-
 renderCategoryDropdown();
 
 sortBtn.addEventListener('click', toggleSorting);
@@ -392,24 +380,16 @@ sidebarOverlay.addEventListener('click', closeSidebar);
 
 // Close dropdown when clicking outside on mobile
 document.addEventListener('click', (e) => {
-    if (!categoryDropdownBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
-        categoryDropdown.classList.add('hidden');
-    }
     // Close sidebar when clicking on main content area on mobile
     if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !hamburgerMenu.contains(e.target)) {
         closeSidebar();
     }
 });
 
-// Prevent dropdown from closing when clicking inside it
-categoryDropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
-
 // Handle keyboard navigation
 searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        categoryDropdown.classList.add('hidden');
+        // No dropdown to close anymore
     }
 });
 
