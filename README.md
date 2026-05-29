@@ -20,6 +20,7 @@ A browser-based ICD-11 reference app for Ethiopian primary hospitals, built from
 
 ## 📦 Included Files
 * `index.html` — main application markup and UI structure.
+* `icd 11 disease list.txt` — source dataset used to generate the app data.
 * `icd_data.js` / `icd_data.json` — full ICD-11 dataset for the app.
 * `script.js` — app logic for search, filtering, sorting, and UI interaction.
 * `manifest.json` — PWA install metadata.

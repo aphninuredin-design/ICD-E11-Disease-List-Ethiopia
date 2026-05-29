@@ -217,8 +217,8 @@
         #categoryButtonsContainer {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: flex-start;
+            gap: 8px;
+            justify-content: start;
             width: 100%;
         }
 
@@ -226,19 +226,22 @@
         .category-btn {
             display: inline-flex;
             align-items: center;
-            padding: 0.375rem 0.75rem;
-            font-size: 0.875rem;
+            justify-content: center;
+            padding: 6px 12px;
+            font-size: 14px;
             font-weight: 500;
-            border: 2px solid #e5e7eb;
-            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.375rem;
             background: white;
-            color: #4b5563;
+            color: #374151;
             cursor: pointer;
             transition: all 0.2s ease;
-            white-space: nowrap;
-            min-height: 32px;
+            white-space: normal;
+            word-break: break-word;
+            min-height: 44px;
             user-select: none;
             -webkit-tap-highlight-color: transparent;
+            flex: 0 1 auto;
         }
 
         .category-btn:hover {
@@ -258,12 +261,10 @@
             box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
         }
 
-        /* Ensure buttons are touch-friendly on mobile */
+        /* Mobile-friendly category buttons */
         @media (max-width: 768px) {
             .category-btn {
-                padding: 0.5rem 0.875rem;
-                font-size: 0.8125rem;
-                min-height: 36px;
+                min-height: 44px;
             }
         }
 
