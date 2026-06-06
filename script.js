@@ -130,16 +130,16 @@ function renderCategoryDropdown() {
 function toggleDropdown() {
     categoryDropdownMenu.classList.toggle('hidden');
     categoryDropdownIcon.style.transform = categoryDropdownMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-    
-    // Position dropdown dynamically relative to button
+
     if (!categoryDropdownMenu.classList.contains('hidden')) {
-        const button = categoryDropdownBtn;
-        const rect = button.getBoundingClientRect();
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-        
-        categoryDropdownMenu.style.top = (rect.bottom + scrollTop + 8) + 'px';
-        categoryDropdownMenu.style.left = (rect.left + scrollLeft) + 'px';
+        // Reset any previously set inline styles so CSS takes over
+        categoryDropdownMenu.style.top = '';
+        categoryDropdownMenu.style.left = '';
+        categoryDropdownMenu.style.position = '';
+        categoryDropdownMenu.style.background = '';
+        // Use CSS positioning (position:absolute relative to the parent wrapper)
+        categoryDropdownMenu.style.top = '100%';
+        categoryDropdownMenu.style.left = '0';
     }
 }
 
