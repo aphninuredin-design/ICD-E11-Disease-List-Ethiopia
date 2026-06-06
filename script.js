@@ -1,7 +1,10 @@
 // Application State
 const searchInput = document.getElementById('searchInput');
 const resultsDiv = document.getElementById('results');
-const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
+const categoryDropdownBtn = document.getElementById('categoryDropdownBtn');
+const categoryDropdownMenu = document.getElementById('categoryDropdownMenu');
+const categoryDropdownLabel = document.getElementById('categoryDropdownLabel');
+const categoryDropdownIcon = document.getElementById('categoryDropdownIcon');
 const sortBtn = document.getElementById('sortBtn');
 const sortStatus = document.getElementById('sortStatus');
 const cardViewBtn = document.getElementById('cardViewBtn');
@@ -85,7 +88,7 @@ function renderCategoryDropdown() {
         return a.localeCompare(b);
     });
 
-    const buttons = [{
+    const items = [{
         category: 'all',
         label: 'All Categories'
     }, ...categories.map(category => ({
@@ -93,26 +96,45 @@ function renderCategoryDropdown() {
         label: category
     }))];
 
-    // Clear container and render buttons
-    categoryButtonsContainer.innerHTML = '';
+    // Clear menu and render options
+    categoryDropdownMenu.innerHTML = '';
     
-    buttons.forEach(btn => {
-        const button = document.createElement('button');
-        button.className = `category-btn ${btn.category === 'all' ? 'active' : ''}`;
-        button.textContent = btn.label;
-        button.dataset.category = btn.category;
-        button.type = 'button';
+    items.forEach(item => {
+        const option = document.createElement('button');
+        option.className = `w-full text-left px-4 py-3 hover:bg-green-50 transition-colors text-sm font-medium text-gray-700 hover:text-green-700 border-b border-gray-100 last:border-b-0 category-option ${item.category === 'all' ? 'bg-green-50 text-green-700 font-bold' : ''}`;
+        option.textContent = item.label;
+        option.dataset.category = item.category;
+        option.type = 'button';
         
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
-            button.classList.add('active');
-            selectCategory(btn.category);
+        option.addEventListener('click', () => {
+            // Update button label
+            categoryDropdownLabel.textContent = item.label;
+            
+            // Update active state in menu
+            document.querySelectorAll('.category-option').forEach(o => {
+                o.classList.remove('bg-green-50', 'text-green-700', 'font-bold');
+            });
+            option.classList.add('bg-green-50', 'text-green-700', 'font-bold');
+            
+            // Close dropdown
+            closeDropdown();
+            
+            // Select category
+            selectCategory(item.category);
         });
         
-        categoryButtonsContainer.appendChild(button);
+        categoryDropdownMenu.appendChild(option);
     });
+}
+
+function toggleDropdown() {
+    categoryDropdownMenu.classList.toggle('hidden');
+    categoryDropdownIcon.style.transform = categoryDropdownMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+
+function closeDropdown() {
+    categoryDropdownMenu.classList.add('hidden');
+    categoryDropdownIcon.style.transform = 'rotate(0deg)';
 }
 
 function openSidebar() {
@@ -369,6 +391,7 @@ searchInput.addEventListener('input', () => {
 
 renderCategoryDropdown();
 
+categoryDropdownBtn.addEventListener('click', toggleDropdown);
 sortBtn.addEventListener('click', toggleSorting);
 
 tableViewBtn.addEventListener('click', () => setViewMode('table'));
@@ -378,8 +401,13 @@ hamburgerMenu.addEventListener('click', openSidebar);
 closeSidebarBtn.addEventListener('click', closeSidebar);
 sidebarOverlay.addEventListener('click', closeSidebar);
 
-// Close dropdown when clicking outside on mobile
+// Close dropdown when clicking outside
 document.addEventListener('click', (e) => {
+    const isClickInsideDropdown = categoryDropdownBtn.contains(e.target) || categoryDropdownMenu.contains(e.target);
+    if (!isClickInsideDropdown && !categoryDropdownMenu.classList.contains('hidden')) {
+        closeDropdown();
+    }
+    
     // Close sidebar when clicking on main content area on mobile
     if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !hamburgerMenu.contains(e.target)) {
         closeSidebar();
