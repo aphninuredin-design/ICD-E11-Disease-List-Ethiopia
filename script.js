@@ -132,14 +132,21 @@ function toggleDropdown() {
     categoryDropdownIcon.style.transform = categoryDropdownMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
 
     if (!categoryDropdownMenu.classList.contains('hidden')) {
-        // Reset any previously set inline styles so CSS takes over
-        categoryDropdownMenu.style.top = '';
-        categoryDropdownMenu.style.left = '';
-        categoryDropdownMenu.style.position = '';
-        categoryDropdownMenu.style.background = '';
-        // Use CSS positioning (position:absolute relative to the parent wrapper)
-        categoryDropdownMenu.style.top = '100%';
-        categoryDropdownMenu.style.left = '0';
+        const button = categoryDropdownBtn;
+        const rect = button.getBoundingClientRect();
+
+        categoryDropdownMenu.style.position = 'fixed';
+        categoryDropdownMenu.style.top = (rect.bottom + 8) + 'px';
+        categoryDropdownMenu.style.left = rect.left + 'px';
+        categoryDropdownMenu.style.width = rect.width + 'px';
+        categoryDropdownMenu.style.minWidth = '260px';
+        categoryDropdownMenu.style.background = '#ffffff';
+        categoryDropdownMenu.style.backgroundColor = '#ffffff';
+        categoryDropdownMenu.style.opacity = '1';
+        categoryDropdownMenu.style.zIndex = '99999';
+        categoryDropdownMenu.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12)';
+        categoryDropdownMenu.style.borderRadius = '0.5rem';
+        categoryDropdownMenu.style.border = '1px solid #e5e7eb';
     }
 }
 
