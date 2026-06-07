@@ -154,6 +154,33 @@
             }
         }
 
+        /* Improve table usability on small screens */
+        @media (max-width: 480px) {
+            .table-container {
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .table-container table {
+                table-layout: auto;
+                min-width: 100%;
+            }
+
+            .table-container thead th,
+            .table-container tbody td {
+                padding: 0.5rem;
+                font-size: 0.825rem;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            /* Make the code column more compact on very small screens */
+            .table-container thead th:nth-child(2),
+            .table-container tbody td:nth-child(2) {
+                width: 4.25rem;
+                min-width: 3.5rem;
+            }
+        }
+
         /* Card grid responsive */
         #results > div[class*="grid"] {
             display: grid;
