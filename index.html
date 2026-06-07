@@ -146,12 +146,8 @@
             background-color: #fefce8;
         }
 
-        /* Hide table on mobile, show card view instead */
+        /* On mobile, allow table view to appear when selected. */
         @media (max-width: 768px) {
-            .table-container {
-                display: none;
-            }
-
             /* Auto-switch to card view on mobile by showing card grid */
             #results > div[class*="grid"] {
                 display: grid;
