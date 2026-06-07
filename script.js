@@ -128,31 +128,57 @@ function renderCategoryDropdown() {
 }
 
 function toggleDropdown() {
-    categoryDropdownMenu.classList.toggle('hidden');
-    categoryDropdownIcon.style.transform = categoryDropdownMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    const isHidden = categoryDropdownMenu.classList.contains('hidden');
+    
+    if (isHidden) {
+        // Show dropdown
+        categoryDropdownMenu.classList.remove('hidden');
+        categoryDropdownIcon.style.transform = 'rotate(180deg)';
+        
+        // Push results section down to make room
+        const menuHeight = Math.min(400, window.innerHeight * 0.5);
+        resultsDiv.style.marginTop = (menuHeight + 20) + 'px';
+        resultsDiv.style.transition = 'margin-top 0.3s ease';
+        
+        const frequentSectionEl = document.getElementById('frequentSection');
+        if (!frequentSectionEl.classList.contains('hidden')) {
+            frequentSectionEl.style.marginTop = (menuHeight + 20) + 'px';
+            frequentSectionEl.style.transition = 'margin-top 0.3s ease';
+        }
 
-    if (!categoryDropdownMenu.classList.contains('hidden')) {
-        const button = categoryDropdownBtn;
-        const rect = button.getBoundingClientRect();
-
+        // Style the dropdown solidly
         categoryDropdownMenu.style.position = 'fixed';
-        categoryDropdownMenu.style.top = (rect.bottom + 8) + 'px';
-        categoryDropdownMenu.style.left = rect.left + 'px';
-        categoryDropdownMenu.style.width = rect.width + 'px';
-        categoryDropdownMenu.style.minWidth = '260px';
         categoryDropdownMenu.style.background = '#ffffff';
         categoryDropdownMenu.style.backgroundColor = '#ffffff';
-        categoryDropdownMenu.style.opacity = '1';
         categoryDropdownMenu.style.zIndex = '99999';
-        categoryDropdownMenu.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12)';
+        categoryDropdownMenu.style.boxShadow = '0 8px 24px rgba(0,0,0,0.20)';
         categoryDropdownMenu.style.borderRadius = '0.5rem';
         categoryDropdownMenu.style.border = '1px solid #e5e7eb';
+        categoryDropdownMenu.style.minWidth = '260px';
+        categoryDropdownMenu.style.maxHeight = menuHeight + 'px';
+        categoryDropdownMenu.style.overflowY = 'auto';
+
+        const rect = categoryDropdownBtn.getBoundingClientRect();
+        categoryDropdownMenu.style.top = (rect.bottom + 8) + 'px';
+        categoryDropdownMenu.style.left = rect.left + 'px';
+        categoryDropdownMenu.style.width = Math.max(rect.width, 260) + 'px';
+
+    } else {
+        closeDropdown();
     }
 }
 
 function closeDropdown() {
     categoryDropdownMenu.classList.add('hidden');
     categoryDropdownIcon.style.transform = 'rotate(0deg)';
+    
+    // Restore table position
+    resultsDiv.style.marginTop = '';
+    resultsDiv.style.transition = 'margin-top 0.3s ease';
+    
+    const frequentSectionEl = document.getElementById('frequentSection');
+    frequentSectionEl.style.marginTop = '';
+    frequentSectionEl.style.transition = 'margin-top 0.3s ease';
 }
 
 function openSidebar() {
