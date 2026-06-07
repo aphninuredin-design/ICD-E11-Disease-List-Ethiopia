@@ -146,40 +146,21 @@
             background-color: #fefce8;
         }
 
-        /* On mobile, allow table view to appear when selected. */
+        /* Hide table on mobile, show card view instead */
         @media (max-width: 768px) {
-            /* Auto-switch to card view on mobile by showing card grid */
-            #results > div[class*="grid"] {
-                display: grid;
+            .table-container {
+                display: none !important;
+            }
+            #tableViewBtn {
+                display: none !important;
             }
         }
 
-        /* Improve table usability on small screens */
-        @media (max-width: 480px) {
-            .table-container {
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .table-container table {
-                table-layout: auto;
-                min-width: 100%;
-            }
-
-            .table-container thead th,
-            .table-container tbody td {
-                padding: 0.5rem;
-                font-size: 0.825rem;
-                white-space: normal;
-                overflow-wrap: anywhere;
-                word-break: normal;
-            }
-
-            /* Make the code column more compact on very small screens */
-            .table-container thead th:nth-child(2),
-            .table-container tbody td:nth-child(2) {
-                width: 4.25rem;
-                min-width: 3.5rem;
-            }
+        /* Card grid responsive */
+        #results > div[class*="grid"] {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
         }
 
         /* Card grid responsive */
